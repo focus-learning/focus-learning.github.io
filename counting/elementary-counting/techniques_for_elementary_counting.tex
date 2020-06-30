@@ -24,6 +24,7 @@
 \author{Perryn Chang}
 
 \date{\today}
+
 \begin{document}
 \maketitle
 
@@ -210,6 +211,61 @@ Imagine that there are $4$ spaces, $2$ before and after the $3$ consonants, and 
 Consider the first letter. We have $3$ choices for it. Then, no matter what letter we choose, we have $2$ possibilities for the next letter. Similarly, no matter what letter we choose for the second letter, there are $2$ options for the third letter. This means that for all of the letters except the first one, we have $2$ options. Since we have $7$ digits in total, our answer is $3\cdot 2^6=192.$
 \end{solution}
 
+
+Now, we add some basic number theory to the mix. 
+
+\begin{prop}
+If the prime factorization of a positive integer $n$ is $p_1^{e_1}p_2^{e_2} \dots p_n^{e_n}$, then $n$ has $(e_1+1)(e_2+1)(e_3+1)\dots (e_n+1)$ factors.
+
+\end{prop}
+
+We won't prove this here, but try to see why this is true. Our next problem will use a twist of this idea. The solution of it will give a sketch on why the proposition is true.
+\begin{example}
+How many factors of $567,000$ are perfect squares?
+\end{example}
+
+\begin{solution}
+We begin by prime factorizing. The prime factorization is $2^3\cdot 3^4 \cdot 5^3 \cdot 7$. In order for a factor to be a perfect square, the exponents in its prime factorization must be even. Therefore, to create a factor of $567,000$ that is a perfect square, the exponent for $2$ must be $0$ or $2$, the exponent for $3$ must be $0,2,$ or $4$, the exponent for $5$ must be $0$ or $2$, and the exponent for $7$ must be $0$. Since we have $2$ choices for the exponent of $2$, $3$ choices for the exponent of $3$, $2$ choices for the exponent of $5$, and $1$ choice for the exponent of $7$, our answer is $2\cdot 3\cdot 2 \cdot 1=12$
+\end{solution}
+
+\begin{example}
+(2012 AMC) A $3\times3$ square is partitioned into $9$ unit squares. Each unit square is painted either white or black with each color being equally likely, chosen independently and at random. The square is then rotated $90^\circ$ clockwise about its center, and every white square in a position formerly occupied by a black square is painted black. The colors of all other squares are left unchanged. How many ways are there to initially paint the grid such that the grid is now black?
+
+\end{example}
+
+\begin{solution}
+
+
+First, notice that the center square must be black. If it was white, a $90^\circ$ rotation would leave it at the same position, so it would still be white. Then, notice that the four corner squares and the four middle squares do not affect each other. A rotation puts a corner square in another corner square and a middle square in a middle square. This means that we can consider the corner and middle squares separately. Let's do the corner squares first. If they are all black, then it is easy to see that all the corner squares would be black after a rotation. Here, we only have $1$ way to color the square. If $3$ of the corner squares are colored black, then a rotation would make all the squares black. This is because after the rotation, the sole white square is forced to land on a square that was previously black. We have $4$ ways to color the corners with $3$ blacks squares. If only $2$ squares are black, then notice that we must choose the corners that are diagonal from each other. If not, one white square will go into a spot that was previously white, so it will not be colored black. However, with the diagonals being colored black, each white square will go to a square that was previously black. There are $2$ ways to color the corners with $2$ black squares. It is easy to see that it is impossible to color the corners with $1$ black square, so in total, there are $1+4+2=7$ ways to color the corners. With a similar argument, we have $7$ ways to color the middle squares, so our final answer is $1\cdot 7 \cdot 7=49$.
+\end{solution}
+
+\subsection*{Exercises}
+
+\begin{exercise}
+(PHS TST) How many ways are there to rearrange the letters in “PRINCETON” such that no two of the vowels are
+adjacent?
+\end{exercise}
+
+\begin{exercise}
+(PUMaC) You have four fair $6$-sided dice, each numbered from $1$ to $6$ (inclusive). If all four dice are rolled, what is the probability that the product of the numbers rolled is prime?
+\end{exercise}
+
+\begin{exercise}
+(PUMaC) A word is an ordered, non-empty sequence of letters, such as \textit{word} or \textit{wrod}. How many
+distinct 3-letter words can be made from a subset of the letters c, o, m, b, o, where each letter
+in the list is used no more than the number of times it appears?
+\end{exercise}
+
+\begin{exercise}
+(HMMT) Given an $8\times 8$ checkerboard with alternating white and black squares, how many ways are there to choose four black squares and four white squares so that no two of the eight chosen squares are in the same row or column?
+\end{exercise}
+
+\begin{exercise}
+(2018 AMC) A scanning code consists of a $7 \times 7$ grid of squares, with some of its squares colored black and the rest colored white. There must be at least one square of each color in this grid of $49$ squares. A scanning code is called symmetric if its look does not change when the entire square is rotated by a multiple of $90 ^{\circ}$ counterclockwise around its center, nor when it is reflected across a line joining opposite corners or a line joining midpoints of opposite sides. What is the total number of possible symmetric scanning codes?
+\end{exercise}
+
+\section{Casework Counting}
+In many cases, constructive counting is not enough to finish a problem. One often has to consider various cases and then count the number of ways to satisfy a condition for each specific case. In the last example of the previous section, we looked over a basic example of casework by considering the amount of black squares that were initially colored. We now begin to explore casework in more depth.
 
 
 
