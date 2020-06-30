@@ -1,5 +1,5 @@
 # handouts
-LaTeX handouts for focus learning.
+LaTeX handouts for our math organization, **focus learning**.
 Each handout/subject should have a folder just to keep it organized.  
 
 ### Counting
