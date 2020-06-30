@@ -9,16 +9,16 @@
 \begin{document}
 
 \title{Modular Arithmetic}
-\author{Placeholder}
+\author{Jonathan Pei}
 \maketitle
 Note: This handout is for people with little to no experience with modular arithmetic. If you are already familiar with modular arithmetic, feel free to do the problems at the bottom and the ones dispersed throughout.
 
 \section{Introduction}
-\indent In essence, modular arithmetic is the addition, subtraction, multiplication and sometimes division 
-of the remainders of numbers.
-\\\\
-\textbf{Definition 1.1} Two numbers are said to be congruent modulo n if their difference is evenly divisible by n.
-So a is congruent to b modulo n if $n | (a-b)$. \\
+\subsection*{Basic Operations}
+\begin{mdframed}
+\textbf{Definition 1.1} Two numbers are said to be congruent modulo n if their difference is evenly divisible by n.\\
+\end{mdframed}
+So a is congruent to b modulo n if $n | (a-b)$. 
 This congruence is written as 
 $$ a \equiv b \pmod{n}.$$
 
@@ -58,8 +58,87 @@ So when you divide in modular arithmetic, you need to make sure you divide by a 
 If you need to divide by a number that is not relatively prime, you simply divide the modulus by the gcd of itself and the divisor. 
 \\\\
 From our original example again, if we divide both sides by 3, while also dividing 12 by 3, we get 
-$$5 \equiv 25 \pmod{4}$$ which is clearly true.
+$$5 \equiv 25 \pmod{4}$$ which is clearly true. \\
 
+We will present a more rigorous proof on when division works in the next section.
+
+\subsection*{Modular Inverses}
+When you divide by a number $a$, you are actually multiplying by another number $b$ such that $ab=1$.
+For example, in normal arithmetic dividing by $2$ is actually multiplying by $\frac{1}{2}$. 
+In this case $\frac{1}{2}$ would be the multiplicative inverse of $2$.
+\\
+
+Modular Inverses are very similar. The inverse of a number $a$ modulo n, is the number $b$ modulo n such that $ab \equiv 1 \pmod{n}$\\\\\\
+\begin{mdframed}
+\textbf{Definition 1.3} A modular inverse of an integer a is the integer b such that $ab \equiv 1 \pmod{n}$
+\end{mdframed}
+\begin{mdframed}
+    \textbf{Example 1.4}. Find the inverse of $5 \pmod{11}$.    
+\end{mdframed}
+\emph{Solution}. We can guess and check and find that $5\cdot 9\equiv 45 \equiv 1 \pmod{11}$. So \boxed{9} is our inverse.
+\\
+
+We will present 2 ways to find the modular inverse. 
+The first way is to use brute force and check all numbers modulo n. We used this
+method in the above exercise. For very small numbers, this is often the fastest way to calculate inverses.
+
+The second way is to use the Euclidean Algorithm.
+\begin{mdframed}
+    \textbf{Proposition 1.5} If $\gcd{(a,b)}\neq 1$, then a does not have a modular inverse $\mod b$ and vice versa.
+\end{mdframed}
+\emph{Proof}. Suppose that a did have an inverse. So $ax \equiv 1 \pmod{b}$ would have a solution. Equivalently, $ax+by = 1$ would have integer solutions. 
+However, let $\gcd(a,b) = g$ and $\frac{a}{g} = a'$ and $\frac{b}{g} = b'$. So we can factor g out of the left side to get $g(a'x+b'y) = 1$. This is a contradiction
+because the left hand side has a factor of $g$, while the right side does not.
+
+\begin{mdframed}
+    \textbf{Proposition 1.6} $\gcd(a,b) = \gcd(a,a-b)$.
+\end{mdframed}
+\emph{Proof.} Consider any common divisor $d$ of a and b. Clearly this common divisor also divides $a-b$.
+Now consider a common divisor $d'$ of a and (a-b). We have $d'|a$ and $d' | (a-b)$ so $d'|b$. We have shown that every common divisor of a and b is a common divisor of a and (a-b). 
+And every common divisor of a and (a-b) is a common divisor of a and b. So the common divisors of a and b and the common divisors of a and (a-b) are the same. Thus, the greatest common divisor is also the same.
+
+\begin{mdframed}
+    \textbf{Theorem 1.7} The Division Algorithm. For any pair of integers $a$ and $b$, we can uniquely write $a$ as $bq + r$ where $r<b$.
+\end{mdframed}
+The r represents the remainder after a has been divided by b. It is pretty clear that this theorem is true. As an exercise prove that you can always find q and r, 
+and that when $r < b$, r is unique.
+\newline
+\newline
+\newline
+\newline
+
+\begin{mdframed}
+    \textbf{Theorem 1.8} The Euclidean Algorithm. 
+    \begin{center}
+        $\begin{array}{rcl}
+            a &= &bq_1 + r_1\\
+            b &= &r_1q_2 + r_2\\
+            r_1 &= &r_2q_3 + r_3\\
+            &\vdots\\
+            r_n-1 &= &r_nq_{n+1}\\
+            \gcd(a,b) &= &r_n
+        \end{array}$
+    \end{center}
+\end{mdframed}
+\emph{Proof.} By proposition 1.6, $\gcd(r_m,r_m+1) = \gcd(a,b)$. So by repeatedly using the division algorithm, we get that $\gcd(a,b) = \gcd(r_n,0) = r_n$.
+
+Now in order to find a modular inverse, we use the Euclidean Algorithm.
+The trick is to write 1 as the sum of multiples of $r_{m-1}$ and $r_m$.\\\\
+\emph{Example.} Find the inverse of 12 modulo 17. \\
+\emph{Solution.} First we use the Euclidean Algorithm. We get \\
+\begin{center}
+$\begin{array}{rcl}
+    17 &= &12\cdot 1 + 5\\
+    12 &= &5 \cdot 2 + 2\\
+    5 &= &2 \cdot 2 + 1\\
+    2 &= &1 \cdot 2
+\end{array}$
+\end{center}
+Now we write $1 = 5-2\cdot 2$. We substitute the second equation and get
+ $1 = 5 - 2\cdot(12-5\cdot 2) \implies 1 = 5\cdot 5 -2 \cdot 12$. \\
+ Substituting again gives us
+ $1 = -2\cdot 12 + 5\cdot(17-12) \implies 1 = -7 \cdot 12 + 5 \cdot 17$.\\ 
+ $-7 \cdot 12 + 5\cdot 17 \equiv -7\cdot 12 \equiv 10 \cdot 12 \pmod{17}$. So $\boxed{10}$ is the inverse of 12 modulo 17.
 \subsection*{Exercises}
 1. Prove that subtraction and multiplication work in modular arithmetic.
 \\
@@ -70,8 +149,8 @@ $$5 \equiv 25 \pmod{4}$$ which is clearly true.
 \\
 \\
 3. Compute $2021 \cdot 2019 \cdot 2018 \cdot 2017 \mod{10}$.\\\\
-4.(AMC 8) How many positive three-digit integers have a remainder of 2 when divided by 6, a remainder of 5 when divided by 9, and a remainder of 7 when divided by 11?
-\newpage
+4.(AMC 8) How many positive three-digit integers have a remainder of 2 when divided by 6, a remainder of 5 when divided by 9, and a remainder of 7 when divided by 11?\\\\
+5. Solve the congruence $37x = 12 \pmod{73}$
 \section{Chinese Remainder Theorem}
 \begin{mdframed}
     \textbf{Theorem 2.1} The Chinese Remainder Theorem states that if \\$a_1$, $a_2$, $a_3$, $\dots$ $a_{n-1}$, $a_n$ are all relatively prime, then the system
@@ -89,7 +168,7 @@ $$5 \equiv 25 \pmod{4}$$ which is clearly true.
     has a unique solution modulo $a_1 a_2 a_3 \dots a_n$
 \end{mdframed}
 We present this theorem without proof as it goes beyond the scope of this handout.
-This theorem guarentees solutions to many problems involving modular arithmetic.
+This theorem guarantees solutions to many problems involving modular arithmetic.
 
 \begin{mdframed}
     \textbf{Example 2.2} 
@@ -105,7 +184,7 @@ This theorem guarentees solutions to many problems involving modular arithmetic.
             n &\equiv &6 &\pmod{9}\\
         \end{array}$
     \end{center}
-    The Chinese Remainder Theorem guarentees that there is a unique solution modulo $5\cdot 7 \cdot 9$.\\
+    The Chinese Remainder Theorem guarantees that there is a unique solution modulo $5\cdot 7 \cdot 9$.\\
     We can rewrite the first congruence as $n = 3 + 5a$ where a is an integer.
     Substituting into the second congruence we get 
     \begin{center}
@@ -128,6 +207,4 @@ This theorem guarentees solutions to many problems involving modular arithmetic.
     \end{center}
     Substituting, we get $n = 215c + 78$. Since we want n to be as small as possible, we set $c=0$ and get $\boxed{n=78}$
 
-\section{Orders}
-\subsection*{Exercises}
 \end{document}
