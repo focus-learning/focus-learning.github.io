@@ -167,9 +167,20 @@ Now we write $1 = 5-2\cdot 2$. We substitute the second equation and get
     \end{center}
     has a unique solution modulo $a_1 a_2 a_3 \dots a_n$
 \end{mdframed}
-We present this theorem without proof as it goes beyond the scope of this handout.
-This theorem guarantees solutions to many problems involving modular arithmetic.
-
+\emph{Proof.} We will prove it with induction. Consider the base case with two congruences. 
+\begin{alignat}{4}
+         x &\equiv &b_1 &\pmod{a_1}\\
+        x &\equiv &b_{2} &\pmod{a_{2}}
+\end{alignat}
+We can write (2) as $x = b_2 + a_2y$. Substituting into (1), we get $$b_2 + a_2y \equiv b+1 \pmod{a_1}.$$
+Let $a_2'$ be the inverse of $a_2$ mod $a_1$. We know such a number exists because $\gcd(a_1,a_2)=1$. 
+Rearranging and multiplying both sides by $a_2'$ gives us $$y \equiv a_2'(b+1-b_2) \pmod{a_1}$$
+So $y = a_2'(b+1-b_2) + a_1z$. Substituting into $x = b_2 + a_2y$ gives us 
+\begin{align*}
+    b_2 + a_2(a_2'(b+1-b_2)+a_1z)=b_2+a_2a_2'(b+1-b_2)+a_1a_2z\\
+    \implies x \equiv b_2+a_2a_2'(b+1-b_2) \pmod{a_1a_2}
+\end{align*}
+So we have found a unique solution modulo $a_1a_2$. The inductive step is similar and is left as an exercise.
 \begin{mdframed}
     \textbf{Example 2.2} 
     If a teacher arranges her students in rows of 5, there are 3 students left in the last row.
@@ -206,6 +217,10 @@ This theorem guarantees solutions to many problems involving modular arithmetic.
         \end{array}$
     \end{center}
     Substituting, we get $n = 215c + 78$. Since we want n to be as small as possible, we set $c=0$ and get $\boxed{n=78}$
+\subsection*{Exercises}
+1. Finish the proof for the Chinese Remainder Theorem.\\\\
+2. (2017 AMC) Let $N=123456789101112\dots4344$ be the $79$-digit number that is formed by writing the integers from $1$ to $44$ in order, one after the other. What is the remainder when $N$ is divided by $45$?
+ 
 \section{Problems}
 1. Find the possible remainders when a perfect square is divided by 4.\\\\
 2. Find the last two digits of $26^{100}$\\\\
