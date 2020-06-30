@@ -10,6 +10,6 @@ Each handout/subject should have a folder just to keep it organized.
 
 - [Modular Arithmetic](https://github.com/focus-learning/handouts/blob/master/Number%20Theory/modular_arithmetic_beg/modular_arithmetic.pdf) (RadiantCheddar, June 2020)
 
-### Geometry
-
 ### Algebra
+
+### Geometry
