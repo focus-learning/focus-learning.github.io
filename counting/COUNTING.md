@@ -1,0 +1,1 @@
+# Counting handouts folder.
