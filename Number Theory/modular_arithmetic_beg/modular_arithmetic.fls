@@ -1,7 +1,7 @@
-PWD d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg
+PWD d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg
 INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.tex
-OUTPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.log
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.tex
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.log
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo
@@ -30,9 +30,9 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
-INPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.aux
-INPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.aux
-OUTPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.aux
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.aux
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.aux
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.aux
 INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii
 INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -74,9 +74,9 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-OUTPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.pdf
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.pdf
 INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-INPUT d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.aux
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.aux
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb

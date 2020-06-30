@@ -32,8 +32,34 @@ This can be easily proven from the definition of modular congruences.
     \implies &n|(a+c)-(b+d)\\
     \implies &\boxed{a+c \equiv b+d \pmod{n}}
 \end{align*}
-Subtraction and multiplication follow similarly.
+Subtraction and multiplication follow similarly.\\
 
+Division in modular arithmetic is a little different. As an example, consider the congruence
+$$15 \equiv 75 \pmod{12}.$$
+Dividing both sides by 3 yields $$5 \equiv 25 \pmod{12}.$$
+So clearly there is a problem here.
+Let's examine the definition of modular congruence again.
+With our current example, we have 
+$$12 | 75-15.$$
+When we divide $75-15$ by 3, we ``remove'' a factor of 3, so 12 doesn't divide the quotient.
+Notice that if we divided both sides of the original congruence by 5, we get 
+$$3 \equiv 15 \pmod{12}$$ which is true. As long as you divide by a number that is relatively prime to the modulus,
+you won't ``remove'' any factors so the congruence holds true.\\\\
+So when you divide in modular arithmetic, you need to make sure you divide by a number that doesn't share any factors with the modulus.
+\\\\
+If you need to divide by a number that is not relatively prime, you simply divide the modulus by the gcd of itself and the divisor. 
+\\\\
+From our original example again, if we divide both sides by 3, while also dividing 12 by 3, we get 
+$$5 \equiv 25 \pmod{4}$$ which is clearly true.
+
+\section*{Exercises}
+1. Prove that subtraction and multiplication work in modular arithmetic.
+\\
+\\
+2. Prove the divisibility rules for the numbers 2 through 11. (The rule for 7 is you take the last digit, double it then subtract it from the remaining digits. If the difference is divisible by 7, then the original number was divisible by 7)
+\\
+\\
+3. Compute $2021 \cdot 2019 \cdot 2018 \cdot 2017 \mod{10}$.
 
 
 \end{document}

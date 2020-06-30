@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1593486784 "d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.tex" "d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.pdf" "modular_arithmetic" 1593486785
+["pdflatex"] 1593489615 "d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.tex" "d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.pdf" "modular_arithmetic" 1593489616
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -48,13 +48,13 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/sectsty/sectsty.sty" 1469029225 23038 d476012cd03f82f9475ad54ba6cd3267 ""
   "C:/Users/jonat/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1593024496 4153041 321e425a2625a01b55711c9a3f4d8730 ""
   "C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1541821433 80423 3cfba73105275d3ad410701d89fbdf7a ""
-  "d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.aux" 1593486785 9 a94a2480d3289e625eea47cd1b285758 ""
-  "d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.tex" 1593486783 1411 e52feb88d8a606b363dcff813111b8e8 ""
-  "modular_arithmetic.aux" 1593486785 9 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "modular_arithmetic.tex" 1593486783 1411 e52feb88d8a606b363dcff813111b8e8 ""
+  "d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.aux" 1593489616 9 a94a2480d3289e625eea47cd1b285758 ""
+  "d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.tex" 1593489614 2955 8d55f914b55605ad66ff090210e7ad2b ""
+  "modular_arithmetic.aux" 1593489616 9 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "modular_arithmetic.tex" 1593489614 2955 8d55f914b55605ad66ff090210e7ad2b ""
   (generated)
-  "modular_arithmetic.log"
+  "d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.log"
+  "d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.pdf"
   "modular_arithmetic.pdf"
-  "d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.log"
-  "d:/jonat/Math_Writeups/Handouts/modular_arithmetic_beg/modular_arithmetic.pdf"
   "modular_arithmetic.aux"
+  "modular_arithmetic.log"
