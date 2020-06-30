@@ -11,6 +11,9 @@
 
 \theoremstyle{remark}
 \newtheorem*{solution}{Solution}
+
+\theoremstyle{definition}
+\newtheorem{exercise}[thm]{Exercise}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -61,7 +64,111 @@ There are $10$ cards on a table, one card for each integer between $1$ and $10$.
 Now, we have the job of choosing $3$ cards, each of which satisfies a certain condition. Although for each part we aren't given the number of ways we can complete it, we can solve for the number of ways to complete each step. For the first card, we have to choose an odd number. Between $1$ and $10$, there are $5$ odd numbers, so the first part can be done in $5$ ways. For the second part, we have to choose a prime number. There are $4$ prime numbers that we are allowed to choose, namely $2, 3, 5, $ and $7$. Therefore, there are $4$ ways to complete the second part. For the last part, there are $3$ divisors of $9$, so the last part can be completed in $3$ ways. In total, there are $5\cdot 4 \cdot 3=60$ ways to choose $3$ cards.
 \end{solution}
 
-Now we introduce a harder idea \dots
+
+\begin{example}
+Freddy has $3$ different pencils that he would like to use over the course of $3$ days. In how many ways can he use his pencils?
+
+\end{example}
+
+\begin{solution}
+We use the motivation from the previous $2$ problems. Let's think about his choices day by day. On the first day, he has $3$ pencils to choose from. On the second day, he has $2$ pencils to choose from, since he cannot choose the pencil he chose on the first day. On the third and last day, he has only $1$ pencil to choose from-the only one left. Therefore, he has $3\cdot 2\cdot 1$ ways to use $3$ pencils over the course of $3$ days.
+\end{solution}
+
+
+
+Hmmmm, the answer to this problem is $3!$, which seems like a "nice" number. 
+
+\begin{example}
+
+How many ways are there to arrange $6$ distinct children?
+\end{example}
+
+\begin{solution}
+
+Let's think about this in terms of the position that they are arranged. For the first person in line, we have $6$ ways to choose the child. For the second person in line, we have $5$ ways to choose the child, since we cannot use the child who was already chosen to be first. Similarly, for the third person, we have $4$ ways to choose the child, since we cannot use any of the two children that were already chosen. Eventually, for the last position, there is only one way to choose the child. Therefore, the answer is $6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1=6!$, since for each spot, we have one less way to choose a child for that spot.
+\end{solution}
+
+
+
+In our previous problems, our answers were $3!$ and $6!$, which are pretty similar, except with the $3$ and $6$ switched. We will try to generalize this.
+
+\begin{prop}
+The number of ways to arrange $n$ distinct items is equal to $n!$
+\end{prop}
+
+This proposition fits Example 2.5 pretty well, but how does it relate to Example 2.4? We know that $3!$ is equal to the number of ways to rearrange $3$ pencils. But, for each rearrangement, we simply choose the first pencil on day $1$, the second pencil on day $2$, and the third pencil on day $3$! Hence, each arrangement corresponds to exactly one way to use the items. In general, arranging $n$ items is the same as choosing $n$ items, then choosing $n-1$ items, then $n-2$ items, and so on , until one item it chosen. Convince yourself that this is indeed correct. 
+\newline
+
+\begin{example}
+How many ways are there to rearrange the letters in "barb"?
+\end{example}
+
+\begin{solution}
+Notice how we cannot use the proposition here, since there are $2$ b's, which are clearly not distinct. For emphasis, let the two b's be $b_1$ and $b_2$. This way we'll be able to use the proposition. It is easy to see that in this case, the answer will be $4!=24$. However, for each arrangement of $b_1$ and $b_2$, we have a similar arrangement, but with $b_1$ and $b_2$ switched. Since for the problem they are considered the same, we must divide our answer by $2$. As an example, $b_1 a b_2 r$ and $b_2 a b_1 r$ are actually the same arrangement.
+\end{solution}
+
+\begin{example}
+How many ways are there to rearrange the letters in "juggling"?
+\end{example}
+
+\begin{solution}
+We see that this problem is very similar to the previous one, except we now have $3$ repeated letters instead of $2$. However, the idea is essentially the same. If we label the g's as $g_1, g_2$, and $g_3$, for each configuration, the g's can be rearranged in $3!$ ways. Therefore, the answer is $\frac{8!}{3!}=6720$, where $8!$ is the initial count of arranging the letters, and the $3!$ exists because the g's are identical.
+\end{solution}
+
+\begin{thm}
+Placeholder
+\end{thm}
+
+The next two examples demonstrate two key ideas.
+
+\begin{example}
+If there are $5$ people, how many ways are there to choose a captain and a secretary for the math team if a person cannot be both the captain and the secretary?
+\end{example}
+
+\begin{solution}
+We can treat the captain as the first role and the secretary as the second role. For the captain, we have $5$ ways of choosing a person; each person is eligible. For the secretary, we have $4$ ways of choosing a person; everyone except the person who got chosen as the captain. Therefore, there are $5\cdot 4=20 $ ways of choosing a captain and a secretary.
+\end{solution}
+
+\begin{example}
+If there are $5$ people, how many ways can I choose $2$ people to be part of a jury?
+\end{example}
+
+\begin{solution}
+If we do the same thing as the previous problem, we end up with an answer of $20$. However, the key difference here is that the roles are the same, rather than distinct. For instance, in this problem, Ann and Bob being chosen are the same. For the previous problem, this would count as two ways, one for Ann as President and one for Bob as President. Since each time $2$ people are chosen we actually count it as one, we have to divide the answer from the previous problem by $2$. Therefore, our answer is $10$.
+\end{solution}
+
+Example 2.10 illustrates an idea known as \textbf{permutations} and Example 2.11 illustrates an idea known as \textbf{combinations}. Let's see if we can generalize them.
+
+\begin{prop}
+In simple language, if we want to choose $k$ items from a total of $n$ items such that the order they are chosen matters, we have a \textbf{permutation}. The number of ways to choose them is $\frac{n!}{(n-k)}!$.
+\end{prop}
+
+\begin{prop}
+If we want to choose $k$ items from a total of $n$ items such that the order they are chosen does not matter, we have something known as a \textbf{combination}. The number of ways to choose the item is $\frac{n!}{(n-k)!k!}$. Typically, this is written as $\binom{n}{k}.$
+\end{prop}
+
+Try to figure out yourself why this is true, and test these propositions with the previous examples.
+
+\subsection*{Exercises}
+
+\begin{exercise}
+How many ways can I choose two co-captains for my math team?
+\end{exercise}
+
+\begin{exercise}
+How many ways are there to arrange the letters in "monsoon"?
+\end{exercise}
+
+\begin{exercise}
+Convince yourself that the propositions and theorems from this section are true.
+\end{exercise}
+
+\begin{exercise}
+From a group of $5$ adults and $6$ children, how many ways are there to choose $3$ adults and $3$ children?
+\end{exercise}
+
+
+
 
 
 
@@ -70,11 +177,38 @@ Now we introduce a harder idea \dots
 Constructive counting is perhaps one of the most intuitive and easiest methods of counting. Simply put, one counts the number of ways to construct each step of a process, and manipulates those numbers in order to find the total amount of ways to complete a process. It is a natural step from simply the fundamentals and acts as a bridge for more advanced counting techniques. In addition, constructive counting occurs frequently in both the AMC 10/12 and AIME, so it is a good idea to start with this topic.
 
 \begin{example}
-(AIME 2003)
+(Mathcounts Mini) A palindrome is a number that reads the same forwards and backwards. How many $7$ digit palindromes are there?
 
 \end{example}
 
+\begin{solution}
+Since the numbers read the same forward and backwards, the first digit is the same as the last digit, the second is the same as the second to last digit, and so on. The example asks for the number of $7$ digit palindromes, so first and 7th digits are identical, the second and 6th digits are identical, the third and 5th digits are identical, and the 4th digit is by itself. Let's consider the first digit. Clearly, it can be any integer from $1$ to $9$. However, once this is decided, the 7th digit is chosen as well, since those digits must be the same. Similarly, once we have chosen the second digit, we have chosen the 6th digit as well. In this case, we have $10$ options for the choices, since we can use $0$ here as well. For the third and fifth digits, it is the same; we have $10$ choices. For the fourth digit, we have $10$ choices as well. Therefore, the answer to the example is $9\cdot 10\cdot 10 \cdot 10=9000$, where each factor corresponds to the number of ways to choose a digit.
+\end{solution}
 
+\begin{example}
+How many ways are there to arrange $2$ grandparents, $3$ fathers, and $4$ children in a row if the children insist on being next to each other?
+\end{example}
+
+\begin{solution}
+Since the children will all be next to each other, we can think of them as a block. Now, we have $2$ grandparents, $3$ fathers, and $1$ block of children. Since all of them are distinct, there are $6!=720$ ways of arranging them. However, within the block of children, we have $4!=24$ ways to arrange the children. Therefore, our final answer is $720\cdot 24=17280.$
+\end{solution}
+
+\begin{example}
+How many ways are there to arrange the letters in "violin" such that none of the vowels are next to each other?
+\end{example}
+
+\begin{solution}
+We can begin by first placing the consonants since they have no restrictions. There are $3$ consonants so we have $3!=6$ ways to arrange them. Now we tackle the vowels. 
+Imagine that there are $4$ spaces, $2$ before and after the $3$ consonants, and $2$ between the consonants. Clearly, these spaces are not adjacent. This means that we can choose any $3$ of them to hold our vowels. There are $\binom{4}{3}=4$ ways to choose the spaces we use, and $3!=6$ ways to arrange the $3$ vowels in those spots. Our final answer is $6\cdot 4\cdot 6=144$.
+\end{solution}
+
+\begin{example}
+(2003 AIME) Define a $good~word$ as a sequence of letters that consists only of the letters $A$, $B$, and $C$ - some of these letters may not appear in the sequence - and in which $A$ is never immediately followed by $B$, $B$ is never immediately followed by $C$, and $C$ is never immediately followed by $A$. How many seven-letter good words are there?
+\end{example}
+
+\begin{solution}
+Consider the first letter. We have $3$ choices for it. Then, no matter what letter we choose, we have $2$ possibilities for the next letter. Similarly, no matter what letter we choose for the second letter, there are $2$ options for the third letter. This means that for all of the letters except the first one, we have $2$ options. Since we have $7$ digits in total, our answer is $3\cdot 2^6=192.$
+\end{solution}
 
 
 
