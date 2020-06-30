@@ -4,7 +4,7 @@ Each handout/subject should have a folder just to keep it organized.
 
 ### Counting
 
-- Techniques for Elementary Counting (PCChess, June 2020)
+- [Techniques for Elementary Counting](https://github.com/focus-learning/handouts/blob/master/counting/Counting_Handout.pdf) (PCChess, June 2020)
 
 ### Number Theory
 
