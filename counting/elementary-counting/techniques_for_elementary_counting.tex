@@ -21,6 +21,12 @@
 
 \usepackage[inline]{asymptote}
 
+\linespread{1.1}
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.8em}
+
+
+
 \title{Techniques for Elementary Counting}
 
 \author{Perryn Chang}
@@ -31,12 +37,12 @@
 \maketitle
 
 \begin{abstract}
-In this handout, we will give a basic overview of the counting techniques needed for the AMC Series. The difficulty will mostly be for the AMC 10, but may progress to the difficulty of the AIME.
+In this handout, we will give a basic overview of the counting techniques needed for the AMC Series. Section $2$ will provide the fundamentals needed for competition math, while sections $3,4$, $5$ go more in depth on various techniques. The handout's difficulty increases rather quickly during section $2$, so I recommend looking over the examples to see which ones cater to your ability. If you can consistently score over $90$ on the AMC 10, I recommend starting from section 2. The examples would most likely be too easy for anyone who has qualified for the AIME, so I would recommend those readers to do the exercises at the end of the sections as review and then immediately skip to the problem set. Enjoy! 
 \end{abstract}
 
 \section{Introduction}
 
-Learning to count is one of the most fundamental skills every student learns in elementary combinatorics. Therefore, we begin by learning the most common ways of counting: casework, complementary counting, and constructive counting.
+Learning to count is one of the most fundamental skills every student learns in elementary combinatorics. We begin with the counting fundamentals and then dive into the three most common techniques for counting: Constructive Counting, Casework Counting, and Complementary Counting.
 
 \section{Fundamentals}
 \label{sec:examples}
@@ -318,7 +324,7 @@ Therefore, the answer is $8\cdot 2+4\cdot 3=28$.
 \end{example}
 
 \begin{solution}
-First, note that there are $15$ integers between $16$ and $30$. We have $binom{15}{3}=455$ ways of choosing $3$ numbers. Further, in order for $3$ integers to sum to an even number, there must be an odd amount of even numbers. In this problem, we must have either $1$ even number or $3$ even numbers. Also, there are $8$ even numbers between $16$ and $30$ and $7$ odd numbers between $16$ and $30$.
+First, note that there are $15$ integers between $16$ and $30$. We have $\binom{15}{3}=455$ ways of choosing $3$ numbers. Further, in order for $3$ integers to sum to an even number, there must be an odd amount of even numbers. In this problem, we must have either $1$ even number or $3$ even numbers. Also, there are $8$ even numbers between $16$ and $30$ and $7$ odd numbers between $16$ and $30$.
 \newline
 
 \textit{Case 1:} $1$ even number: We have $8$ ways of choosing an even number and $\binom{7}{2}=21$ ways to choose an odd number. There are $8\cdot 21=168$ ways total.
@@ -338,7 +344,7 @@ Add self created example later
 \subsection*{Exercises}
 
 \begin{exercise}
-(2019 AMC) For a set of four distinct lines in a plane, there are exactly $N$ distinct points that lie on two or more of the lines. What is the sum of all possible values of $N$?
+(2014 AMC) Four fair six-sided dice are rolled. What is the probability that at least three of the four dice show the same value?
 \end{exercise}
  
 \begin{exercise}
@@ -365,5 +371,146 @@ draw((0,0)--(2,0)--(2,1)--(0,1)--cycle); draw((1,0)--(1,1));
 
 \section{Complementary Counting}
 Complementary counting is the idea of counting the amount of things we don't want and subtracting that count from the total number of possibilities. Typically, it is used in conjunction with the previous methods in order to solve most problems. This is also the final method that we'll be going over. Almost all of the more advanced techniques use a combination of the elementary ways to count. 
+
+Let's start with a simple example.
+
+\begin{example}
+How many $5$ digit numbers have at least $1$ one?
+\end{example}
+
+\begin{solution}
+Rather than do casework based on the number of ones, we count the opposite: The number of $5$ digit numbers that have no ones. Then, we subtract this count from the total number of $5$ digit integers. Our difference is naturally the number of $5$ digit integers that have at least $1$ one. The amount of $5$ digit numbers is simply $9\cdot 10^4=90000$ by considering the digits. The amount of $5$ digit numbers without any ones is $8\cdot 9^4=52488$ by letting each digit be any integer except one. Our answer is $90000-52488=37512$.
+\end{solution}
+
+\begin{example}
+(2002 AIME) Many states use a sequence of three letters followed by a sequence of three digits as their standard license-plate pattern. Given that each three-letter three-digit arrangement is equally likely, the probability that such a license plate will contain at least one palindrome (a three-letter arrangement or a three-digit arrangement that reads the same left-to-right as it does right-to-left) is $\dfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n.$
+\end{example}
+
+\begin{solution}
+We begin by finding the total number of arrangements without any restrictions. Since there are $26$ letters and $10$ digits, there are $26^3\cdot 10^3$ possibilities. Now, we find the number of arrangements such that there are no palindromes. Consider the letters first. We have $26$ ways to choose the first digit and $26$ ways to choose the second digit. For the last letter, we have $25$ ways to choose it, since it can't be the same as the first letter. Now let's consider the digits. There are $10$ ways each for the first and second digit. For the last digit, we have $9$ ways of choosing it, since it can't be the same as the first digit. In total, we have $26^2\cdot 25 \cdot 10^2 \cdot 9$ ways of choosing the digits such that we don't have a palindrome. The probability that we do not have a palindrome is $\frac{26^2\cdot 25\cdot 10^2 \cdot 9}{26^3\cdot 10^3}=\frac{45}{52}$. This is what we don't want, so we subtract this from one, and our desired probability is $\frac{7}{52}$. Our final answer is $59$.
+\end{solution}
+
+The next example uses an idea that is based on constructive counting. I will show the theorem and the reader will get a chance to prove it themselves.
+
+\begin{thm}
+Consider an $m \times n$ grid. The number of ways to get from one corner to the opposite corner in the shortest number of moves is $\binom{m+n}{n}$.
+\end{thm}
+
+\begin{example}
+Chu is at the point $(0,0)$ on the coordinate grid. How many ways can he get to to the point $(5,6)$ via the lattice points if he only goes up or right at each lattice point and wants to avoid the point $(1,4)$?
+\end{example}
+
+\begin{solution}
+Without any restrictions, Chu has $\binom{11}{5}=462$ ways of getting to his destination. We now consider the cases where he has to go through the point $(1,4).$ To get from $(0,0)$ to $(1,4)$, he has $\binom{5}{4}=5$ ways to do so. Then, to get from $(1,4)$ to $(5,6)$, he has $\binom{6}{4}=15$ ways to do so. Therefore, there are $5\cdot 15=75$ ways to get from $(0,0)$ to $(5,6)$ via $(1,4)$. Since this is what we don't want, we subtract it from the final count, so our answer is $462-75=387$.
+\end{solution}
+
+
+\begin{example}
+(2017 AMC) How many triangles with positive area have all their vertices at points $(i,j)$ in the coordinate plane, where $i$ and $j$ are integers between $1$ and $5$, inclusive?
+\end{example}
+
+\begin{solution}
+Notice that any three points determine a unique triangle. The only exception to this is when the three points are collinear, so this hints at complementary counting. We start by counting the total number of (possibly-degenerate) triangles. Since there are $25$ points, there are $\binom{25}{3}=2300$ triangles in our initial count. We then do casework on where the collinear points lie.
+
+\textit{Case 1:} $3$ points among $5$ collinear points: The rows, columns, and main diagonals have $5$ points. Since there are $5$ rows, $5$, columns, and $2$ main diagonals, and for each one we have $\binom{5}{3}=10$ ways of choosing $3$ collinear points, there are $12\cdot10=120$ degenerate triangles here.
+\newline
+
+\textit{Case 2:} $3$ points among $4$ collinear points: These consists of the diagonals adjacent to the main diagonals, and there are $4$ of them. For each of these diagonals, we can choose $\binom{4}{3}$ points, so there are $4\cdot 4=16$ degenerate triangles here.
+
+\textit{Case 3:} $3$ points among $3$ collinear points: These consists of the diagonals parallel to the ones counted in case $2$ and the lines of slope $2,\frac{1}{2}, -\frac{1}{2}$, and $-2$. For the diagonals parallel to the ones in case $2$, there are $4$ of them, and each possibility has $1$ degenerate triangle. For the cases where the slope isn't $1$ or $-1$, there are $3$ possibilities for each of them, and each possibility has $1$ degenerate triangle. Therefore, for this case, there are $4+4\cdot3=16$ total degenerate triangles.
+
+Since these cases are what we don't want, our answer is $2300-120-16-16=2148$.
+\end{solution}
+
+\subsection*{Exercises}
+\begin{exercise}
+(2006 AMC) How many four-digit positive integers have at least one digit that is a $2$ or a $3$?
+\end{exercise}
+
+\begin{exercise}
+(2008 AMC) A parking lot has $16$ spaces in a row. Twelve cars arrive, each of which requires one parking space, and their drivers chose spaces at random from among the available spaces. Auntie Em then arrives in her SUV, which requires $2$ adjacent spaces. What is the probability that she is able to park?
+\end{exercise}
+
+\begin{exercise}
+(HMMT) Find the number of ordered pairs of integers $(a, b)$ such that $a, b$ are divisors of $720$ but $ab$ is not.
+\end{exercise}
+
+\section{Problems}
+This section will contain problems from various competitions. They are arranged \textit{roughly} in order. Problems near the end will be especially tricky.
+
+\begin{exercise}
+(PUMaC) How many ways can you arrange $3$ Alice’s, $1$ Bob, $3$ Chad’s, and $1$ David in a line if the Alice’s are all indistinguishable, the Chad’s are all indistinguishable, and Bob and David want to be adjacent to each other? (In other words, how many ways can you arrange $3$ A’s, $1$ B, $3$ C’s,and $1$ D in a row where the B and D are adjacent?)
+\end{exercise}
+
+\begin{exercise}
+(P\_Groudon January Mock AMC) How many ways can 2 $As$, 2 $Bs$, 1 $C$, 1 $D$, and 1 $E$ be arranged in a line such that the two $As$ are next to each other or the two $Bs$ are next to each other, but not both at the same time?
+\end{exercise}
+
+\begin{exercise}
+(HMMT) How many distinct permutations of the letters of the word REDDER are there that do not contain a palindromic substring of length at least two? (A substring is a contiguous block of letters that is part of the string. A string is palindromic if it is the same when read backwards.)
+\end{exercise}
+
+\begin{exercise}
+(AOIME) Find the number of ordered pairs of positive integers $(m,n)$ such that ${m^2n = 20 ^{20}}$.
+\end{exercise}
+
+\begin{exercise}
+(PUMaC) There are five dots arranged in a line from left to right. Each of the dots is colored from one of five colors so that no $3$ consecutive dots are all the same color. How many ways are there to color the dots?
+\end{exercise}
+
+\begin{exercise}
+(2019 AMC) How many positive integer divisors of $201^9$ are perfect squares or perfect cubes (or both)?
+\end{exercise}
+
+\begin{exercise}
+(PUMaC) Chitoge is painting a cube; she can paint each face either black or white, but she wants no vertex of the cube to be touching three faces of the same color. In how many ways can Chitoge paint the cube? Two paintings of a cube are considered to be the same if you can rotate one cube so that it looks like the other cube.
+\end{exercise}
+
+\begin{exercise}
+(2018 AMC) Three young brother-sister pairs from different families need to take a trip in a van. These six children will occupy the second and third rows in the van, each of which has three seats. To avoid disruptions, siblings may not sit right next to each other in the same row, and no child may sit directly in front of his or her sibling. How many seating arrangements are possible for this trip?
+\end{exercise}
+
+\begin{exercise}
+(2017 AMC) Three fair six-sided dice are rolled. What is the probability that the values shown on two of the dice sum to the value shown on the remaining die?
+\end{exercise}
+
+\begin{exercise}
+(2019 AMC) A child builds towers using identically shaped cubes of different color. How many different towers with a height $8$ cubes can the child build with $2$ red cubes, $3$ blue cubes, and $4$ green cubes? (One cube will be left out.)
+\end{exercise}
+
+\begin{exercise}
+(2018 AMC) A number $m$ is randomly selected from the set $\{11,13,15,17,19\}$, and a number $n$ is randomly selected from $\{1999,2000,2001,\newline \ldots,2018\}$. What is the probability that $m^n$ has a units digit of $1$?
+\end{exercise}
+
+\begin{exercise}
+(HMMT) There are $10$ people who want to choose a committee of $5$ people among them. They do this by first electing a set of $1, 2, 3$, or $4$ committee leaders, who then choose among the remaining people to complete the $5$-person committee. In how many ways can the committee be formed, assuming that people are distinguishable? (Two committees that have the same members but different sets of leaders are considered to be distinct.)
+\end{exercise}
+
+\begin{exercise}
+(OTSS Season 1) Let $(a \oplus b)$ denote the bitwise exclusive-or (XOR) of $a$ and $b$. This is equivalent to adding $a$ and $b$ in binary (base-two), but discarding the "carry" to the next place value if it is applicable. For instance, $(1_2 \oplus 1_2) = 0_2$, $(1_2 \oplus 0_2) = 1_2$, and $(5\oplus 3)= (101_2\oplus 011_2)= 110_2$. How many ordered pairs of nonnegative integers $(x,y)$ both less than $32$ satisfy $(x \oplus y) > x \geq y$?
+\end{exercise}
+
+\begin{exercise}
+(2005 AIME) Robert has $4$ indistinguishable gold coins and $4$ indistinguishable silver coins. Each coin has an engraving of one face on one side, but not on the other. He wants to stack the eight coins on a table into a single stack so that no two adjacent coins are face to face. Find the number of possible distinguishable arrangements of the $8$ coins.
+\end{exercise}
+
+\begin{exercise}
+(2004 AIME) How many positive integers less than $10,000$ have at most two different digits?
+\end{exercise}
+
+\begin{exercise}
+(2020 AIME) Six cards numbered $1$ through $6$ are to be lined up in a row. Find the number of arrangements of these six cards where one of the cards can be removed leaving the remaining five cards in either ascending or descending order.
+\end{exercise}
+
+\begin{exercise}
+(2017 AIME) A $10\times 10\times 10$ grid of points consists of all points in space of the form $(i,j,k)$, where $i$, $j$, and $k$ are integers between $1$ and $10$, inclusive. Find the number of different lines that contain exactly $8$ of these points.
+\end{exercise}
+
+\begin{exercise}
+(2004 AIME) For all positive integers $ x$, let
+\[ f(x) = \begin{cases}1 & \text{if }x = 1 \\
+\frac x{10} & \text{if }x\text{ is divisible by 10} \\
+x + 1 & \text{otherwise}\end{cases}\]and define a sequence as follows: $ x_1 = x$ and $ x_{n + 1} = f(x_n)$ for all positive integers $ n$. Let $ d(x)$ be the smallest $ n$ such that $ x_n = 1$. (For example, $ d(100) = 3$ and $ d(87) = 7$.) Let $ m$ be the number of positive integers $ x$ such that $ d(x) = 20$. Find the sum of the distinct prime factors of $ m$.
+\end{exercise}
 
 \end{document}
