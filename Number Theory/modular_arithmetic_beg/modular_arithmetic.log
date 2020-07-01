@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2020.6.24)  30 JUN 2020 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2020.6.24)  1 JUL 2020 00:18
 entering extended mode
 **"d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.tex"
 ("d:/jonat/GitHub/RadiantCheddar/handouts/Number Theory/modular_arithmetic_beg/modular_arithmetic.tex"
@@ -93,6 +93,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks25
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\mdframed\mdframed.sty"
 Package: mdframed 2013/07/01 1.9b: mdframed
  ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
@@ -137,12 +148,12 @@ Package: expl3 2020-06-18 L3 programming layer (code)
 \l_tmpb_dim=\dimen117
 \g_tmpa_dim=\dimen118
 \g_tmpb_dim=\dimen119
-\c_zero_skip=\skip46
-\c_max_skip=\skip47
-\l_tmpa_skip=\skip48
-\l_tmpb_skip=\skip49
-\g_tmpa_skip=\skip50
-\g_tmpb_skip=\skip51
+\c_zero_skip=\skip49
+\c_max_skip=\skip50
+\l_tmpa_skip=\skip51
+\l_tmpb_skip=\skip52
+\g_tmpa_skip=\skip53
+\g_tmpb_skip=\skip54
 \c_zero_muskip=\muskip11
 \c_max_muskip=\muskip12
 \l_tmpa_muskip=\muskip13
@@ -318,47 +329,47 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-\mdf@templength=\skip52
+\mdf@templength=\skip55
 \c@mdf@globalstyle@cnt=\count194
-\mdf@skipabove@length=\skip53
-\mdf@skipbelow@length=\skip54
-\mdf@leftmargin@length=\skip55
-\mdf@rightmargin@length=\skip56
-\mdf@innerleftmargin@length=\skip57
-\mdf@innerrightmargin@length=\skip58
-\mdf@innertopmargin@length=\skip59
-\mdf@innerbottommargin@length=\skip60
-\mdf@splittopskip@length=\skip61
-\mdf@splitbottomskip@length=\skip62
-\mdf@outermargin@length=\skip63
-\mdf@innermargin@length=\skip64
-\mdf@linewidth@length=\skip65
-\mdf@innerlinewidth@length=\skip66
-\mdf@middlelinewidth@length=\skip67
-\mdf@outerlinewidth@length=\skip68
-\mdf@roundcorner@length=\skip69
-\mdf@footenotedistance@length=\skip70
-\mdf@userdefinedwidth@length=\skip71
-\mdf@needspace@length=\skip72
-\mdf@frametitleaboveskip@length=\skip73
-\mdf@frametitlebelowskip@length=\skip74
-\mdf@frametitlerulewidth@length=\skip75
-\mdf@frametitleleftmargin@length=\skip76
-\mdf@frametitlerightmargin@length=\skip77
-\mdf@shadowsize@length=\skip78
-\mdf@extratopheight@length=\skip79
-\mdf@subtitleabovelinewidth@length=\skip80
-\mdf@subtitlebelowlinewidth@length=\skip81
-\mdf@subtitleaboveskip@length=\skip82
-\mdf@subtitlebelowskip@length=\skip83
-\mdf@subtitleinneraboveskip@length=\skip84
-\mdf@subtitleinnerbelowskip@length=\skip85
-\mdf@subsubtitleabovelinewidth@length=\skip86
-\mdf@subsubtitlebelowlinewidth@length=\skip87
-\mdf@subsubtitleaboveskip@length=\skip88
-\mdf@subsubtitlebelowskip@length=\skip89
-\mdf@subsubtitleinneraboveskip@length=\skip90
-\mdf@subsubtitleinnerbelowskip@length=\skip91
+\mdf@skipabove@length=\skip56
+\mdf@skipbelow@length=\skip57
+\mdf@leftmargin@length=\skip58
+\mdf@rightmargin@length=\skip59
+\mdf@innerleftmargin@length=\skip60
+\mdf@innerrightmargin@length=\skip61
+\mdf@innertopmargin@length=\skip62
+\mdf@innerbottommargin@length=\skip63
+\mdf@splittopskip@length=\skip64
+\mdf@splitbottomskip@length=\skip65
+\mdf@outermargin@length=\skip66
+\mdf@innermargin@length=\skip67
+\mdf@linewidth@length=\skip68
+\mdf@innerlinewidth@length=\skip69
+\mdf@middlelinewidth@length=\skip70
+\mdf@outerlinewidth@length=\skip71
+\mdf@roundcorner@length=\skip72
+\mdf@footenotedistance@length=\skip73
+\mdf@userdefinedwidth@length=\skip74
+\mdf@needspace@length=\skip75
+\mdf@frametitleaboveskip@length=\skip76
+\mdf@frametitlebelowskip@length=\skip77
+\mdf@frametitlerulewidth@length=\skip78
+\mdf@frametitleleftmargin@length=\skip79
+\mdf@frametitlerightmargin@length=\skip80
+\mdf@shadowsize@length=\skip81
+\mdf@extratopheight@length=\skip82
+\mdf@subtitleabovelinewidth@length=\skip83
+\mdf@subtitlebelowlinewidth@length=\skip84
+\mdf@subtitleaboveskip@length=\skip85
+\mdf@subtitlebelowskip@length=\skip86
+\mdf@subtitleinneraboveskip@length=\skip87
+\mdf@subtitleinnerbelowskip@length=\skip88
+\mdf@subsubtitleabovelinewidth@length=\skip89
+\mdf@subsubtitlebelowlinewidth@length=\skip90
+\mdf@subsubtitleaboveskip@length=\skip91
+\mdf@subsubtitlebelowskip@length=\skip92
+\mdf@subsubtitleinneraboveskip@length=\skip93
+\mdf@subsubtitleinnerbelowskip@length=\skip94
  ("C:\Program Files\MiKTeX 2.9\tex\latex\mdframed\md-frame-0.mdf"
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
@@ -367,33 +378,33 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@splitbox@one=\box49
 \mdf@splitbox@two=\box50
 \mdf@splitbox@save=\box51
-\mdfsplitboxwidth=\skip92
-\mdfsplitboxtotalwidth=\skip93
-\mdfsplitboxheight=\skip94
-\mdfsplitboxdepth=\skip95
-\mdfsplitboxtotalheight=\skip96
-\mdfframetitleboxwidth=\skip97
-\mdfframetitleboxtotalwidth=\skip98
-\mdfframetitleboxheight=\skip99
-\mdfframetitleboxdepth=\skip100
-\mdfframetitleboxtotalheight=\skip101
-\mdffootnoteboxwidth=\skip102
-\mdffootnoteboxtotalwidth=\skip103
-\mdffootnoteboxheight=\skip104
-\mdffootnoteboxdepth=\skip105
-\mdffootnoteboxtotalheight=\skip106
-\mdftotallinewidth=\skip107
-\mdfboundingboxwidth=\skip108
-\mdfboundingboxtotalwidth=\skip109
-\mdfboundingboxheight=\skip110
-\mdfboundingboxdepth=\skip111
-\mdfboundingboxtotalheight=\skip112
-\mdf@freevspace@length=\skip113
-\mdf@horizontalwidthofbox@length=\skip114
-\mdf@verticalmarginwhole@length=\skip115
-\mdf@horizontalspaceofbox=\skip116
-\mdfsubtitleheight=\skip117
-\mdfsubsubtitleheight=\skip118
+\mdfsplitboxwidth=\skip95
+\mdfsplitboxtotalwidth=\skip96
+\mdfsplitboxheight=\skip97
+\mdfsplitboxdepth=\skip98
+\mdfsplitboxtotalheight=\skip99
+\mdfframetitleboxwidth=\skip100
+\mdfframetitleboxtotalwidth=\skip101
+\mdfframetitleboxheight=\skip102
+\mdfframetitleboxdepth=\skip103
+\mdfframetitleboxtotalheight=\skip104
+\mdffootnoteboxwidth=\skip105
+\mdffootnoteboxtotalwidth=\skip106
+\mdffootnoteboxheight=\skip107
+\mdffootnoteboxdepth=\skip108
+\mdffootnoteboxtotalheight=\skip109
+\mdftotallinewidth=\skip110
+\mdfboundingboxwidth=\skip111
+\mdfboundingboxtotalwidth=\skip112
+\mdfboundingboxheight=\skip113
+\mdfboundingboxdepth=\skip114
+\mdfboundingboxtotalheight=\skip115
+\mdf@freevspace@length=\skip116
+\mdf@horizontalwidthofbox@length=\skip117
+\mdf@verticalmarginwhole@length=\skip118
+\mdf@horizontalspaceofbox=\skip119
+\mdfsubtitleheight=\skip120
+\mdfsubsubtitleheight=\skip121
 \c@mdfcountframes=\count195
 
 ****** mdframed patching \endmdf@trivlist
@@ -426,38 +437,41 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen146
 \ar@mcellbox=\box52
 \extrarowheight=\dimen147
-\NC@list=\toks20
-\extratabsurround=\skip119
-\backup@length=\skip120
+\NC@list=\toks26
+\extratabsurround=\skip122
+\backup@length=\skip123
 \ar@cellbox=\box53
-) ("d:/jonat\GitHub\RadiantCheddar\handouts\Number Theory\modular_arithmetic_beg\modular_arithmetic.aux")
+)
+\c@thm=\count266
+\c@corollary=\count267
+ ("d:/jonat\GitHub\RadiantCheddar\handouts\Number Theory\modular_arithmetic_beg\modular_arithmetic.aux")
 \openout1 = `modular_arithmetic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count266
+\scratchcounter=\count268
 \scratchdimen=\dimen148
 \scratchbox=\box54
-\nofMPsegments=\count267
-\nofMParguments=\count268
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count269
+\nofMPsegments=\count269
+\nofMParguments=\count270
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count271
 \MPscratchDim=\dimen149
-\MPnumerator=\count270
-\makeMPintoPDFobject=\count271
-\everyMPtoPDFconversion=\toks22
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
+\everyMPtoPDFconversion=\toks28
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
@@ -469,154 +483,179 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box55
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 38.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 62.
 [1
 
 {C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 54--61
+Underfull \hbox (badness 10000) in paragraph at lines 77--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--61
+Underfull \hbox (badness 10000) in paragraph at lines 77--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--61
+Underfull \hbox (badness 10000) in paragraph at lines 77--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+Underfull \hbox (badness 10000) in paragraph at lines 89--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 96.
 [2]
-Package mdframed Info: Not enough space on this page on input line 74.
+Package mdframed Info: Not enough space on this page on input line 99.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 101.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 115.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 125.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 135.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
+Underfull \hbox (badness 10000) in paragraph at lines 139--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
+Underfull \hbox (badness 10000) in paragraph at lines 139--145
 
  []
 
-Package mdframed Info: Not enough space on this page on input line 122.
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--145
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 147.
 [3]
-Package mdframed Info: Not enough space on this page on input line 122.
+Package mdframed Info: Not enough space on this page on input line 160.
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--129
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--147
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--154
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--154
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--154
-
- []
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
+
+ []
+
+[4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 195.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 228.
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
 
  []
 
 [6] ("d:/jonat\GitHub\RadiantCheddar\handouts\Number Theory\modular_arithmetic_beg\modular_arithmetic.aux") ) 
 Here is how much of TeX's memory you used:
- 14908 strings out of 492970
- 280266 string characters out of 3135855
- 334026 words of memory out of 3000000
- 18705 multiletter control sequences out of 15000+200000
+ 15004 strings out of 492970
+ 281320 string characters out of 3135855
+ 335611 words of memory out of 3000000
+ 18797 multiletter control sequences out of 15000+200000
  538067 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,13n,63p,919b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "d:/jonat\GitHub\RadiantCheddar\handouts\Number Theory\modular_arithmetic_beg\modular_arithmetic.pdf" (6 pages, 143855 bytes).
+Output written on "d:/jonat\GitHub\RadiantCheddar\handouts\Number Theory\modular_arithmetic_beg\modular_arithmetic.pdf" (6 pages, 148284 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -12,4 +12,4 @@ Each handout/subject should have a folder just to keep it organized.
 
 ### Algebra
 
-- [The Quadratic Discriminant](https://github.com/focus-learning/handouts/blob/master/algebra/quadratic-discriminant/quadratic-discriminant.pdf) (Alexander Chen, July 2020)
+- [Introduction to Quadratics](https://github.com/focus-learning/handouts/blob/master/algebra/intro-to-quadratics/intro-to-quadratics.pdf) (Alexander Chen, July 2020)
