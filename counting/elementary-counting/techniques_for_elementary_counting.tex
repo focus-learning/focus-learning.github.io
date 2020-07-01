@@ -19,6 +19,8 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
+\usepackage[inline]{asymptote}
+
 \title{Techniques for Elementary Counting}
 
 \author{Perryn Chang}
@@ -46,7 +48,7 @@ Let there be a job with $n$ parts. If the first part can be done in $a_1$ ways, 
 
 \begin{example}
 
-John's outfit consists of a hat, a shirt, and a pair of pants. If he has $5$ hats, $3$ shirts, and $2$ pants, in how many ways can John choose his outfit.
+John's outfit consists of a hat, a shirt, and a pair of pants. If he has $5$ hats, $3$ shirts, and $2$ pants, in how many ways can John choose his outfit?
 
 \end{example}
 
@@ -57,7 +59,7 @@ Here, the "job" is choosing his outfit, which consists of $3$ parts, namely choo
 
 \begin{example}
 
-There are $10$ cards on a table, one card for each integer between $1$ and $10$. In how many ways can I choose $3$ cards with replacement such that the first card I choose is odd, the second card is prime, and the third card is a divisor of $9$.
+There are $10$ cards on a table, one card for each integer between $1$ and $10$. In how many ways can I choose $3$ cards with replacement such that the first card I choose is odd, the second card is prime, and the third card is a divisor of $9$?
 \end{example}
 
 \begin{solution}
@@ -214,12 +216,12 @@ Consider the first letter. We have $3$ choices for it. Then, no matter what lett
 
 Now, we add some basic number theory to the mix. 
 
-\begin{prop}
+\begin{thm}
 If the prime factorization of a positive integer $n$ is $p_1^{e_1}p_2^{e_2} \dots p_n^{e_n}$, then $n$ has $(e_1+1)(e_2+1)(e_3+1)\dots (e_n+1)$ factors.
 
-\end{prop}
+\end{thm}
 
-We won't prove this here, but try to see why this is true. Our next problem will use a twist of this idea. The solution of it will give a sketch on why the proposition is true.
+We won't prove this here, but try to see why this is true. Our next problem will use a twist of this idea. The solution of it will give a sketch on why the theorem is true.
 \begin{example}
 How many factors of $567,000$ are perfect squares?
 \end{example}
@@ -267,6 +269,101 @@ in the list is used no more than the number of times it appears?
 \section{Casework Counting}
 In many cases, constructive counting is not enough to finish a problem. One often has to consider various cases and then count the number of ways to satisfy a condition for each specific case. In the last example of the previous section, we looked over a basic example of casework by considering the amount of black squares that were initially colored. We now begin to explore casework in more depth.
 
+\begin{example}
+In how many ways can I choose $2$ positive integers that multiply to an even integer between $5$ and $10$ inclusive?
+\end{example}
 
+\begin{solution}
+
+
+Let's call the two integers $a$ and $b$. Since we want $ab$ to multiply to an even integer between $5$ and $10$, $ab$ can equal $6, 8, $ or $10$. We take \textit{cases} on what $ab$ equals.
+\newline
+
+\textit{Case 1:} $ab=6:$ Here, $a$ can equal $1, 2, 3,$ or $6$. For each value of $a$, $b$ will just equal $6/a$. We can $6$ possible answers here.
+\newline
+
+\textit{Case 2:} $ab=8:$ Here, $a$ can equal $1, 2, 4,$ or $8$. For each value of $a$, $b$ will equal $8/a$. Therefore, we have $4$ possible answers.
+\newline
+\textit{Case 3:} $ab=10:$ Here, $a$ can equal $1, 2, 5,$ or $10$. Using the same reasoning as above, we have $4$ possible answers.
+\newline
+
+In total, we have $4(3)=12$ possibilities.
+\end{solution}
+
+\begin{example}
+(2017 AMC) Alice refuses to sit next to either Bob or Carla. Derek refuses to sit next to Eric. How many ways are there for the five of them to sit in a row of $5$ chairs under these conditions?
+\end{example}
+
+\begin{solution}
+Let the people be called $A, B, C, D$, and $E$. Since $A$ is the one with the most restrictions, we do cases on where she sits. 
+\newline
+
+\textit{Case 1:} $A$ is first: Since $A$ is first, we have $2$ options for the second person, either $D$ or $E$. For the third option, we have $2$ choices, either $B$ or $C$. For the fourth option, we have $2$ choices as well, just the two remaining options. Obviously there's only one choice for the last person, so our count here is $2^3=8$.
+\newline
+
+\textit{Case 2:} $A$ is second: The first and third positions must be occupied by $D$ and $E$, so we have $2$ possibilities here depending on the ordering of $D$ and $E$. Then, we have $2!=2$ ways of ordering $B$ and $C$ between the last two spots, so our total here is $2^2=4$.
+\newline
+
+\textit{Case 3:} $A$ is third: $D$ and $E$ must occupy the second and fourth positions, and there are $2$ ways to place $D$ and $E$ in those positions. Then, $B$ and $C$ must occupy the first and last positions, and there are $2$ ways to place $B$ and $C$ in those positions. The total here is $2^2=4$.
+\newline
+
+Notice that when $A$ is in the fourth spot, it the number of possibilities is identical to the number of possibilities in Case 2. This is because for every case in case $2$, we can simply mirror the arrangement to get a valid seating where $A$ is in the fourth spot. From a similar argument, the number of seatings where $A$ is in the fifth spot is equal to the number of seatings where $A$ is in the first spot.
+
+
+Therefore, the answer is $8\cdot 2+4\cdot 3=28$.
+\end{solution}
+
+\begin{example}
+(PUMaC) What is the probability that the sum of three distinct integers between $16$ and $30$ (inclusive) is even?
+\end{example}
+
+\begin{solution}
+First, note that there are $15$ integers between $16$ and $30$. We have $binom{15}{3}=455$ ways of choosing $3$ numbers. Further, in order for $3$ integers to sum to an even number, there must be an odd amount of even numbers. In this problem, we must have either $1$ even number or $3$ even numbers. Also, there are $8$ even numbers between $16$ and $30$ and $7$ odd numbers between $16$ and $30$.
+\newline
+
+\textit{Case 1:} $1$ even number: We have $8$ ways of choosing an even number and $\binom{7}{2}=21$ ways to choose an odd number. There are $8\cdot 21=168$ ways total.
+\newline
+
+\textit{Case 2:} $3$ even numbers: We have $\binom{8}{3}=56$ ways of choosing $3$ even numbers. 
+\newline
+
+Therefore, our answer is $\frac{168+56}{455}=\frac{32}{65}$.
+
+\end{solution}
+
+\begin{example}
+Add self created example later
+\end{example}
+
+\subsection*{Exercises}
+
+\begin{exercise}
+(2019 AMC) For a set of four distinct lines in a plane, there are exactly $N$ distinct points that lie on two or more of the lines. What is the sum of all possible values of $N$?
+\end{exercise}
+ 
+\begin{exercise}
+(2015 AMC) Eight people are sitting around a circular table, each holding a fair coin. All eight people flip their coins and those who flip heads stand while those who flip tails remain seated. What is the probability that no two adjacent people will stand?
+\end{exercise}
+
+\begin{exercise}
+(HMMT) A $4\times 4$ window is made out of $16$ square windowpanes. How many ways are there to stain each of the windowpanes, red, pink, or magenta, such that each windowpane is the same color as exactly two of its neighbors? Two different windowpanes are neighbors if they share a side.
+\end{exercise}
+
+\begin{exercise}
+(HMMT) Let $R$ be the rectangle in the Cartesian plane with vertices at $(0,0), (2,0), (2,1),$ and $(0,1)$. $R$ can be divided into two unit squares, as shown; the resulting figure has seven edges. How many subsets of these seven edges form a connected figure?
+
+\begin{center}
+
+\begin{asy}
+size(3cm);
+draw((0,0)--(2,0)--(2,1)--(0,1)--cycle); draw((1,0)--(1,1)); 
+\end{asy}
+
+\end{center}
+
+\end{exercise}
+
+\section{Complementary Counting}
+Complementary counting is the idea of counting the amount of things we don't want and subtracting that count from the total number of possibilities. Typically, it is used in conjunction with the previous methods in order to solve most problems. This is also the final method that we'll be going over. Almost all of the more advanced techniques use a combination of the elementary ways to count. 
 
 \end{document}
