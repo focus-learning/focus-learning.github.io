@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  1 JUL 2020 10:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  1 JUL 2020 10:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -193,20 +193,20 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )) (build/quadratic-discriminant.aux)
 \openout1 = `quadratic-discriminant.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
 \AtBeginShipoutBox=\box51
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -223,48 +223,48 @@ LaTeX Font Info:    ... okay on input line 10.
 \makeMPintoPDFobject=\count193
 \everyMPtoPDFconversion=\toks20
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-Package mdframed Info: Not enough space on this page on input line 35.
+Package mdframed Info: Not enough space on this page on input line 34.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package mdframed Info: Not enough space on this page on input line 35.
+Package mdframed Info: Not enough space on this page on input line 34.
  [2] (build/quadratic-discriminant.aux) ) 
 Here is how much of TeX's memory you used:
  3494 strings out of 480608
  60012 string characters out of 5903631
- 311950 words of memory out of 5000000
+ 311939 words of memory out of 5000000
  19344 multiletter control sequences out of 15000+600000
  540229 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
