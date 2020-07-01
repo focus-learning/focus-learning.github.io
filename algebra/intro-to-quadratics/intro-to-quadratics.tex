@@ -19,8 +19,9 @@
   ---Stephen Colbert
 \end{abstract}
 
+
 \section{Fundamentals}
-Quadratic equations can be found in almost every type of math, and in many math competitions.
+Quadratic equations can be found in almost every type of math, and in many math competitions. This section may be review for many of you, so feel free to skip ahead.
 \begin{mdframed}
   \textbf{Definition 1.1.} A quadratic equation is a special kind of polynomial that has a degree of 2, which means that it highest power exponent of $x$ is 2.
 \end{mdframed}
@@ -50,16 +51,47 @@ Remember, we want to find the values of x such that the above expression equals 
 
 \subsection{Completing the Square}
 Completing the square is a handy method used not only for factoring but also for many other things. The key is to transform the original quadratic as such:
-$$ax^2+bx+c=a(x+d)^2+e$$
+$$ax^2+bx+c=(x+d)^2+e=0$$
+We can use $2x^2+3x+1=0$ as an example again. Divide by two on both sides:
+$$x^2+\frac{3}{2}x+\frac{1}{2}=0$$
+If one expands $(x+c)^2$, one gets $x^2+2cx+c^2$. We match terms and see that we can rewrite the equation as follows:
+$$x^2+2 \cdot \frac{3}{4}x+\frac{9}{16}-\frac{1}{16}=0$$
+Then, factor to form the perfect square.
+$$(x+\frac{3}{4})^2=\frac{1}{16}$$
+We can take the square root of both sides and rearrange, not forgetting the $\pm$. If the right hand side is negative, we can derive the complex roots with $i$.
+$$x=\frac{-3\pm1}{16}$$
+Then, $x=-\frac{1}{2},-1$.
+\begin{mdframed}
+  \textbf{Exercise 1.6.} Complete the square and then find the roots of $x^2+6x+7$.
+\end{mdframed}
+
+\subsection{The Quadratic Formula}
+\begin{mdframed}
+  \textbf{Theorem 1.7.} The roots of a quadratic can be expressed as: $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+\end{mdframed}
+Let's prove this powerful formula. We start with the general quadratic. $$ax^2+bx+c=0$$
+Our goal is to complete the square. Divide by $a$ on both sides.
+$$x^2+\frac{b}{a}x+\frac{c}{a}=0$$
+Adding $(\frac{b}{2a})^2$, or $\frac{b^2}{4a^2}$, to both sides of the equation allows us to complete the square.
+$$x^2+\frac{b}{a}x+\frac{b^2}{4a^2}+\frac{c}{a}=\frac{b^2}{4a^2}$$
+$$(x+\frac{b}{2a})^2=\frac{b^2}{4a^2}-\frac{c}{a}$$
+Equalize the denominators on the right-hand side:
+$$(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}$$\\
+We take the square root.
+$$x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}$$
+Subtracting $\frac{b}{2a}$ gives us our final form:
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+I highly recommend you to memorize this formula if you haven't already; it's incredibly useful.
+
+\subsection{Po-Shen Loh's Quadratic Method}
+This final technique, parts of which were known by the ancient Babylonians and Vieta alike, has been recently discovered by USA IMO Coach and Carnegie Mellon Professor Po-Shen Loh.
+\\\\Let's consider the quadratic $x^2+4x+5$. 
+
 
 \section{The Discriminant}
 The discriminant is a crucial tool in solving problems related to quadratics, or polynomials of degree two.\\
 
-Recall that the general form of a quadratic is $ax^2+bx+c=0$ with $a\neq0$. To solve for the discriminant, we first divide both sides by $a$. $$x^2+\frac{b}{a}x+\frac{c}{a}=0$$
-Adding $(\frac{b}{2a})^2$, or $\frac{b^2}{4a^2}$, to both sides of the equation allows us to complete the square.
-$$x^2+\frac{b}{a}x+\frac{b^2}{4a^2}+\frac{c}{a}=\frac{b^2}{4a^2}$$
-$$(x+\frac{b}{2a})^2=\frac{b^2}{4a^2}-\frac{c}{a}$$
-We arrive at the key equation:
+Take a look at this equation, derived during our proof of the quadratic formula.
 $$(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}$$\\
 
 \begin{mdframed}
