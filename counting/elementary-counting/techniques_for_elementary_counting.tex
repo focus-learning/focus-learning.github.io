@@ -1,6 +1,7 @@
 \documentclass[letterpaper]{article}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{mdframed}
 \newtheorem{thm}{Theorem}[section]
 
 \newtheorem{prop}[thm]{Proposition}
@@ -37,7 +38,7 @@
 \maketitle
 
 \begin{abstract}
-In this handout, we will give a basic overview of the counting techniques needed for the AMC Series. Section $2$ will provide the fundamentals needed for competition math, while sections $3,4$, $5$ go more in depth on various techniques. The handout's difficulty increases rather quickly during section $2$, so I recommend looking over the examples to see which ones cater to your ability. If you can consistently score over $90$ on the AMC 10, I recommend starting from section 2. The examples would most likely be too easy for anyone who has qualified for the AIME, so I would recommend those readers to do the exercises at the end of the sections as review and then immediately skip to the problem set. Enjoy! 
+In this handout, we will go over fundamental ideas in counting as well as the basic counting strategies: Constructive Counting, Casework Counting, and Complementary Counting. Since there aren't a lot of theorems in introductory counting, this handout will primarily consist of key ideas encapsulated within worked problem. After the Introduction in part 1, we start with the fundamentals in part 2, and then we progress to the various counting strategies. The difficulty of part 2 is intended for the first half of the AMC 10, while the rest of the handout is designed for the end of the AMC 10 and the beginning of AIME. Please skip around to find the problems that will best suit you. If you can consistently score higher than a $90$ on the AMC 10, I recommend starting at part 3. If you have qualified for the AIME, the examples are probably too easy. In this case, you should go directly to the exercises. However, these are just my recommendations, so please do whatever is best for you. All of the exercises in the last section are pulled from various sources so you can search them up online to find the solutions. Enjoy!
 \end{abstract}
 
 \section{Introduction}
@@ -47,66 +48,64 @@ Learning to count is one of the most fundamental skills every student learns in 
 \section{Fundamentals}
 \label{sec:examples}
 
+\bigskip
+
+\begin{mdframed}
+
 \begin{prop}
 Let there be a job with $n$ parts. If the first part can be done in $a_1$ ways, the second part can be done in $a_2$ ways, and so on, such that the $n$th part can be done in $a_n$ ways, then the job can be done in $a_1 \cdot a_2 \cdot \dots \cdot a_n$ ways.
 
 \end{prop}
-
+\end{mdframed}
+\bigskip
 \begin{example}
-
 John's outfit consists of a hat, a shirt, and a pair of pants. If he has $5$ hats, $3$ shirts, and $2$ pants, in how many ways can John choose his outfit?
-
 \end{example}
 
 \begin{solution}
-
-Here, the "job" is choosing his outfit, which consists of $3$ parts, namely choosing his hat, his shirt, and his pants. The first part of choosing his hat can be done in $5$ ways (one for each hat). Similarly, the second part of choosing his shirt can be done in $3$ ways (one for each shirt, and the last part of choosing his pants can be done in $2$ ways. Hence, the job of choosing his outfit can be done in $5\cdot 3 \cdot 2$ ways.
+Here, the "job" is choosing his outfit, which consists of $3$ parts, namely choosing his hat, his shirt, and his pants. The first part of choosing his hat can be done in $5$ ways (one for each hat). Similarly, the second part of choosing his shirt can be done in $3$ ways (one for each shirt), and the last part of choosing his pants can be done in $2$ ways. Hence, the job of choosing his outfit can be done in $5\cdot 3 \cdot 2$ ways.
 \end{solution}
-
+\bigskip
 \begin{example}
-
 There are $10$ cards on a table, one card for each integer between $1$ and $10$. In how many ways can I choose $3$ cards with replacement such that the first card I choose is odd, the second card is prime, and the third card is a divisor of $9$?
 \end{example}
 
 \begin{solution}
-
 Now, we have the job of choosing $3$ cards, each of which satisfies a certain condition. Although for each part we aren't given the number of ways we can complete it, we can solve for the number of ways to complete each step. For the first card, we have to choose an odd number. Between $1$ and $10$, there are $5$ odd numbers, so the first part can be done in $5$ ways. For the second part, we have to choose a prime number. There are $4$ prime numbers that we are allowed to choose, namely $2, 3, 5, $ and $7$. Therefore, there are $4$ ways to complete the second part. For the last part, there are $3$ divisors of $9$, so the last part can be completed in $3$ ways. In total, there are $5\cdot 4 \cdot 3=60$ ways to choose $3$ cards.
 \end{solution}
-
-
+\bigskip
 \begin{example}
 Freddy has $3$ different pencils that he would like to use over the course of $3$ days. In how many ways can he use his pencils?
-
 \end{example}
 
 \begin{solution}
 We use the motivation from the previous $2$ problems. Let's think about his choices day by day. On the first day, he has $3$ pencils to choose from. On the second day, he has $2$ pencils to choose from, since he cannot choose the pencil he chose on the first day. On the third and last day, he has only $1$ pencil to choose from-the only one left. Therefore, he has $3\cdot 2\cdot 1$ ways to use $3$ pencils over the course of $3$ days.
 \end{solution}
 
-
-
-Hmmmm, the answer to this problem is $3!$, which seems like a "nice" number. 
+The answer to this problem is $3!$, which seems like a "nice" number...
 
 \begin{example}
-
 How many ways are there to arrange $6$ distinct children?
 \end{example}
 
 \begin{solution}
-
 Let's think about this in terms of the position that they are arranged. For the first person in line, we have $6$ ways to choose the child. For the second person in line, we have $5$ ways to choose the child, since we cannot use the child who was already chosen to be first. Similarly, for the third person, we have $4$ ways to choose the child, since we cannot use any of the two children that were already chosen. Eventually, for the last position, there is only one way to choose the child. Therefore, the answer is $6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1=6!$, since for each spot, we have one less way to choose a child for that spot.
 \end{solution}
 
+In our previous problems, our answers were $3!$ and $6!$, which are pretty similar. We will try to generalize this.
 
+\bigskip
 
-In our previous problems, our answers were $3!$ and $6!$, which are pretty similar, except with the $3$ and $6$ switched. We will try to generalize this.
-
+\begin{mdframed}
 \begin{prop}
 The number of ways to arrange $n$ distinct items is equal to $n!$
 \end{prop}
+\end{mdframed}
 
-This proposition fits Example 2.5 pretty well, but how does it relate to Example 2.4? We know that $3!$ is equal to the number of ways to rearrange $3$ pencils. But, for each rearrangement, we simply choose the first pencil on day $1$, the second pencil on day $2$, and the third pencil on day $3$! Hence, each arrangement corresponds to exactly one way to use the items. In general, arranging $n$ items is the same as choosing $n$ items, then choosing $n-1$ items, then $n-2$ items, and so on , until one item it chosen. Convince yourself that this is indeed correct. 
-\newline
+This proposition fits Example 2.5 pretty well, but how does it relate to Example 2.4? We know that $3!$ is equal to the number of ways to arrange $3$ pencils. But, for each rearrangement, we simply choose the first pencil on day $1$, the second pencil on day $2$, and the third pencil on day $3$! Hence, each arrangement corresponds to exactly one way to use the items. In general, arranging $n$ items is the same as choosing $n$ items, one at a time, until everything is chosen.
+
+\bigskip
+
 
 \begin{example}
 How many ways are there to rearrange the letters in "barb"?
@@ -116,6 +115,8 @@ How many ways are there to rearrange the letters in "barb"?
 Notice how we cannot use the proposition here, since there are $2$ b's, which are clearly not distinct. For emphasis, let the two b's be $b_1$ and $b_2$. This way we'll be able to use the proposition. It is easy to see that in this case, the answer will be $4!=24$. However, for each arrangement of $b_1$ and $b_2$, we have a similar arrangement, but with $b_1$ and $b_2$ switched. Since for the problem they are considered the same, we must divide our answer by $2$. As an example, $b_1 a b_2 r$ and $b_2 a b_1 r$ are actually the same arrangement.
 \end{solution}
 
+\bigskip
+
 \begin{example}
 How many ways are there to rearrange the letters in "juggling"?
 \end{example}
@@ -124,11 +125,35 @@ How many ways are there to rearrange the letters in "juggling"?
 We see that this problem is very similar to the previous one, except we now have $3$ repeated letters instead of $2$. However, the idea is essentially the same. If we label the g's as $g_1, g_2$, and $g_3$, for each configuration, the g's can be rearranged in $3!$ ways. Therefore, the answer is $\frac{8!}{3!}=6720$, where $8!$ is the initial count of arranging the letters, and the $3!$ exists because the g's are identical.
 \end{solution}
 
-\begin{thm}
-Placeholder
-\end{thm}
+\bigskip
+
+We will generalize this crucial idea.
+
+\bigskip
+
+\begin{mdframed}
+\begin{prop}
+Let there be $n$ total objects and $t$ types of objects such that every object in each type is identical. Then, the number of ways to arrange these $n$ objects is the total number of ways to arrange all $n$ objects divided by the product of the number of ways to arrange each type of object. Algebraically, it is $\frac{n!}{a_1! a_2! \dots a_t!}$ where each $a_i$ is the number of objects in type $i$. 
+\end{prop}
+\end{mdframed}
+
+This is pretty confusing, so lets do an example.
+
+\bigskip
+
+\begin{example}
+How many ways are there to arrange $3$ red balls, $2$ blue balls, and $1$ orange ball?
+\end{example}
+
+\begin{solution}
+There are $6$ total objects and $3$ types of objects. There are $3$ objects in the first type, $2$ objects in the second type, and $1$ object in the third type. Using the proposition, the answer is $\frac{6!}{3!2!1!}=60$.
+\end{solution}
+
+\bigskip
 
 The next two examples demonstrate two key ideas.
+
+\bigskip
 
 \begin{example}
 If there are $5$ people, how many ways are there to choose a captain and a secretary for the math team if a person cannot be both the captain and the secretary?
@@ -138,6 +163,8 @@ If there are $5$ people, how many ways are there to choose a captain and a secre
 We can treat the captain as the first role and the secretary as the second role. For the captain, we have $5$ ways of choosing a person; each person is eligible. For the secretary, we have $4$ ways of choosing a person; everyone except the person who got chosen as the captain. Therefore, there are $5\cdot 4=20 $ ways of choosing a captain and a secretary.
 \end{solution}
 
+\bigskip
+
 \begin{example}
 If there are $5$ people, how many ways can I choose $2$ people to be part of a jury?
 \end{example}
@@ -146,15 +173,23 @@ If there are $5$ people, how many ways can I choose $2$ people to be part of a j
 If we do the same thing as the previous problem, we end up with an answer of $20$. However, the key difference here is that the roles are the same, rather than distinct. For instance, in this problem, Ann and Bob being chosen are the same. For the previous problem, this would count as two ways, one for Ann as President and one for Bob as President. Since each time $2$ people are chosen we actually count it as one, we have to divide the answer from the previous problem by $2$. Therefore, our answer is $10$.
 \end{solution}
 
-Example 2.10 illustrates an idea known as \textbf{permutations} and Example 2.11 illustrates an idea known as \textbf{combinations}. Let's see if we can generalize them.
+Example 2.11 illustrates an idea known as \textbf{permutations} and Example 2.12 illustrates an idea known as \textbf{combinations}. Let's see if we can generalize them.
 
+\bigskip
+
+\begin{mdframed}
 \begin{prop}
 In simple language, if we want to choose $k$ items from a total of $n$ items such that the order they are chosen matters, we have a \textbf{permutation}. The number of ways to choose them is $\frac{n!}{(n-k)}!$.
 \end{prop}
+\end{mdframed}
 
+\begin{mdframed}
 \begin{prop}
 If we want to choose $k$ items from a total of $n$ items such that the order they are chosen does not matter, we have something known as a \textbf{combination}. The number of ways to choose the item is $\frac{n!}{(n-k)!k!}$. Typically, this is written as $\binom{n}{k}.$
 \end{prop}
+\end{mdframed}
+
+\bigskip
 
 Try to figure out yourself why this is true, and test these propositions with the previous examples.
 
@@ -183,7 +218,9 @@ From a group of $5$ adults and $6$ children, how many ways are there to choose $
 
 \section{Constructive Counting}
 
-Constructive counting is perhaps one of the most intuitive and easiest methods of counting. Simply put, one counts the number of ways to construct each step of a process, and manipulates those numbers in order to find the total amount of ways to complete a process. It is a natural step from simply the fundamentals and acts as a bridge for more advanced counting techniques. In addition, constructive counting occurs frequently in both the AMC 10/12 and AIME, so it is a good idea to start with this topic.
+Constructive counting is perhaps one of the most intuitive and easiest methods of counting. Simply put, one counts the number of ways to construct each step of a process, and manipulates those numbers in order to find the total amount of ways to complete a process. It is a natural continuation from the fundamentals and acts as a bridge for more advanced counting techniques. In addition, constructive counting occurs frequently in both the AMC 10/12 and AIME, so we introduce this topic first.
+
+\bigskip
 
 \begin{example}
 (Mathcounts Mini) A palindrome is a number that reads the same forwards and backwards. How many $7$ digit palindromes are there?
@@ -191,41 +228,47 @@ Constructive counting is perhaps one of the most intuitive and easiest methods o
 \end{example}
 
 \begin{solution}
-Since the numbers read the same forward and backwards, the first digit is the same as the last digit, the second is the same as the second to last digit, and so on. The example asks for the number of $7$ digit palindromes, so first and 7th digits are identical, the second and 6th digits are identical, the third and 5th digits are identical, and the 4th digit is by itself. Let's consider the first digit. Clearly, it can be any integer from $1$ to $9$. However, once this is decided, the 7th digit is chosen as well, since those digits must be the same. Similarly, once we have chosen the second digit, we have chosen the 6th digit as well. In this case, we have $10$ options for the choices, since we can use $0$ here as well. For the third and fifth digits, it is the same; we have $10$ choices. For the fourth digit, we have $10$ choices as well. Therefore, the answer to the example is $9\cdot 10\cdot 10 \cdot 10=9000$, where each factor corresponds to the number of ways to choose a digit.
+Since the numbers read the same forward and backwards, the first digit is the same as the last digit, the second is the same as the second to last digit, and so on. The example asks for the number of $7$ digit palindromes, so first and 7th digits are identical, the second and 6th digits are identical, the third and 5th digits are identical, and the 4th digit is by itself. Let's consider the first digit. Clearly, it can be any integer from $1$ to $9$. However, once this is decided, the 7th digit is chosen as well, since those digits must be the same. Similarly, once we have chosen the second digit, we have chosen the 6th digit as well. In this case of the second and sixth digits, we have $10$ options for the choices, since we can use $0$ here as well. For the third and fifth digits, it is the same; we have $10$ choices. For the fourth digit, we have $10$ choices as well. Therefore, the answer to the example is $9\cdot 10\cdot 10 \cdot 10=9000$, where each factor corresponds to the number of ways to choose a digit.
 \end{solution}
+
+\bigskip
 
 \begin{example}
 How many ways are there to arrange $2$ grandparents, $3$ fathers, and $4$ children in a row if the children insist on being next to each other?
 \end{example}
 
 \begin{solution}
-Since the children will all be next to each other, we can think of them as a block. Now, we have $2$ grandparents, $3$ fathers, and $1$ block of children. Since all of them are distinct, there are $6!=720$ ways of arranging them. However, within the block of children, we have $4!=24$ ways to arrange the children. Therefore, our final answer is $720\cdot 24=17280.$
+Since the children will all be next to each other, we can think of them as a block of children. Now, we have $2$ grandparents, $3$ fathers, and $1$ block of children. Since all of them are distinct, there are $6!=720$ ways of arranging them. However, within the block of children, we have $4!=24$ ways to arrange the children. Therefore, our final answer is $720\cdot 24=17280.$
 \end{solution}
+
+\bigskip
 
 \begin{example}
 How many ways are there to arrange the letters in "violin" such that none of the vowels are next to each other?
 \end{example}
 
 \begin{solution}
-We can begin by first placing the consonants since they have no restrictions. There are $3$ consonants so we have $3!=6$ ways to arrange them. Now we tackle the vowels. 
-Imagine that there are $4$ spaces, $2$ before and after the $3$ consonants, and $2$ between the consonants. Clearly, these spaces are not adjacent. This means that we can choose any $3$ of them to hold our vowels. There are $\binom{4}{3}=4$ ways to choose the spaces we use, and $3!=6$ ways to arrange the $3$ vowels in those spots. Our final answer is $6\cdot 4\cdot 6=144$.
+We can begin by first placing the consonants since they have no restrictions. There are $3$ consonants so we have $3!=6$ ways to arrange them. Now we tackle the vowels. Imagine that there are $4$ spaces, $1$ before the $3$ consonants, $1$ after the consonants, and $2$ between the consonants. Clearly, these spaces are not adjacent. This means that we can choose any $3$ of them to hold our vowels. There are $\binom{4}{3}=4$ ways to choose the spaces we use, and $3!=6$ ways to arrange the $3$ vowels in those spots. Our final answer is $6\cdot 4\cdot 6=144$.
 \end{solution}
+
+\bigskip
 
 \begin{example}
 (2003 AIME) Define a $good~word$ as a sequence of letters that consists only of the letters $A$, $B$, and $C$ - some of these letters may not appear in the sequence - and in which $A$ is never immediately followed by $B$, $B$ is never immediately followed by $C$, and $C$ is never immediately followed by $A$. How many seven-letter good words are there?
 \end{example}
 
 \begin{solution}
-Consider the first letter. We have $3$ choices for it. Then, no matter what letter we choose, we have $2$ possibilities for the next letter. Similarly, no matter what letter we choose for the second letter, there are $2$ options for the third letter. This means that for all of the letters except the first one, we have $2$ options. Since we have $7$ digits in total, our answer is $3\cdot 2^6=192.$
+Consider the first letter. We have $3$ choices for it. Then, no matter what letter we choose, we have $2$ possibilities for the next letter-any of the letters except the one that is prohibited. Similarly, no matter what letter we choose for the second letter, there are $2$ options for the third letter. This means that for all of the letters except the first one, we have $2$ options. Since we have $7$ digits in total, our answer is $3\cdot 2^6=192.$
 \end{solution}
 
 
 Now, we add some basic number theory to the mix. 
 
+\begin{mdframed}
 \begin{thm}
-If the prime factorization of a positive integer $n$ is $p_1^{e_1}p_2^{e_2} \dots p_n^{e_n}$, then $n$ has $(e_1+1)(e_2+1)(e_3+1)\dots (e_n+1)$ factors.
-
+If the prime factorization of a positive integer $n$ is \newline $p_1^{e_1}p_2^{e_2} \dots p_n^{e_n}$, then $n$ has $(e_1+1)(e_2+1)(e_3+1)\dots (e_n+1)$ factors.
 \end{thm}
+\end{mdframed}
 
 We won't prove this here, but try to see why this is true. Our next problem will use a twist of this idea. The solution of it will give a sketch on why the theorem is true.
 \begin{example}
@@ -236,16 +279,6 @@ How many factors of $567,000$ are perfect squares?
 We begin by prime factorizing. The prime factorization is $2^3\cdot 3^4 \cdot 5^3 \cdot 7$. In order for a factor to be a perfect square, the exponents in its prime factorization must be even. Therefore, to create a factor of $567,000$ that is a perfect square, the exponent for $2$ must be $0$ or $2$, the exponent for $3$ must be $0,2,$ or $4$, the exponent for $5$ must be $0$ or $2$, and the exponent for $7$ must be $0$. Since we have $2$ choices for the exponent of $2$, $3$ choices for the exponent of $3$, $2$ choices for the exponent of $5$, and $1$ choice for the exponent of $7$, our answer is $2\cdot 3\cdot 2 \cdot 1=12$
 \end{solution}
 
-\begin{example}
-(2012 AMC) A $3\times3$ square is partitioned into $9$ unit squares. Each unit square is painted either white or black with each color being equally likely, chosen independently and at random. The square is then rotated $90^\circ$ clockwise about its center, and every white square in a position formerly occupied by a black square is painted black. The colors of all other squares are left unchanged. How many ways are there to initially paint the grid such that the grid is now black?
-
-\end{example}
-
-\begin{solution}
-
-
-First, notice that the center square must be black. If it was white, a $90^\circ$ rotation would leave it at the same position, so it would still be white. Then, notice that the four corner squares and the four middle squares do not affect each other. A rotation puts a corner square in another corner square and a middle square in a middle square. This means that we can consider the corner and middle squares separately. Let's do the corner squares first. If they are all black, then it is easy to see that all the corner squares would be black after a rotation. Here, we only have $1$ way to color the square. If $3$ of the corner squares are colored black, then a rotation would make all the squares black. This is because after the rotation, the sole white square is forced to land on a square that was previously black. We have $4$ ways to color the corners with $3$ blacks squares. If only $2$ squares are black, then notice that we must choose the corners that are diagonal from each other. If not, one white square will go into a spot that was previously white, so it will not be colored black. However, with the diagonals being colored black, each white square will go to a square that was previously black. There are $2$ ways to color the corners with $2$ black squares. It is easy to see that it is impossible to color the corners with $1$ black square, so in total, there are $1+4+2=7$ ways to color the corners. With a similar argument, we have $7$ ways to color the middle squares, so our final answer is $1\cdot 7 \cdot 7=49$.
-\end{solution}
 
 \subsection*{Exercises}
 
@@ -265,15 +298,11 @@ in the list is used no more than the number of times it appears?
 \end{exercise}
 
 \begin{exercise}
-(HMMT) Given an $8\times 8$ checkerboard with alternating white and black squares, how many ways are there to choose four black squares and four white squares so that no two of the eight chosen squares are in the same row or column?
-\end{exercise}
-
-\begin{exercise}
 (2018 AMC) A scanning code consists of a $7 \times 7$ grid of squares, with some of its squares colored black and the rest colored white. There must be at least one square of each color in this grid of $49$ squares. A scanning code is called symmetric if its look does not change when the entire square is rotated by a multiple of $90 ^{\circ}$ counterclockwise around its center, nor when it is reflected across a line joining opposite corners or a line joining midpoints of opposite sides. What is the total number of possible symmetric scanning codes?
 \end{exercise}
 
 \section{Casework Counting}
-In many cases, constructive counting is not enough to finish a problem. One often has to consider various cases and then count the number of ways to satisfy a condition for each specific case. In the last example of the previous section, we looked over a basic example of casework by considering the amount of black squares that were initially colored. We now begin to explore casework in more depth.
+In many cases, constructive counting is not enough to finish a problem. One often has to consider various cases and then count the number of ways to satisfy a condition for each specific case. 
 
 \begin{example}
 In how many ways can I choose $2$ positive integers that multiply to an even integer between $5$ and $10$ inclusive?
@@ -285,16 +314,19 @@ In how many ways can I choose $2$ positive integers that multiply to an even int
 Let's call the two integers $a$ and $b$. Since we want $ab$ to multiply to an even integer between $5$ and $10$, $ab$ can equal $6, 8, $ or $10$. We take \textit{cases} on what $ab$ equals.
 \newline
 
-\textit{Case 1:} $ab=6:$ Here, $a$ can equal $1, 2, 3,$ or $6$. For each value of $a$, $b$ will just equal $6/a$. We can $6$ possible answers here.
+\textit{Case 1:} $ab=6:$ Here, $a$ can equal $1, 2, 3,$ or $6$. For each value of $a$, $b$ will just equal $6/a$. We have $4$ possible answers here.
 \newline
 
 \textit{Case 2:} $ab=8:$ Here, $a$ can equal $1, 2, 4,$ or $8$. For each value of $a$, $b$ will equal $8/a$. Therefore, we have $4$ possible answers.
 \newline
+
 \textit{Case 3:} $ab=10:$ Here, $a$ can equal $1, 2, 5,$ or $10$. Using the same reasoning as above, we have $4$ possible answers.
 \newline
 
 In total, we have $4(3)=12$ possibilities.
 \end{solution}
+
+\bigskip
 
 \begin{example}
 (2017 AMC) Alice refuses to sit next to either Bob or Carla. Derek refuses to sit next to Eric. How many ways are there for the five of them to sit in a row of $5$ chairs under these conditions?
@@ -307,10 +339,10 @@ Let the people be called $A, B, C, D$, and $E$. Since $A$ is the one with the mo
 \textit{Case 1:} $A$ is first: Since $A$ is first, we have $2$ options for the second person, either $D$ or $E$. For the third option, we have $2$ choices, either $B$ or $C$. For the fourth option, we have $2$ choices as well, just the two remaining options. Obviously there's only one choice for the last person, so our count here is $2^3=8$.
 \newline
 
-\textit{Case 2:} $A$ is second: The first and third positions must be occupied by $D$ and $E$, so we have $2$ possibilities here depending on the ordering of $D$ and $E$. Then, we have $2!=2$ ways of ordering $B$ and $C$ between the last two spots, so our total here is $2^2=4$.
+\textit{Case 2:} $A$ is second: The first and third positions must be occupied by $D$ and $E$, so we have $2$ possibilities here depending on the ordering of $D$ and $E$. Note that this takes care of the D/E restriction. Then, we have $2!=2$ ways of ordering $B$ and $C$ between the last two spots, so our total here is $2^2=4$.
 \newline
 
-\textit{Case 3:} $A$ is third: $D$ and $E$ must occupy the second and fourth positions, and there are $2$ ways to place $D$ and $E$ in those positions. Then, $B$ and $C$ must occupy the first and last positions, and there are $2$ ways to place $B$ and $C$ in those positions. The total here is $2^2=4$.
+\textit{Case 3:} $A$ is third: Since $B$ and $C$ cannot be next to $A$, $D$ and $E$ must occupy the second and fourth positions, and there are $2$ ways to place $D$ and $E$ in those positions. Then, $B$ and $C$ must occupy the first and last positions, and there are $2$ ways to place $B$ and $C$ in those positions. The total here is $2^2=4$.
 \newline
 
 Notice that when $A$ is in the fourth spot, it the number of possibilities is identical to the number of possibilities in Case 2. This is because for every case in case $2$, we can simply mirror the arrangement to get a valid seating where $A$ is in the fourth spot. From a similar argument, the number of seatings where $A$ is in the fifth spot is equal to the number of seatings where $A$ is in the first spot.
@@ -318,6 +350,8 @@ Notice that when $A$ is in the fourth spot, it the number of possibilities is id
 
 Therefore, the answer is $8\cdot 2+4\cdot 3=28$.
 \end{solution}
+
+\bigskip
 
 \begin{example}
 (PUMaC) What is the probability that the sum of three distinct integers between $16$ and $30$ (inclusive) is even?
@@ -337,9 +371,24 @@ Therefore, our answer is $\frac{168+56}{455}=\frac{32}{65}$.
 
 \end{solution}
 
+\bigskip
+
 \begin{example}
-Add self created example later
+How many ways are there to distribute $10$ pieces of candy to Zhu, Chao, and Chen if the amount candy that Chao gets is a multiple of $4$?
 \end{example}
+
+\begin{solution}
+Chao must get either $4$ or $8$ pieces of candy. We do casework based on how many pieces of candy he gets.
+\newline
+
+\textit{Case 1:} $4$ pieces of candy: This means that $6$ pieces of candy will be distributed between Zhu and Chen. Zhu can get between $0$ and $6$ pieces of candy, and Chen will get the rest. We have $7$ possibilities here.
+\newline
+
+\textit{Case 2:} $8$ pieces of candy: Two pieces of candy will be distributed between Zhu and Chen. Zhu can get between $0$ and $2$ pieces of candy, and Chen will take the rest. We have $3$ cases in here.
+\newline
+
+We sum up our cases to get our final answer is $7+2=9$.
+\end{solution}
 
 \subsection*{Exercises}
 
@@ -382,19 +431,28 @@ How many $5$ digit numbers have at least $1$ one?
 Rather than do casework based on the number of ones, we count the opposite: The number of $5$ digit numbers that have no ones. Then, we subtract this count from the total number of $5$ digit integers. Our difference is naturally the number of $5$ digit integers that have at least $1$ one. The amount of $5$ digit numbers is simply $9\cdot 10^4=90000$ by considering the digits. The amount of $5$ digit numbers without any ones is $8\cdot 9^4=52488$ by letting each digit be any integer except one. Our answer is $90000-52488=37512$.
 \end{solution}
 
+\bigskip
+
 \begin{example}
 (2002 AIME) Many states use a sequence of three letters followed by a sequence of three digits as their standard license-plate pattern. Given that each three-letter three-digit arrangement is equally likely, the probability that such a license plate will contain at least one palindrome (a three-letter arrangement or a three-digit arrangement that reads the same left-to-right as it does right-to-left) is $\dfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n.$
 \end{example}
 
 \begin{solution}
-We begin by finding the total number of arrangements without any restrictions. Since there are $26$ letters and $10$ digits, there are $26^3\cdot 10^3$ possibilities. Now, we find the number of arrangements such that there are no palindromes. Consider the letters first. We have $26$ ways to choose the first digit and $26$ ways to choose the second digit. For the last letter, we have $25$ ways to choose it, since it can't be the same as the first letter. Now let's consider the digits. There are $10$ ways each for the first and second digit. For the last digit, we have $9$ ways of choosing it, since it can't be the same as the first digit. In total, we have $26^2\cdot 25 \cdot 10^2 \cdot 9$ ways of choosing the digits such that we don't have a palindrome. The probability that we do not have a palindrome is $\frac{26^2\cdot 25\cdot 10^2 \cdot 9}{26^3\cdot 10^3}=\frac{45}{52}$. This is what we don't want, so we subtract this from one, and our desired probability is $\frac{7}{52}$. Our final answer is $59$.
+We begin by finding the total number of arrangements without any restrictions. Since there are $26$ letters and $10$ digits, there are $26^3\cdot 10^3$ possibilities. Now, we find the number of arrangements such that there are no palindromes. Consider the letters first. We have $26$ ways to choose the first letter and $26$ ways to choose the second letter. For the last letter, we have $25$ ways to choose it, since it can't be the same as the first letter. Now let's consider the digits. There are $10$ ways each for the first and second digit. For the last digit, we have $9$ ways of choosing it, since it can't be the same as the first digit. In total, we have $26^2\cdot 25 \cdot 10^2 \cdot 9$ ways of choosing the digits such that we don't have a palindrome. The probability that we do not have a palindrome is $\frac{26^2\cdot 25\cdot 10^2 \cdot 9}{26^3\cdot 10^3}=\frac{45}{52}$. This is what we don't want, so we subtract this from one, and our desired probability is $\frac{7}{52}$. Our final answer is $59$.
 \end{solution}
 
 The next example uses an idea that is based on constructive counting. I will show the theorem and the reader will get a chance to prove it themselves.
 
+\bigskip
+
+
+\begin{mdframed}
 \begin{thm}
-Consider an $m \times n$ grid. The number of ways to get from one corner to the opposite corner in the shortest number of moves is $\binom{m+n}{n}$.
+Consider an $m \times n$ grid. The number of ways to get from one corner to the opposite corner in the minimal number of moves is $\binom{m+n}{n}$.
 \end{thm}
+\end{mdframed}
+
+\bigskip
 
 \begin{example}
 Chu is at the point $(0,0)$ on the coordinate grid. How many ways can he get to to the point $(5,6)$ via the lattice points if he only goes up or right at each lattice point and wants to avoid the point $(1,4)$?
@@ -403,6 +461,8 @@ Chu is at the point $(0,0)$ on the coordinate grid. How many ways can he get to 
 \begin{solution}
 Without any restrictions, Chu has $\binom{11}{5}=462$ ways of getting to his destination. We now consider the cases where he has to go through the point $(1,4).$ To get from $(0,0)$ to $(1,4)$, he has $\binom{5}{4}=5$ ways to do so. Then, to get from $(1,4)$ to $(5,6)$, he has $\binom{6}{4}=15$ ways to do so. Therefore, there are $5\cdot 15=75$ ways to get from $(0,0)$ to $(5,6)$ via $(1,4)$. Since this is what we don't want, we subtract it from the final count, so our answer is $462-75=387$.
 \end{solution}
+
+\bigskip
 
 
 \begin{example}
@@ -483,8 +543,17 @@ This section will contain problems from various competitions. They are arranged 
 \end{exercise}
 
 \begin{exercise}
+(2012 AMC) A $3\times3$ square is partitioned into $9$ unit squares. Each unit square is painted either white or black with each color being equally likely, chosen independently and at random. The square is then rotated $90^\circ$ clockwise about its center, and every white square in a position formerly occupied by a black square is painted black. The colors of all other squares are left unchanged. How many ways are there to initially paint the grid such that the grid is now black?
+\end{exercise}
+
+\begin{exercise}
 (HMMT) There are $10$ people who want to choose a committee of $5$ people among them. They do this by first electing a set of $1, 2, 3$, or $4$ committee leaders, who then choose among the remaining people to complete the $5$-person committee. In how many ways can the committee be formed, assuming that people are distinguishable? (Two committees that have the same members but different sets of leaders are considered to be distinct.)
 \end{exercise}
+
+\begin{exercise}
+(HMMT) Given an $8\times 8$ checkerboard with alternating white and black squares, how many ways are there to choose four black squares and four white squares so that no two of the eight chosen squares are in the same row or column?
+\end{exercise}
+
 
 \begin{exercise}
 (OTSS Season 1) Let $(a \oplus b)$ denote the bitwise exclusive-or (XOR) of $a$ and $b$. This is equivalent to adding $a$ and $b$ in binary (base-two), but discarding the "carry" to the next place value if it is applicable. For instance, $(1_2 \oplus 1_2) = 0_2$, $(1_2 \oplus 0_2) = 1_2$, and $(5\oplus 3)= (101_2\oplus 011_2)= 110_2$. How many ordered pairs of nonnegative integers $(x,y)$ both less than $32$ satisfy $(x \oplus y) > x \geq y$?
