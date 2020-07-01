@@ -1,22 +1,43 @@
-\documentclass{article}
+\documentclass[letterpaper]{article}
 
 \usepackage{sectsty}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{mdframed}
 \usepackage{xcolor}
 \usepackage{array}
+\theoremstyle{plain}
+
+\newtheorem{thm}{Theorem}[section]
+
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{corollary}{Corollary}[thm]
+\newtheorem{lemma}[thm]{Lemma}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{exercise}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{solution}{Solution}
+
+
+
 \begin{document}
 
 \title{Modular Arithmetic For Beginners}
 \author{Jonathan Pei}
 \maketitle
-Note: This handout is for people with little to no experience with modular arithmetic. If you are already familiar with modular arithmetic, feel free to do the problems at the bottom and the ones dispersed throughout.
-
+Note: This handout is for people with little to no experience with modular arithmetic. If you are able to qualify for AIME, this handout will probably be of little use.
 \section{Introduction}
 \subsection*{Basic Operations}
 \begin{mdframed}
-\textbf{Definition 1.1} Two numbers are said to be congruent modulo n if their difference is evenly divisible by n.\\
+\begin{definition}
+    Two numbers are said to be congruent modulo n if their difference is evenly divisible by n.\\
+\end{definition} 
 \end{mdframed}
 So a is congruent to b modulo n if $n | (a-b)$. 
 This congruence is written as 
@@ -38,7 +59,9 @@ This can be easily proven from the definition of modular congruences.
 Subtraction and multiplication follow similarly.\\
 
 \begin{mdframed}
-    \textbf{Example 1.2} Solve the congruence $4x \equiv 3 \pmod{7} $
+    \begin{example} 
+        Solve the congruence $4x \equiv 3 \pmod{7} $
+    \end{example}
 \end{mdframed}
 \emph{Solution} We multiply by 2 to get $8x \equiv 6 \pmod{7} \implies \boxed{x \equiv 6 \pmod{7}}$
 \newpage
@@ -70,13 +93,18 @@ In this case $\frac{1}{2}$ would be the multiplicative inverse of $2$.
 
 Modular Inverses are very similar. The inverse of a number $a$ modulo n, is the number $b$ modulo n such that $ab \equiv 1 \pmod{n}$\\\\\\
 \begin{mdframed}
-\textbf{Definition 1.3} A modular inverse of an integer a is the integer b such that $ab \equiv 1 \pmod{n}$
+    \begin{definition} 
+        A modular inverse of an integer a is the integer b such that $ab \equiv 1 \pmod{n}$
+    \end{definition}
 \end{mdframed}
 \begin{mdframed}
-    \textbf{Example 1.4}. Find the inverse of $5 \pmod{11}$.    
+    \begin{example}
+        Find the inverse of $5 \pmod{11}$.  
+    \end{example}  
 \end{mdframed}
-\emph{Solution}. We can guess and check and find that $5\cdot 9\equiv 45 \equiv 1 \pmod{11}$. So \boxed{9} is our inverse.
-\\
+\begin{solution}
+     We can guess and check and find that $5\cdot 9\equiv 45 \equiv 1 \pmod{11}$. So \boxed{9} is our inverse.
+\end{solution}
 
 We will present 2 ways to find the modular inverse. 
 The first way is to use brute force and check all numbers modulo n. We used this
@@ -84,21 +112,29 @@ method in the above exercise. For very small numbers, this is often the fastest 
 
 The second way is to use the Euclidean Algorithm.
 \begin{mdframed}
-    \textbf{Proposition 1.5} If $\gcd{(a,b)}\neq 1$, then a does not have a modular inverse $\mod b$ and vice versa.
+    \begin{prop}
+         If $\gcd{(a,b)}\neq 1$, then a does not have a modular inverse $\mod b$ and vice versa.
+    \end{prop}
 \end{mdframed}
-\emph{Proof}. Suppose that a did have an inverse. So $ax \equiv 1 \pmod{b}$ would have a solution. Equivalently, $ax+by = 1$ would have integer solutions. 
+\begin{proof}
+    Suppose that a did have an inverse. So $ax \equiv 1 \pmod{b}$ would have a solution. Equivalently, $ax+by = 1$ would have integer solutions. 
 However, let $\gcd(a,b) = g$ and $\frac{a}{g} = a'$ and $\frac{b}{g} = b'$. So we can factor g out of the left side to get $g(a'x+b'y) = 1$. This is a contradiction
 because the left hand side has a factor of $g$, while the right side does not.
-
+\end{proof}
 \begin{mdframed}
-    \textbf{Proposition 1.6} $\gcd(a,b) = \gcd(a,a-b)$.
+    \begin{prop} 
+        $\gcd(a,b) = \gcd(a,a-b)$.
+    \end{prop}
 \end{mdframed}
-\emph{Proof.} Consider any common divisor $d$ of a and b. Clearly this common divisor also divides $a-b$.
+\begin{proof}
+    Consider any common divisor $d$ of a and b. Clearly this common divisor also divides $a-b$.
 Now consider a common divisor $d'$ of a and (a-b). We have $d'|a$ and $d' | (a-b)$ so $d'|b$. We have shown that every common divisor of a and b is a common divisor of a and (a-b). 
 And every common divisor of a and (a-b) is a common divisor of a and b. So the common divisors of a and b and the common divisors of a and (a-b) are the same. Thus, the greatest common divisor is also the same.
-
+\end{proof}
 \begin{mdframed}
-    \textbf{Theorem 1.7} The Division Algorithm. For any pair of integers $a$ and $b$, we can uniquely write $a$ as $bq + r$ where $r<b$.
+    \begin{thm} 
+        The Division Algorithm. For any pair of integers $a$ and $b$, we can uniquely write $a$ as $bq + r$ where $r<b$.
+    \end{thm}
 \end{mdframed}
 The r represents the remainder after a has been divided by b. It is pretty clear that this theorem is true. As an exercise prove that you can always find q and r, 
 and that when $r < b$, r is unique.
@@ -108,7 +144,9 @@ and that when $r < b$, r is unique.
 \newline
 
 \begin{mdframed}
-    \textbf{Theorem 1.8} The Euclidean Algorithm. 
+    \begin{thm} 
+        The Euclidean Algorithm. 
+    \end{thm}
     \begin{center}
         $\begin{array}{rcl}
             a &= &bq_1 + r_1\\
@@ -120,8 +158,9 @@ and that when $r < b$, r is unique.
         \end{array}$
     \end{center}
 \end{mdframed}
-\emph{Proof.} By proposition 1.6, $\gcd(r_m,r_m+1) = \gcd(a,b)$. So by repeatedly using the division algorithm, we get that $\gcd(a,b) = \gcd(r_n,0) = r_n$.
-
+\begin{proof}
+    By proposition 1.6, $\gcd(r_m,r_m+1) = \gcd(a,b)$. So by repeatedly using the division algorithm, we get that $\gcd(a,b) = \gcd(r_n,0) = r_n$.
+\end{proof}
 Now in order to find a modular inverse, we use the Euclidean Algorithm.
 The trick is to write 1 as the sum of multiples of $r_{m-1}$ and $r_m$.\\\\
 \emph{Example.} Find the inverse of 12 modulo 17. \\
@@ -153,7 +192,8 @@ Now we write $1 = 5-2\cdot 2$. We substitute the second equation and get
 5. Solve the congruence $37x = 12 \pmod{73}$
 \section{Chinese Remainder Theorem}
 \begin{mdframed}
-    \textbf{Theorem 2.1} The Chinese Remainder Theorem states that if \\$a_1$, $a_2$, $a_3$, $\dots$ $a_{n-1}$, $a_n$ are all relatively prime, then the system
+    \begin{thm} 
+        The Chinese Remainder Theorem states that if \\$a_1$, $a_2$, $a_3$, $\dots$ $a_{n-1}$, $a_n$ are all relatively prime, then the system
     \begin{center}
         $\begin{array}{rcll}
              x &\equiv &b_1 &\pmod{a_1}\\
@@ -166,11 +206,14 @@ Now we write $1 = 5-2\cdot 2$. We substitute the second equation and get
         \end{array}$
     \end{center}
     has a unique solution modulo $a_1 a_2 a_3 \dots a_n$
+\end{thm}
+
 \end{mdframed}
-\emph{Proof.} We will prove it with induction. Consider the base case with two congruences. 
+\begin{proof} We will prove it with induction. Consider the base case with two congruences. 
+\end{proof}
 \begin{alignat}{4}
-         x &\equiv &b_1 &\pmod{a_1}\\
-        x &\equiv &b_{2} &\pmod{a_{2}}
+    x &\equiv &b_1 &\pmod{a_1}\\
+    x &\equiv &b_{2} &\pmod{a_{2}}
 \end{alignat}
 We can write (2) as $x = b_2 + a_2y$. Substituting into (1), we get $$b_2 + a_2y \equiv b+1 \pmod{a_1}.$$
 Let $a_2'$ be the inverse of $a_2$ mod $a_1$. We know such a number exists because $\gcd(a_1,a_2)=1$. 
@@ -182,10 +225,11 @@ So $y = a_2'(b+1-b_2) + a_1z$. Substituting into $x = b_2 + a_2y$ gives us
 \end{align*}
 So we have found a unique solution modulo $a_1a_2$. The inductive step is similar and is left as an exercise.
 \begin{mdframed}
-    \textbf{Example 2.2} 
+    \begin{example}
     If a teacher arranges her students in rows of 5, there are 3 students left in the last row.
     If she arranges them in rows of 7, there is 1 student left in the last row. If she arranges them in rows of 9, 
     there are 6 students left in the last row. What is the least number of students she could have.
+    \end{example}
 \end{mdframed}
 \emph{Solution.} We can rephrase this problem in terms of modular arithmetic. Let n be the number of students. Thus, the problem boils down to solving the system
     \begin{center}
