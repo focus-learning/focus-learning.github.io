@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1593618739 "quadratic-discriminant.tex" "build/quadratic-discriminant.pdf" "quadratic-discriminant" 1593618740
+["pdflatex"] 1593619707 "intro-to-quadratics.tex" "build/intro-to-quadratics.pdf" "intro-to-quadratics" 1593619709
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -75,9 +75,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "build/quadratic-discriminant.aux" 1593618740 455 91173f8246911c2212148081df248c0f "pdflatex"
-  "quadratic-discriminant.tex" 1593618737 3812 171fb31d323cafa2c8f532b687294ff9 ""
+  "build/intro-to-quadratics.aux" 1593619708 455 91173f8246911c2212148081df248c0f "pdflatex"
+  "intro-to-quadratics.tex" 1593619707 4251 15f45c3f6be816005d4ab6ff85240dd3 ""
   (generated)
-  "build/quadratic-discriminant.log"
-  "build/quadratic-discriminant.aux"
-  "build/quadratic-discriminant.pdf"
+  "build/intro-to-quadratics.aux"
+  "build/intro-to-quadratics.log"
+  "build/intro-to-quadratics.pdf"
