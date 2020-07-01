@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mdframed}
+\usepackage{amssymb}
+\usepackage{dirtytalk}
+
+\title{An Introduction to Quadratics}
+\author{Alexander Chen}
+
+\begin{document}
+
+\maketitle
+
+\section{Fundamentals}
+Quadratic equations can be found in almost every type of math, and in many math competitions.
+\begin{mdframed}
+  \textbf{Definition 1.1.} A quadratic equation is a special kind of polynomial that has a degree of 2, which means that it highest power exponent of $x$ is 2.
+\end{mdframed}
+\begin{mdframed}
+  \textbf{Definition 1.2.} The standard form of a quadratic is as follows:
+  $$ax^2+bx+c=0$$
+\end{mdframed}
+\begin{mdframed}
+  \textbf{Definition 1.3.} The roots (or zeros) of a quadratic are the values of $x$ such that $ax^2+bx+c=0$.
+\end{mdframed}
+\begin{mdframed}
+  \textbf{Definition 1.4.} The \say{leading coefficient} of a quadratic is the coefficient of $x^2$, or $a$.
+\end{mdframed}
+You will often be required to derive the roots of a quadratic. There are few ways to accomplish this.
+
+\subsection{Factoring}
+Factoring is the most common method for finding the roots of a quadratic. The key is to find two numbers whose product equals $a\cdot c$ and whose sum equals $b$, rewrite the quadratic, and then factor. This is best explained with an example. Consider the quadratic: $$2x^2+3x+1$$
+We see that $a \cdot c = 2$ and $b = 3$. Two numbers that satisfy this are 1 and 2. Now we rewrite the quadratic as:
+$$2x^2+x+2x+1$$
+The first two terms can be rewritten as $x(2x+1)$, and the last two terms as $1(2x+1)$. Factor to get:
+$$(x+1)(2x+1)$$
+\textbf{Note:} In cases where the leading coefficient ($a$) is just 1, we can directly write the final form. Take $x^2+2x+3$. The two numbers whose sum is 2 and product is 3 are clearly 1 and 2. We slap these two numbers on the end of two $(x + \dots)$'s to get $(x+1)(x+2)$.
+
+\subsection{Completing the Square}
+Completing the square is a handy method used not only for factoring but also for many other things.
+
+\section{The Discriminant}
+The discriminant is a crucial tool in solving problems related to quadratics, or polynomials of degree two.\\\\
+
+Recall that the general form of a quadratic is $ax^2+bx+c=0$ with $a\neq0$. To solve for the discriminant, we first divide both sides by $a$. $$x^2+\frac{b}{a}x+\frac{c}{a}=0$$
+Adding $(\frac{b}{2a})^2$, or $\frac{b^2}{4a^2}$, to both sides of the equation allows us to complete the square.
+$$x^2+\frac{b}{a}x+\frac{b^2}{4a^2}+\frac{c}{a}=\frac{b^2}{4a^2}$$
+$$(x+\frac{b}{2a})^2=\frac{b^2}{4a^2}-\frac{c}{a}$$
+We arrive at the key equation:
+$$(x+\frac{b}{2a})^2=\frac{b^2-4ac}{4a^2}$$\\
+
+\begin{mdframed}
+  \textbf{Definition 2.1.} The discriminant of a quadratic in the form $ax^2+bx+c=0$ is the number $b^2-4ac$.
+\end{mdframed}
+
+We know that a number $c \in \mathbb{R}$ ($c$ is a real number) has $c^2>0$. However, if $c^2<0$, $c \not\in \mathbb{R}$ ($c$ is a non-real complex number). The left-hand side of the key equation, $(x+\frac{b}{2a})^2$, follows the same rules. Note that since $4a^2 > 0$, the discriminant is the deciding factor for whether $(x+\frac{b}{2a})^2 \in \mathbb{R}$ or not. We get the following theorem:\\
+
+\begin{mdframed}
+    \textbf{Theorem 2.2.}
+    \begin{itemize}
+        \item If the discriminant is less than 0, then $ax^2+bx+c$ does not have real roots.
+        \item If the discriminant is equal to 0, then $ax^2+bx+x$ has one real root.
+        \item If the discriminant is greater than 0, then $ax^2+bx+c$ has two real roots.
+    \end{itemize}
+\end{mdframed}
+
+\begin{mdframed}
+  \textbf{Exercise 2.3.} Check if $5x^2+6x+8$ has real roots and if so, the number of real roots.
+\end{mdframed}
+\emph{Solution}. The discriminant of the quadratic equals $6^2-4\cdot8\cdot5 = -124$. Since $-124 < 0$, there are no real roots.
+
+\end{document}
