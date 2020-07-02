@@ -2,7 +2,7 @@
 LaTeX handouts for our math organization, **focus learning**.
 Each handout/subject should have a folder just to keep it organized.  
 
-### Counting
+### Counting and Probability
 
 - [Techniques for Elementary Counting](https://github.com/focus-learning/handouts/blob/master/counting/elementary-counting/Techniques_for_Elementary_Counting%20(2).pdf) (Perryn Chang, July 2020)
 
