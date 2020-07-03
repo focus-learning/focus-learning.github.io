@@ -1,0 +1,174 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\newtheorem{thm}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{corollary}{Corollary}[thm]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{example}[thm]{Example}
+\newtheorem{definition}[thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{solution}{Solution}
+
+\theoremstyle{definition}
+\newtheorem{exercise}[thm]{Exercise}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Expected Value}
+\author{Nathan Zhao}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this handout we will be discussing expected value problems common within the AMC Series.
+\end{abstract}
+
+\section{Introduction}
+Let us start with a simple problem: What is the expected value of a dice roll? Take a few seconds, and think about your answer. You should get $3.5$, which we get this by averaging all our possible outcomes (Numbers $1-6$).
+
+\begin{example}
+Now, let us try something else. Say we have a spinner with labeled numbers. It has $\frac{1}{6}$ chance of landing on $2$, $\frac{1}{2}$ chance of landing on $3$, and $\frac{1}{3}$ chance of landing on $4$. If we spin the spinner, what is the value we expect to obtain?
+\end{example}
+
+\begin{solution}
+In order to solve this, we use \textbf{weighted averages}. For example, in our problem, our calculations would look like
+
+$$\frac{1}{6}(2) + \frac{1}{2}(3) + \frac{1}{3}(4)$$\\
+This turns out to be $19/6$ or 3.1$\overline{6}$.\\
+\end{solution}
+
+\noindent
+The way we utilize weighted averages is by multiplying our probabilities with their associated values, and simply taking the sum. By definition, expected values are the weighted averages of all possible outcomes in an event
+
+\subsection*{Exercises}
+Now, let's try some practice. As with other future chapters, note that though these problems utilize our main topic, other different techniques are incorporated into them as well:
+
+\begin{exercise}
+    John flips a coin until he flips heads. What is the expected number of heads he will get?
+\end{exercise}
+
+\begin{exercise}
+    Casey alternates flipping a coin and rolling dice, starting with the coin. She stops when she either flips tails or rolls a $6$. What is the sum of the number of tails and $1$s she will receive?
+\end{exercise}
+
+\begin{exercise}
+    Brendan has a $\frac{1}{2}$ chance of hitting a tennis ball during a game, and Sally has a $\frac{1}{3}$ chance of hitting the tennis ball. What is the expected number of times the ball will be hit in a tennis game between Brendan and Sally, where Brendan serves first with $100\%$ accuracy?
+\end{exercise}
+
+\section{Linearity of Expectation}
+The Linearity of Expectation purely says that $E[a+b] = E[a] + E[b]$, even if the two expected values are $\emph{dependent}$ on each other. This is very useful, as it allows us to avoid large amounts of casework and simplify complex problems.
+
+\begin{example}
+Say we flip $9$ coins and order them in a line. How many adjacent heads-heads pairs would we expect?
+\end{example}
+
+\begin{solution}
+We see that we have $8$ adjacent pairs. Even though the probability for our coin-pairs depend on each other, we can still sum their expected values. So, to solve, since each adjacent pair has $\frac{1}{4}$ probability of being heads-heads, our answer is simply $8\cdot\frac{1}{4}$, or $2$. Essentially, even though our probabilities are dependent on each other (the each central coin is involved in multiple pairs), we can still simply regard them separately.\\
+\end{solution}
+
+\noindent
+Apart from simplifying problems, we can use a symmetry argument along with the Linearity of Expectation to equally divide our probabilities. Let us use a problem to illustrate this principal:
+
+\begin{example}
+(Mock AIME 2 2006-2007) In his spare time, Richard shuffles a standard deck of $52$ playing cards. He then turns the cards up one by one from the top of the deck until the third ace appears. How many cards would Richard expect to flip?
+\end{example}
+
+\begin{solution}
+To solve this problem, we know that there are $4$ aces in a deck, which separate the rest of the $48$ cards into $5$ groups. Understanding symmetry, we see that we expect $\frac{48}{5}$ cards on average within these groups. Since Richard stops turning cards until his third, we will go through $3$ of our card-groups and flip up $3$ additional aces. Thus, our answer is $3\cdot\frac{48}{5} + 3$ or $\frac{159}{5}$.
+\end{solution}
+
+Note that often in these problems, it is useful to split large systems into small sub-problems and easier-to-find expected values. Then, applying the Linearity of Expectation, you can essentially add your values (different for each problem of course).
+
+\subsection*{Exercises}
+Now, lets practice!
+
+\begin{exercise}
+    A group of $12$ children are doing a gift exchange, and each placing their gift in a pile. One at a time, the children randomly pick the gifts and unwrap them. After all gifts have been chosen, how many children do you expect picked their own gift?
+\end{exercise}
+
+\begin{exercise}
+    (Brilliant) The digits $1$, $2$, $3$, and $4$ are randomly arranged to form two two-digit numbers, $\overline{AB}$ and $\overline{CD}$. For example, we could have $\overline{AB} = 42$ and $\overline{CD} = 13$. What is the expected value of $\overline{AB}\cdot \overline{CD}$? 
+\end{exercise}
+
+\begin{exercise}
+    With $n$ people in a room, how many distinct birthdays in a $365$ day year would you expect within the room? Write your answer as an equation.
+\end{exercise}
+
+\section{Utilizing States}
+States are conditions at certain point in a problem. These conditions can often be described using certain equations. Once these equations have been written, all one must do is solve the system of equations.
+
+\begin{example}
+Say we have 3 switches. Every minute, a person walks by and flips a random switch (from on to off, or off to on). Initially, all the switches are off. What is the expected number of minutes until all the switches are on?
+\end{example}
+
+\begin{solution}
+We solve this by creating states. Our notation for this problem will be that we use $E_{n}$ for a state where $n$ switches are active. Starting off, our state for our initial configuration $E_{0} = E_{1} + 1$. This equation results from us knowing that at $E_{0}$, we have $\frac{1}{1}$ (or $1$) chance to reach $E_{1}$. Additionally, we add $1$ in order to account for the increase in minutes. We continue this process to create a full system of equations:
+
+\[ \left\{ 
+    \begin{array}{lcl} 
+        E_{0} &= &E_{1} + 1\\
+        E_{1} &= &\frac{1}{3}E_{0} + \frac{2}{3}E_{2} + 1\\
+        E_{2} &= &\frac{2}{3}E_{1} + \frac{1}{3}E_{3} + 1\\
+        E_{3} &= &0
+\end{array}
+\right.\]
+
+Note that $E_{3} = 0$ because once all our switches are on, we don't need to count anymore. After solving this system of equations, we see that $E_{0} = 10$ meaning that starting from all switches off, you would expect to wait 10 minutes until all switches are on. 
+\end{solution}
+
+\subsection*{Exercises}
+Now, here are some practice problems to work on:
+
+\begin{exercise}
+    A frog lies on a lily pad $1$. On lily pad $0$, there is a snake that will hug the frog, but the frog doesn't want to be hugged. For lily pad $n$, the frog has $\frac{n}{7}$ chance of moving to lily pad $n+1$, and $\frac{7-n}{7}$ chance of moving to lily pad $n-1$. What is the probability that our frog makes it to lily pad $4$ before he gets hugged?
+\end{exercise}
+
+\begin{exercise}
+    Now, we have another frog. He also wants to avoid getting hugged by the snake on lily pad $0$. However, our new frog is quite strong, and can jump $2$ lily pads forward every jump, but still only $1$ lily pad back. For lily pad $n$, the frog has $\frac{n}{7}$ chance of moving to lily pad $n+2$, and $\frac{7-n}{7}$ chance of moving to lily pad $n-1$. What is the probability that our frog makes it to lily pad $4$ or $5$ before he gets hugged?
+\end{exercise}
+
+\begin{exercise}
+    A squirrel is on the bottom-left corner of a square, and he hopes to get to his acorn in the top-right corner. However, squirrels are very easily distracted, so every minute, at any vertex, he has $\frac{1}{2}$ chance to get distracted and not move, or randomly walk along an adjacent edge of the square. How many minutes, on average, will it take for the squirrel to reach his acorn?
+\end{exercise}
+
+\begin{exercise}
+    Let's say we have a bin with $6$ red balls and $4$ blue balls. Billy is randomly pulling out balls from the bin. Every time Billy pulls out a blue ball, he paints it red and puts it back. If he pulls out a red ball, he does nothing. How many balls will Billy pull out until all balls in the bin are red?
+\end{exercise}
+
+\section{Markov Chains}
+Markov Chains allow one to express transitions in state. Say, every minute. a cat in State A has a probability of $.3$ of transitioning from State A to State B. Thus, it has a $.7$ probability of staying in State A.
+
+Additionally, if the cat is in State B, it has $.6$ chance of transitioning to State A and thus a $.4$ chance of transitioning to state B.\\\\
+
+\begin{center}
+    \begin{tikzpicture}[scale=2.5, every node/.append style={transform shape}]
+            % Draw the states
+            \node[state]             (A) {A};
+            \node[state,right=of A]  (B) {B};
+    
+            % Connect the states with arrows
+            \draw[every loop, line width=1mm,
+            >=latex
+             ]
+                (B) edge[bend right] node {} (A)
+                (A) edge[bend right] node {} (B);
+    \end{tikzpicture}
+\end{center}
+
+Thus, for a cat starting in State A, after 3 minutes, what is the probability of the cat ending up at State B? This is where the power of Markov Chains come to use. With 
+
+\end{document}
