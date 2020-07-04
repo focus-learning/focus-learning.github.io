@@ -1,30 +1,75 @@
-\documentclass[letterpaper]{article}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{mdframed}
-\newtheorem{thm}{Theorem}[section]
+%\documentclass[letterpaper]{article}
+%\usepackage{amsmath}
+%\usepackage{amsthm}
+%\usepackage{mdframed}
+%\usepackage{dirtytalk}
+%\newtheorem{thm}{Theorem}[section]
 
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{corollary}{Corollary}[thm]
-\newtheorem{lemma}[thm]{Lemma}
-\newtheorem{example}[thm]{Example}
-\newtheorem{definition}[thm]{Definition}
+%\newtheorem{prop}[thm]{Proposition}
+%\newtheorem{corollary}{Corollary}[thm]
+%\newtheorem{lemma}[thm]{Lemma}
+%\newtheorem{example}[thm]{Example}
+%\newtheorem{definition}[thm]{Definition}
 
-\theoremstyle{remark}
-\newtheorem*{solution}{Solution}
+%\theoremstyle{remark}
+%\newtheorem*{solution}{Solution}
 
-\theoremstyle{definition}
-\newtheorem{exercise}[thm]{Exercise}
+%\theoremstyle{definition}
+%\newtheorem{exercise}[thm]{Exercise}
+%\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+%\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+
+%\usepackage[inline]{asymptote}
+
+%\linespread{1.1}
+%\setlength\parindent{0pt}
+%\setlength{\parskip}{0.8em}
+
+\documentclass[l1pt]{article}
+
+
 \usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mdframed}
+\usepackage{enumerate}
 
+%\usepackage[]{microtype}
 \usepackage[inline]{asymptote}
 
-\linespread{1.1}
-\setlength\parindent{0pt}
-\setlength{\parskip}{0.8em}
+
+
+%% Sets page size and margins
+\usepackage[margin=1in]{geometry}
+
+%% Useful packages
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Techniques for Elementary Counting}
+\rhead{\thepage}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{dirtytalk}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lemma}[thm]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{exercise}{Exercise}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+
+
+\title{\textbf{Techniques for Elementary Counting}}
+\author{\textbf{Perryn Chang}}
+\date{\today}
+
 
 
 
@@ -38,8 +83,12 @@
 \maketitle
 
 \begin{abstract}
-In this handout, we will go over fundamental ideas in counting as well as the basic counting strategies: Constructive Counting, Casework Counting, and Complementary Counting. Since there aren't a lot of theorems in introductory counting, this handout will primarily consist of key ideas encapsulated within worked problem. After the Introduction in part 1, we start with the fundamentals in part 2, and then we progress to the various counting strategies. The difficulty of part 2 is intended for the first half of the AMC 10, while the rest of the handout is designed for the end of the AMC 10 and the beginning of AIME. Please skip around to find the problems that will best suit you. If you can consistently score higher than a $90$ on the AMC 10, I recommend starting at part 3. If you have qualified for the AIME, the examples are probably too easy. In this case, you should go directly to the exercises. However, these are just my recommendations, so please do whatever is best for you. All of the exercises in the last section are pulled from various sources so you can search them up online to find the solutions. Enjoy!
+In this handout, we will go over fundamental ideas in counting as well as the basic counting strategies: Constructive Counting, Casework Counting, and Complementary Counting. Since there aren't a lot of theorems in introductory counting, this handout will primarily consist of key ideas encapsulated within worked problem. After the Introduction in part 1, we start with the fundamentals in part 2, and then we progress to the various counting strategies. The difficulty is intended for people who are close for qualifying for the AIME. All of the exercises in the last section are pulled from various sources so you can search them up online to find the solutions. Enjoy!
 \end{abstract}
+
+\tableofcontents
+
+\eject
 
 \section{Introduction}
 
@@ -48,7 +97,7 @@ Learning to count is one of the most fundamental skills every student learns in 
 \section{Fundamentals}
 \label{sec:examples}
 
-\bigskip
+
 
 \begin{mdframed}
 
@@ -57,15 +106,14 @@ Let there be a job with $n$ parts. If the first part can be done in $a_1$ ways, 
 
 \end{prop}
 \end{mdframed}
-\bigskip
+
 \begin{example}
 John's outfit consists of a hat, a shirt, and a pair of pants. If he has $5$ hats, $3$ shirts, and $2$ pants, in how many ways can John choose his outfit?
 \end{example}
 
 \begin{solution}
-Here, the "job" is choosing his outfit, which consists of $3$ parts, namely choosing his hat, his shirt, and his pants. The first part of choosing his hat can be done in $5$ ways (one for each hat). Similarly, the second part of choosing his shirt can be done in $3$ ways (one for each shirt), and the last part of choosing his pants can be done in $2$ ways. Hence, the job of choosing his outfit can be done in $5\cdot 3 \cdot 2$ ways.
+Here, the \say{job} is choosing his outfit, which consists of $3$ parts, namely choosing his hat, his shirt, and his pants. The first part of choosing his hat can be done in $5$ ways (one for each hat). Similarly, the second part of choosing his shirt can be done in $3$ ways (one for each shirt), and the last part of choosing his pants can be done in $2$ ways. Hence, the job of choosing his outfit can be done in $5\cdot 3 \cdot 2$ ways.
 \end{solution}
-\bigskip
 \begin{example}
 There are $10$ cards on a table, one card for each integer between $1$ and $10$. In how many ways can I choose $3$ cards with replacement such that the first card I choose is odd, the second card is prime, and the third card is a divisor of $9$?
 \end{example}
@@ -73,7 +121,7 @@ There are $10$ cards on a table, one card for each integer between $1$ and $10$.
 \begin{solution}
 Now, we have the job of choosing $3$ cards, each of which satisfies a certain condition. Although for each part we aren't given the number of ways we can complete it, we can solve for the number of ways to complete each step. For the first card, we have to choose an odd number. Between $1$ and $10$, there are $5$ odd numbers, so the first part can be done in $5$ ways. For the second part, we have to choose a prime number. There are $4$ prime numbers that we are allowed to choose, namely $2, 3, 5, $ and $7$. Therefore, there are $4$ ways to complete the second part. For the last part, there are $3$ divisors of $9$, so the last part can be completed in $3$ ways. In total, there are $5\cdot 4 \cdot 3=60$ ways to choose $3$ cards.
 \end{solution}
-\bigskip
+
 \begin{example}
 Freddy has $3$ different pencils that he would like to use over the course of $3$ days. In how many ways can he use his pencils?
 \end{example}
@@ -82,7 +130,7 @@ Freddy has $3$ different pencils that he would like to use over the course of $3
 We use the motivation from the previous $2$ problems. Let's think about his choices day by day. On the first day, he has $3$ pencils to choose from. On the second day, he has $2$ pencils to choose from, since he cannot choose the pencil he chose on the first day. On the third and last day, he has only $1$ pencil to choose from-the only one left. Therefore, he has $3\cdot 2\cdot 1$ ways to use $3$ pencils over the course of $3$ days.
 \end{solution}
 
-The answer to this problem is $3!$, which seems like a "nice" number...
+The answer to this problem is $3!$, which seems like a nice number...
 
 \begin{example}
 How many ways are there to arrange $6$ distinct children?
@@ -94,7 +142,7 @@ Let's think about this in terms of the position that they are arranged. For the 
 
 In our previous problems, our answers were $3!$ and $6!$, which are pretty similar. We will try to generalize this.
 
-\bigskip
+
 
 \begin{mdframed}
 \begin{prop}
@@ -104,32 +152,29 @@ The number of ways to arrange $n$ distinct items is equal to $n!$
 
 This proposition fits Example 2.5 pretty well, but how does it relate to Example 2.4? We know that $3!$ is equal to the number of ways to arrange $3$ pencils. But, for each rearrangement, we simply choose the first pencil on day $1$, the second pencil on day $2$, and the third pencil on day $3$! Hence, each arrangement corresponds to exactly one way to use the items. In general, arranging $n$ items is the same as choosing $n$ items, one at a time, until everything is chosen.
 
-\bigskip
+
 
 
 \begin{example}
-How many ways are there to rearrange the letters in "barb"?
+How many ways are there to rearrange the letters in \say{barb}?
 \end{example}
 
 \begin{solution}
 Notice how we cannot use the proposition here, since there are $2$ b's, which are clearly not distinct. For emphasis, let the two b's be $b_1$ and $b_2$. This way we'll be able to use the proposition. It is easy to see that in this case, the answer will be $4!=24$. However, for each arrangement of $b_1$ and $b_2$, we have a similar arrangement, but with $b_1$ and $b_2$ switched. Since for the problem they are considered the same, we must divide our answer by $2$. As an example, $b_1 a b_2 r$ and $b_2 a b_1 r$ are actually the same arrangement.
 \end{solution}
 
-\bigskip
 
 \begin{example}
-How many ways are there to rearrange the letters in "juggling"?
+How many ways are there to rearrange the letters in \say{juggling}?
 \end{example}
 
 \begin{solution}
 We see that this problem is very similar to the previous one, except we now have $3$ repeated letters instead of $2$. However, the idea is essentially the same. If we label the g's as $g_1, g_2$, and $g_3$, for each configuration, the g's can be rearranged in $3!$ ways. Therefore, the answer is $\frac{8!}{3!}=6720$, where $8!$ is the initial count of arranging the letters, and the $3!$ exists because the g's are identical.
 \end{solution}
 
-\bigskip
 
 We will generalize this crucial idea.
 
-\bigskip
 
 \begin{mdframed}
 \begin{prop}
@@ -139,7 +184,7 @@ Let there be $n$ total objects and $t$ types of objects such that every object i
 
 This is pretty confusing, so lets do an example.
 
-\bigskip
+
 
 \begin{example}
 How many ways are there to arrange $3$ red balls, $2$ blue balls, and $1$ orange ball?
@@ -149,11 +194,9 @@ How many ways are there to arrange $3$ red balls, $2$ blue balls, and $1$ orange
 There are $6$ total objects and $3$ types of objects. There are $3$ objects in the first type, $2$ objects in the second type, and $1$ object in the third type. Using the proposition, the answer is $\frac{6!}{3!2!1!}=60$.
 \end{solution}
 
-\bigskip
 
 The next two examples demonstrate two key ideas.
 
-\bigskip
 
 \begin{example}
 If there are $5$ people, how many ways are there to choose a captain and a secretary for the math team if a person cannot be both the captain and the secretary?
@@ -163,7 +206,6 @@ If there are $5$ people, how many ways are there to choose a captain and a secre
 We can treat the captain as the first role and the secretary as the second role. For the captain, we have $5$ ways of choosing a person; each person is eligible. For the secretary, we have $4$ ways of choosing a person; everyone except the person who got chosen as the captain. Therefore, there are $5\cdot 4=20 $ ways of choosing a captain and a secretary.
 \end{solution}
 
-\bigskip
 
 \begin{example}
 If there are $5$ people, how many ways can I choose $2$ people to be part of a jury?
@@ -177,9 +219,10 @@ Example 2.11 illustrates an idea known as \textbf{permutations} and Example 2.12
 
 \bigskip
 
+
 \begin{mdframed}
 \begin{prop}
-In simple language, if we want to choose $k$ items from a total of $n$ items such that the order they are chosen matters, we have a \textbf{permutation}. The number of ways to choose them is $\frac{n!}{(n-k)}!$.
+If we want to choose $k$ items from a total of $n$ items such that the order they are chosen matters, we have a \textbf{permutation}. The number of ways to choose them is $\frac{n!}{(n-k)}!$.
 \end{prop}
 \end{mdframed}
 
@@ -188,8 +231,6 @@ In simple language, if we want to choose $k$ items from a total of $n$ items suc
 If we want to choose $k$ items from a total of $n$ items such that the order they are chosen does not matter, we have something known as a \textbf{combination}. The number of ways to choose the item is $\frac{n!}{(n-k)!k!}$. Typically, this is written as $\binom{n}{k}.$
 \end{prop}
 \end{mdframed}
-
-\bigskip
 
 Try to figure out yourself why this is true, and test these propositions with the previous examples.
 
@@ -200,7 +241,7 @@ How many ways can I choose two co-captains for my math team?
 \end{exercise}
 
 \begin{exercise}
-How many ways are there to arrange the letters in "monsoon"?
+How many ways are there to arrange the letters in \say{monsoon}?
 \end{exercise}
 
 \begin{exercise}
@@ -220,7 +261,7 @@ From a group of $5$ adults and $6$ children, how many ways are there to choose $
 
 Constructive counting is perhaps one of the most intuitive and easiest methods of counting. Simply put, one counts the number of ways to construct each step of a process, and manipulates those numbers in order to find the total amount of ways to complete a process. It is a natural continuation from the fundamentals and acts as a bridge for more advanced counting techniques. In addition, constructive counting occurs frequently in both the AMC 10/12 and AIME, so we introduce this topic first.
 
-\bigskip
+
 
 \begin{example}
 (Mathcounts Mini) A palindrome is a number that reads the same forwards and backwards. How many $7$ digit palindromes are there?
@@ -231,7 +272,6 @@ Constructive counting is perhaps one of the most intuitive and easiest methods o
 Since the numbers read the same forward and backwards, the first digit is the same as the last digit, the second is the same as the second to last digit, and so on. The example asks for the number of $7$ digit palindromes, so first and 7th digits are identical, the second and 6th digits are identical, the third and 5th digits are identical, and the 4th digit is by itself. Let's consider the first digit. Clearly, it can be any integer from $1$ to $9$. However, once this is decided, the 7th digit is chosen as well, since those digits must be the same. Similarly, once we have chosen the second digit, we have chosen the 6th digit as well. In this case of the second and sixth digits, we have $10$ options for the choices, since we can use $0$ here as well. For the third and fifth digits, it is the same; we have $10$ choices. For the fourth digit, we have $10$ choices as well. Therefore, the answer to the example is $9\cdot 10\cdot 10 \cdot 10=9000$, where each factor corresponds to the number of ways to choose a digit.
 \end{solution}
 
-\bigskip
 
 \begin{example}
 How many ways are there to arrange $2$ grandparents, $3$ fathers, and $4$ children in a row if the children insist on being next to each other?
@@ -241,17 +281,17 @@ How many ways are there to arrange $2$ grandparents, $3$ fathers, and $4$ childr
 Since the children will all be next to each other, we can think of them as a block of children. Now, we have $2$ grandparents, $3$ fathers, and $1$ block of children. Since all of them are distinct, there are $6!=720$ ways of arranging them. However, within the block of children, we have $4!=24$ ways to arrange the children. Therefore, our final answer is $720\cdot 24=17280.$
 \end{solution}
 
-\bigskip
+
 
 \begin{example}
-How many ways are there to arrange the letters in "violin" such that none of the vowels are next to each other?
+How many ways are there to arrange the letters in \say{violin} such that none of the vowels are next to each other?
 \end{example}
 
 \begin{solution}
 We can begin by first placing the consonants since they have no restrictions. There are $3$ consonants so we have $3!=6$ ways to arrange them. Now we tackle the vowels. Imagine that there are $4$ spaces, $1$ before the $3$ consonants, $1$ after the consonants, and $2$ between the consonants. Clearly, these spaces are not adjacent. This means that we can choose any $3$ of them to hold our vowels. There are $\binom{4}{3}=4$ ways to choose the spaces we use, and $3!=6$ ways to arrange the $3$ vowels in those spots. Our final answer is $6\cdot 4\cdot 6=144$.
 \end{solution}
 
-\bigskip
+
 
 \begin{example}
 (2003 AIME) Define a $good~word$ as a sequence of letters that consists only of the letters $A$, $B$, and $C$ - some of these letters may not appear in the sequence - and in which $A$ is never immediately followed by $B$, $B$ is never immediately followed by $C$, and $C$ is never immediately followed by $A$. How many seven-letter good words are there?
@@ -266,7 +306,7 @@ Now, we add some basic number theory to the mix.
 
 \begin{mdframed}
 \begin{thm}
-If the prime factorization of a positive integer $n$ is \newline $p_1^{e_1}p_2^{e_2} \dots p_n^{e_n}$, then $n$ has $(e_1+1)(e_2+1)(e_3+1)\dots (e_n+1)$ factors.
+If the prime factorization of a positive integer $n$ is $p_1^{e_1}p_2^{e_2} \dots p_n^{e_n}$, then $n$ has $(e_1+1)(e_2+1)(e_3+1)\dots (e_n+1)$ factors.
 \end{thm}
 \end{mdframed}
 
@@ -351,7 +391,7 @@ Notice that when $A$ is in the fourth spot, it the number of possibilities is id
 Therefore, the answer is $8\cdot 2+4\cdot 3=28$.
 \end{solution}
 
-\bigskip
+
 
 \begin{example}
 (PUMaC) What is the probability that the sum of three distinct integers between $16$ and $30$ (inclusive) is even?
@@ -371,7 +411,7 @@ Therefore, our answer is $\frac{168+56}{455}=\frac{32}{65}$.
 
 \end{solution}
 
-\bigskip
+
 
 \begin{example}
 How many ways are there to distribute $10$ pieces of candy to Zhu, Chao, and Chen if the amount candy that Chao gets is a multiple of $4$?
@@ -431,7 +471,7 @@ How many $5$ digit numbers have at least $1$ one?
 Rather than do casework based on the number of ones, we count the opposite: The number of $5$ digit numbers that have no ones. Then, we subtract this count from the total number of $5$ digit integers. Our difference is naturally the number of $5$ digit integers that have at least $1$ one. The amount of $5$ digit numbers is simply $9\cdot 10^4=90000$ by considering the digits. The amount of $5$ digit numbers without any ones is $8\cdot 9^4=52488$ by letting each digit be any integer except one. Our answer is $90000-52488=37512$.
 \end{solution}
 
-\bigskip
+
 
 \begin{example}
 (2002 AIME) Many states use a sequence of three letters followed by a sequence of three digits as their standard license-plate pattern. Given that each three-letter three-digit arrangement is equally likely, the probability that such a license plate will contain at least one palindrome (a three-letter arrangement or a three-digit arrangement that reads the same left-to-right as it does right-to-left) is $\dfrac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n.$
@@ -443,7 +483,7 @@ We begin by finding the total number of arrangements without any restrictions. S
 
 The next example uses an idea that is based on constructive counting. I will show the theorem and the reader will get a chance to prove it themselves.
 
-\bigskip
+
 
 
 \begin{mdframed}
@@ -452,7 +492,6 @@ Consider an $m \times n$ grid. The number of ways to get from one corner to the 
 \end{thm}
 \end{mdframed}
 
-\bigskip
 
 \begin{example}
 Chu is at the point $(0,0)$ on the coordinate grid. How many ways can he get to to the point $(5,6)$ via the lattice points if he only goes up or right at each lattice point and wants to avoid the point $(1,4)$?
@@ -462,7 +501,6 @@ Chu is at the point $(0,0)$ on the coordinate grid. How many ways can he get to 
 Without any restrictions, Chu has $\binom{11}{5}=462$ ways of getting to his destination. We now consider the cases where he has to go through the point $(1,4).$ To get from $(0,0)$ to $(1,4)$, he has $\binom{5}{4}=5$ ways to do so. Then, to get from $(1,4)$ to $(5,6)$, he has $\binom{6}{4}=15$ ways to do so. Therefore, there are $5\cdot 15=75$ ways to get from $(0,0)$ to $(5,6)$ via $(1,4)$. Since this is what we don't want, we subtract it from the final count, so our answer is $462-75=387$.
 \end{solution}
 
-\bigskip
 
 
 \begin{example}
@@ -556,7 +594,7 @@ This section will contain problems from various competitions. They are arranged 
 
 
 \begin{exercise}
-(OTSS Season 1) Let $(a \oplus b)$ denote the bitwise exclusive-or (XOR) of $a$ and $b$. This is equivalent to adding $a$ and $b$ in binary (base-two), but discarding the "carry" to the next place value if it is applicable. For instance, $(1_2 \oplus 1_2) = 0_2$, $(1_2 \oplus 0_2) = 1_2$, and $(5\oplus 3)= (101_2\oplus 011_2)= 110_2$. How many ordered pairs of nonnegative integers $(x,y)$ both less than $32$ satisfy $(x \oplus y) > x \geq y$?
+(OTSS Season 1) Let $(a \oplus b)$ denote the bitwise exclusive-or (XOR) of $a$ and $b$. This is equivalent to adding $a$ and $b$ in binary (base-two), but discarding the \say{carry} to the next place value if it is applicable. For instance, $(1_2 \oplus 1_2) = 0_2$, $(1_2 \oplus 0_2) = 1_2$, and $(5\oplus 3)= (101_2\oplus 011_2)= 110_2$. How many ordered pairs of nonnegative integers $(x,y)$ both less than $32$ satisfy $(x \oplus y) > x \geq y$?
 \end{exercise}
 
 \begin{exercise}
@@ -571,15 +609,5 @@ This section will contain problems from various competitions. They are arranged 
 (2020 AIME) Six cards numbered $1$ through $6$ are to be lined up in a row. Find the number of arrangements of these six cards where one of the cards can be removed leaving the remaining five cards in either ascending or descending order.
 \end{exercise}
 
-\begin{exercise}
-(2017 AIME) A $10\times 10\times 10$ grid of points consists of all points in space of the form $(i,j,k)$, where $i$, $j$, and $k$ are integers between $1$ and $10$, inclusive. Find the number of different lines that contain exactly $8$ of these points.
-\end{exercise}
-
-\begin{exercise}
-(2004 AIME) For all positive integers $ x$, let
-\[ f(x) = \begin{cases}1 & \text{if }x = 1 \\
-\frac x{10} & \text{if }x\text{ is divisible by 10} \\
-x + 1 & \text{otherwise}\end{cases}\]and define a sequence as follows: $ x_1 = x$ and $ x_{n + 1} = f(x_n)$ for all positive integers $ n$. Let $ d(x)$ be the smallest $ n$ such that $ x_n = 1$. (For example, $ d(100) = 3$ and $ d(87) = 7$.) Let $ m$ be the number of positive integers $ x$ such that $ d(x) = 20$. Find the sum of the distinct prime factors of $ m$.
-\end{exercise}
 
 \end{document}
