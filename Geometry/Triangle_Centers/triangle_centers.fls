@@ -1,7 +1,7 @@
-PWD d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers
+PWD d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers
 INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.tex
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.log
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.tex
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.log
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo
@@ -52,10 +52,10 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/nul:.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/nul:.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/nul:.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
@@ -104,9 +104,23 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.aux
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.aux
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.aux
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/asymptote/asymptote.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/asymptote/asymptote.sty
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pre
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pre
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/catchfile.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/catchfile.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/catchfile.sty
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pre
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
 INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii
 INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -134,15 +148,18 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmti10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.pdf
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pdf
 INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/counting/Geometry/Triangle_Centers/triange_centers.aux
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
@@ -153,11 +170,17 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
