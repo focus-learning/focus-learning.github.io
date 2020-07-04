@@ -4,7 +4,7 @@ Each handout/subject should have a folder just to keep it organized.
 
 ### Counting and Probability
 
-- [Techniques for Elementary Counting](https://github.com/focus-learning/handouts/blob/master/counting/elementary-counting/Techniques_for_Elementary_Counting%20(2).pdf) (Perryn Chang, July 2020)
+- [Techniques for Elementary Counting](https://github.com/focus-learning/handouts/blob/master/counting/elementary-counting/Techniques_for_Elementary_Counting.pdf) (Perryn Chang, July 2020)
 
 - [Introduction to the Pigeonhole Principle](https://github.com/focus-learning/handouts/blob/master/counting/Intermediate%20Counting/Introduction_to_the_Pigeonhole_Principle.pdf) (Perryn Chang, July 2020)
 
