@@ -2,7 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{systeme}
-
+\usepackage{mdframed}
 \usepackage{tikz}
 \usetikzlibrary{automata,positioning}
 
@@ -38,21 +38,28 @@ In this handout we will be discussing expected value problems common within the 
 \end{abstract}
 
 \section{Introduction}
-Let us start with a simple problem: What is the expected value of a dice roll? Take a few seconds, and think about your answer. You should get $3.5$, which we get this by averaging all our possible outcomes (Numbers $1-6$).
+\begin{mdframed}
+    \begin{definition}
+        The expected value is the weighted average of a random variable with the values being its possible values, and the probabilities being the weights.
+    \end{definition}
+\end{mdframed}
+
+So, lets portray this with simple problem: What is the expected value of a dice roll? Take a few seconds, and think about your answer. You should get $3.5$, where we get this by averaging all our possible outcomes (Numbers $1-6$). We see this is characteristic of our definition as our answer is $$\frac{1}{6} \cdot \left(\sum_{n=1}^{6} n \right)$$.
 
 \begin{example}
-Now, let us try something else. Say we have a spinner with labeled numbers. It has $\frac{1}{6}$ chance of landing on $2$, $\frac{1}{2}$ chance of landing on $3$, and $\frac{1}{3}$ chance of landing on $4$. If we spin the spinner, what is the value we expect to obtain?
+Now, let us try something else. Say we have a spinner with labeled numbers. It has $\frac{1}{6}$ chance of landing on $2$, $\frac{1}{2}$ chance of landing on $3$, and $\frac{1}{3}$ chance of landing on $4$. If we spin the spinner, what is the expected value?
 \end{example}
 
 \begin{solution}
-In order to solve this, we use \textbf{weighted averages}. For example, in our problem, our calculations would look like
+In order to solve this, we continue to use the definition of expected value. For In our problem, our calculations would look like
 
-$$\frac{1}{6}(2) + \frac{1}{2}(3) + \frac{1}{3}(4)$$\\
-This turns out to be $19/6$ or 3.1$\overline{6}$.\\
+$$\frac{1}{6}(2) + \frac{1}{2}(3) + \frac{1}{3}(4)$$
+This turns out to be $\boxed{\frac{19}{6}}$.\\
+Notice that this is not actually an obtainable value on the spinner. The expected value doesn't concern what can actually happen, it represents the average value if you found the random value infinitely many times.\\
 \end{solution}
 
 \noindent
-The way we utilize weighted averages is by multiplying our probabilities with their associated values, and simply taking the sum. By definition, expected values are the weighted averages of all possible outcomes in an event
+%The way we utilize our definition is by multiplying our probabilities with their associated values, and simply taking the sum. The way we did our calculation is also known as using \textbf{weighted averages}.
 
 \subsection*{Exercises}
 Now, let's try some practice. As with other future chapters, note that though these problems utilize our main topic, other different techniques are incorporated into them as well:
@@ -111,12 +118,14 @@ Now, lets practice!
 \section{Utilizing States}
 States are conditions at certain point in a problem. These conditions can often be described using certain equations. Once these equations have been written, all one must do is solve the system of equations.
 
+However, often, many people struggle with creating these equations. So, to explain, each state basically is equal to the weighted averages of the next possible states. Not to mention, when counting a certain value, addition of an additional constant should be used. Additionally, once you have a state where your counting would stop, it should equal 0.
+
 \begin{example}
 Say we have 3 switches. Every minute, a person walks by and flips a random switch (from on to off, or off to on). Initially, all the switches are off. What is the expected number of minutes until all the switches are on?
 \end{example}
 
 \begin{solution}
-We solve this by creating states. Our notation for this problem will be that we use $E_{n}$ for a state where $n$ switches are active. Starting off, our state for our initial configuration $E_{0} = E_{1} + 1$. This equation results from us knowing that at $E_{0}$, we have $\frac{1}{1}$ (or $1$) chance to reach $E_{1}$. Additionally, we add $1$ in order to account for the increase in minutes. We continue this process to create a full system of equations:
+We solve this by creating states. Our notation for this problem will be that we use $E_{n}$ for a state where $n$ switches are active. Starting off, our state for our initial configuration $E_{0} = E_{1} + 1$. This equation results from us knowing that at $E_{0}$, we have $\frac{1}{1}$ (or $1$) chance to reach $E_{1}$. Additionally, we add $1$ in order to account for the increase in minutes. We continue to use our "coefficient as probability" idea process to create a full system of equations:
 
 \[ \left\{ 
     \begin{array}{lcl} 
@@ -149,26 +158,78 @@ Now, here are some practice problems to work on:
     Let's say we have a bin with $6$ red balls and $4$ blue balls. Billy is randomly pulling out balls from the bin. Every time Billy pulls out a blue ball, he paints it red and puts it back. If he pulls out a red ball, he does nothing. How many balls will Billy pull out until all balls in the bin are red?
 \end{exercise}
 
+\begin{exercise}
+    Annabelle is on a tightrope. Currently, she is at position $0$, and the tight rope has $4$ other positions: $1$, $2$, $3$, and $4$ respectively. Whenever she is at position $n$, she has $\frac{n}{8}$ probability of moving to position $n-1$ and $\frac{8-n}{8}$ probability of moving to position $n+1$. In order to improve her balancing, Annabelle decides to make a game. Whenever she moves forwards, she will give herself $1$ point. Otherwise, she will subtract from herself $2$ points. When she reaches position $4$, how many points would she expect to have
+\end{exercise}
+
 \section{Markov Chains}
-Markov Chains allow one to express transitions in state. Say, every minute. a cat in State A has a probability of $.3$ of transitioning from State A to State B. Thus, it has a $.7$ probability of staying in State A.
+Markov Chains allow one to express transitions in state. This technique utilizes \textbf{transition matrices} to calculate our answers, so it is recommended that you learn basic matrix operations (like dot products) first.
 
-Additionally, if the cat is in State B, it has $.6$ chance of transitioning to State A and thus a $.4$ chance of transitioning to state B.\\\\
+Markov Chains essentially work where you have a transition matrix for the chances of each transition. Then, where $n$ is the number of times this probability comes into effect, we dot-product our matrix with itself $n$ times.
 
+\begin{example}
+Say, every minute, a cat in State A has a probability of $.3$ of transitioning from State A to State B. Thus, it has a $.7$ probability of staying in State A. Additionally, if the cat is in State B, it has $.6$ chance of transitioning to State A and thus a $.4$ chance of staying in state B.
 \begin{center}
-    \begin{tikzpicture}[scale=2.5, every node/.append style={transform shape}]
+    \begin{tikzpicture}[scale=2, every node/.append style={transform shape}]
             % Draw the states
             \node[state]             (A) {A};
             \node[state,right=of A]  (B) {B};
     
             % Connect the states with arrows
-            \draw[every loop, line width=1mm,
-            >=latex
-             ]
-                (B) edge[bend right] node {} (A)
-                (A) edge[bend right] node {} (B);
+            \draw[every loop, line width=.5mm,
+            >=latex] 
+                (B) edge[bend right, auto=right] node {.6} (A)
+                (A) edge[bend right, auto=right] node {.3} (B)
+                (B) edge[loop right] node {.4} (B)
+                (A) edge[loop left] node {.7} (A);
     \end{tikzpicture}
 \end{center}
 
-Thus, for a cat starting in State A, after 3 minutes, what is the probability of the cat ending up at State B? This is where the power of Markov Chains come to use. With 
+\noindent
+Thus, for a cat starting in State A, after 3 minutes, what is the probability of the cat ending up at State B? 
+\end{example}
+
+\begin{solution}
+This is where the power of Markov Chains come to use. Using a $n$ x $n$ matrix to depict our probabilities (where $n$ is the number of states), we can utilize matrix exponentiation, or repeated dot products, to find our probabilities. Our starting matrix will look like this:
+
+\[
+M=
+  \begin{bmatrix}
+    .7 & .3 \\
+    .6 & .4 
+  \end{bmatrix}
+\]
+
+\noindent
+In the above matrix, we see that each column and row associates with each state. For example, the first column and row relate to State A, where the anything in the first row is out-going from State A and anything in the first column is going into State A. We can see this is true for State B with the second row and column as well.
+
+After using matrix exponentiation to the third power for our 3 minutes (use a calculator if you want), we get a new 3-step transition matrix:
+
+\[
+M^{3}=
+  \begin{bmatrix}
+    .667 & .333 \\
+    .666 & .334 
+  \end{bmatrix}
+\]
+
+\noindent
+We can use the same in-going out-going idea using rows and columns with our new matrix as well. To answer our question, we look at the first row for out-going A, and then second column for in-going B. Thus, the probability after 3 minutes that our cat arrives at State B is $.333$.
+\end{solution}
+
+\subsection*{Exercises}
+Now, here are some problems to try. It's fine to use a calculator for large matrix exponentiations!
+
+\begin{exercise}
+    Gain understanding of why we use dot products in Markov Chains. To help, try to draw out a Markov Chain, create a transition matrix, and square it (doing the calculations by hand).
+\end{exercise}
+
+\begin{exercise}
+    A group of researchers are analyzing the future possible number of restaurants with vegetarian options. They have determined that every year, originally non-vegetarian restaurants have a $.32$ probability of converting to vegetarian options. Additionally, vegetarian restaurants have $.68$ probability of staying vegetarian every year. In the region, how many restaurants will convert from non-vegetarian to vegetarian on the 5th year, knowing that there are currently $210$ vegetarian restaurants and $320$ non-vegetarian restaurants? 
+\end{exercise}
+
+\begin{exercise}
+    Stephen is on vacation. Apart from staying in his hotel, he has two other places to spend his time at (for the whole day): the park and the art museum. If he was in his hotel the previous day, he has $.30$ probability of going to the museum and $.42$ probability of going to the park. If Stephen was in the museum the previous day, he has $.60$ probability of spending his time in his hotel and $.21$ probability of going to the park. Last, if we was in the park the previous day, he has $.42$ probability of going to his hotel and $.53$ of going to the park the next day as well. Assuming that he spends his first day at the hotel, what is the probability that he will be at the museum in $4$ days?
+\end{exercise}
 
 \end{document}
