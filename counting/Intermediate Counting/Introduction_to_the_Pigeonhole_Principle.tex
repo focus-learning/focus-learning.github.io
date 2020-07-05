@@ -71,7 +71,7 @@ Now, what if I had 16 pigeons and 7 pigeonholes. In this case, at least one pige
     \end{prop}
 \end{mdframed}
 
-Although we have this formula, there is no need to memorize it. Usually, common sense will suffice when the problem requires you to use this formula. The proof is left as an exercise for the reader.
+Although we have this formula, there is no need to memorize it. Usually, common sense will suffice when the problem requires you to use this formula. The proof is left as an exercise for the reader. For simplicity, the \say{pigeons} will be known as balls for now on and the \say{pigeonholes} will be known as boxes.
 
 \section{Basic Examples}
 Let's start with a simple example.
@@ -119,12 +119,50 @@ Prove that for any 8 points chosen in a unit circle, there exists 2 points that 
 \end{example}
 
 \begin{solution}
-We want to somehow create the boxes so that each box will have more than 1 ball. The balls seem to be the 8 points. We are able to do this by dividing the circle into 7 congruent sectors. By the Pigeonhole Principle, at least one sector will have more than 1 point. In a sector, two points can be at most 1 unit apart, so we are done.
+We want to somehow create the boxes so that each box will have more than 1 ball. The balls seem to be the 8 points. We are able to do this by dividing the circle into 7 congruent sectors. By the Pigeonhole Principle, at least one sector will have more than 1 point. In a sector, two points can be at most 1 unit apart, so we are done \footnote{Note that this does not mean 8 is the minimum number of points such that the condition is satisfied.}.
 \end{solution}
 
 \section{More Difficult Examples}
 
+Although in the last section the boxes weren't given to us, it was usually quite easy to identify them. Also, the number of balls was always directly to us. In more advanced problems, however, we often have to create the balls and boxes on our own. 
+
+As usual, let's start with an example.
+
+\begin{example}
+(Cornell) Prove that any collection of 31 distinct integers between 1 and 60 has the property that one divides another.
+\end{example}
+
+\begin{solution}
+
+\end{solution}
+
+\subsection{Connection with the Mean and Expected Value}
+We begin this subsection with two theorems.
+
+\begin{mdframed}
+    \begin{thm}
+    If the arithmetic mean of a set of $n$ values is $x$, then there exists one element that is greater than or equal to $x$ and one element that is less than or equal to $x$
+    \end{thm}
+\end{mdframed}
+
+\begin{proof}
+We proceed by contradiction. To prove that there exists an element that is greater than or equal to $x$, we assume that all elements are less than $x$. We have \[\sum_{i=1}^n a_i=nx .\] However, all the $a_is$ are less than $x$, so the equation cannot hold, and we have a contradiction. The proof is similar for proving there exists an element that is less than or equal to $x$, so we are done.
+\end{proof}
+
+
+
+
+
+
 \section{Problems}
+
+\begin{exercise}
+(2006 AMC) Six distinct positive integers are randomly chosen between 1 and 2006, inclusive. What is the probability that some pair of these integers has a difference that is a multiple of 5?
+\end{exercise}
+
+\begin{exercise}
+(1972 IMO) Prove that from a set of ten distinct two-digit numbers (in the decimal system), it is possible to select two disjoint subsets whose members have the same sum.
+\end{exercise}
 
 
 
