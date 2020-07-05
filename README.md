@@ -17,3 +17,7 @@ Each handout/subject should have a folder just to keep it organized.
 ### Algebra
 
 - [Introduction to Quadratics](https://github.com/focus-learning/handouts/blob/master/algebra/intro-to-quadratics/intro-to-quadratics.pdf) (Alexander Chen, July 2020)
+
+### Geometry
+
+- [Triangle Centers](https://github.com/focus-learning/handouts/blob/master/Geometry/Triangle_Centers/triangle_centers.pdf) (Jonathan Pei, July 2020)
