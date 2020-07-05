@@ -4,10 +4,16 @@
 \usepackage[english]{babel}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{mdframed}
+\usepackage{enumerate}
+
+%\usepackage[]{microtype}
+
+
 
 
 %% Sets page size and margins
 \usepackage[margin=1in]{geometry}
+\linespread{1.1}
 
 %% Useful packages
 \usepackage{fancyhdr}
@@ -19,12 +25,13 @@
 \usepackage{dirtytalk}
 
 \theoremstyle{plain}
-\newtheorem{thm}{Theorem}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
 \newtheorem{lemma}[thm]{Lemma}
 
 \theoremstyle{definition}
 \newtheorem{example}[thm]{Example}
-\newtheorem{exercise}{Exercise}
+\newtheorem{exercise}{Exercise}[section]
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
@@ -39,7 +46,7 @@
 \maketitle
 
 \begin{abstract}
-The goal of this handout is to let the reader become familiar with the Pigeonhole Principle, an idea used in all levels of competitive mathematics. However, with that being said, this handout is targeted towards readers who have qualified for the AIME or are close to qualifying for the AIME. 
+The goal of this handout is to let the reader become familiar with the Pigeonhole Principle, an idea used in all levels of competitive mathematics. The Pigeonhole Principle is also known as \textbf{Dirichlet's Box Principle}.
 \end{abstract}
 
 \tableofcontents
@@ -47,8 +54,73 @@ The goal of this handout is to let the reader become familiar with the Pigeonhol
 \eject
 
 \section{Introduction}
+Going with the spirit of the name of the principle, consider $8$ pigeons and $7$ pigeonholes. It is not hard to realize that if all the pigeons went to a pigeonhole, at least one hole would have more than one pigeon. We can easily generalize this.
+
+\begin{mdframed}
+    \begin{prop}
+    \label{prop:beginintro}
+    If $n$ objects are placed into $k$ boxes, where $n>k$, then at least $1$ box will have more than $1$ object.
+    \end{prop}
+\end{mdframed}
+
+Now, what if I had 16 pigeons and 7 pigeonholes. In this case, at least one pigeonhole would contain at least 2 pigeons. Using this idea, we can we can update Proposition \ref{prop:beginintro}.
+
+\begin{mdframed}
+    \begin{prop}
+    If $n$ objects are placed into $k$ boxes, where $n>k$, then at least one box must contain $\left\lfloor \dfrac{n-1}{k} \right\rfloor + 1 $ balls.
+    \end{prop}
+\end{mdframed}
+
+Although we have this formula, there is no need to memorize it. Usually, common sense will suffice when the problem requires you to use this formula. The proof is left as an exercise for the reader.
 
 \section{Basic Examples}
+Let's start with a simple example.
+
+\begin{example}
+There exists a group of 4 friends. How many apples should I give them such that at least one person will receive more than 1 apple.
+\end{example}
+
+\begin{solution}
+By the Pigeonhole Principle, when there are 5 apples, at least person will receive more than one apple, so our answer is \boxed{5}.
+\end{solution}
+
+\bigskip
+
+In some scenarios, the Pigeonhole Principle cannot be directly used, but the idea behind it is similar. Here is an example.
+
+\begin{example}
+(2019 AMC) A box contains $28$ red balls, $20$ green balls, $19$ yellow balls, $13$ blue balls, $11$ white balls, and $9$ black balls. What is the minimum number of balls that must be drawn from the box without replacement to guarantee that at least $15$ balls of a single color will be drawn$?$
+\end{example}
+
+\begin{solution}
+If we had an infinite number of balls for each color, then it's easy to see that the answer would be $14\cdot 6+1=85$, since in the worst case scenario we have to draw 14 balls of each color. This means that for the colors that have less than 15 balls, we can simply draw all of them. We can draw all the black, white, and blue balls, while drawing 14 of the yellow, green, and red balls. The next ball we draw forces some color to have 15 balls, so our answer is $\boxed{76}$.
+\end{solution}
+
+\bigskip
+
+We are not only limited to objects as the balls and boxes; they could be anything. A classic example involves modular arithmetic.
+
+\begin{example}
+Prove that if we are given any 11 integers, there exists a pair of integers such that their difference is divisible by 10.
+\end{example}
+
+\begin{solution}
+Here, the balls and boxes aren't that clear. We are working with solely the integers. However, the words \say{difference} and \say{divisible} hint at modular arithmetic. We can express two integers being congruent modulo 10 as \[a \equiv b \pmod {10}\]
+
+Note that there are 10 choices for the residue of $a$ and $b$. But, we are given 11 total numbers. We can let our balls be the 11 numbers and the boxes be the residues. By the Pigeonhole Principle, at least 2 numbers will be congruent $\mod 10$, which implies that their difference is divisible by 10.
+\end{solution}
+
+\bigskip
+
+Our key idea here is determining our balls in boxes. We had to cleverly figure out that using the residues was the crux in this problem. Determining what our balls and boxes are is often the most important part in Pigeonhole problems. In the next example, we will see how we can use this idea in geometry as well.
+
+\begin{example}
+Prove that for any 8 points chosen in a unit circle, there exists 2 points that are at most 1 unit away from each other.
+\end{example}
+
+\begin{solution}
+We want to somehow create the boxes so that each box will have more than 1 ball. The balls seem to be the 8 points. We are able to do this by dividing the circle into 7 congruent sectors. By the Pigeonhole Principle, at least one sector will have more than 1 point. In a sector, two points can be at most 1 unit apart, so we are done.
+\end{solution}
 
 \section{More Difficult Examples}
 
