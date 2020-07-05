@@ -20,4 +20,4 @@ Each handout/subject should have a folder just to keep it organized.
 
 ### Geometry
 
-- [Triangle Centers](https://github.com/focus-learning/handouts/blob/master/Geometry/Triangle_Centers/triangle_centers.pdf) (Jonathan Pei, July 2020)
+- [Basic Triangle Centers](https://github.com/focus-learning/handouts/blob/master/Geometry/Triangle_Centers/triangle_centers.pdf) (Jonathan Pei, July 2020)
