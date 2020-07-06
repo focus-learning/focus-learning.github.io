@@ -16,18 +16,22 @@
 \linespread{1.1}
 
 %% Useful packages
+\usepackage[dvipsnames]{xcolor}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Introduction to the Pigeonhole Principle}
 \rhead{\thepage}
 \usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{dirtytalk}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=MidnightBlue, pdftitle=Introduction to the Pigeonhole Principle, pdfpagemode=FullScreen}
+
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{lemma}[thm]{Lemma}
+\newtheorem{corollary}[thm]{Corollary}
 
 \theoremstyle{definition}
 \newtheorem{example}[thm]{Example}
@@ -141,6 +145,7 @@ We begin this subsection with two theorems.
 
 \begin{mdframed}
     \begin{thm}
+    \label{thm:arithmetic mean}
     If the arithmetic mean of a set of $n$ values is $x$, then there exists one element that is greater than or equal to $x$ and one element that is less than or equal to $x$
     \end{thm}
 \end{mdframed}
@@ -148,6 +153,25 @@ We begin this subsection with two theorems.
 \begin{proof}
 We proceed by contradiction. To prove that there exists an element that is greater than or equal to $x$, we assume that all elements are less than $x$. We have \[\sum_{i=1}^n a_i=nx .\] However, all the $a_is$ are less than $x$, so the equation cannot hold, and we have a contradiction. The proof is similar for proving there exists an element that is less than or equal to $x$, so we are done.
 \end{proof}
+
+\begin{mdframed}
+    \begin{thm}
+    \label{thm:expected value}
+    If the expected value of a variable x is $E(x)$, then there exists a case of x where x is greater than or equal to $E(x)$ and a case of x where x is less than or equal to $E(x)$.
+    \end{thm}
+\end{mdframed}
+
+The proof is very similar to Theorem \ref{thm:arithmetic mean} and the theorem is very intuitive, so we will not be proving it. It will be left as an exercise if the reader wishes to prove it. 
+
+An immediate corollary very similar to Theorem \ref{thm:expected value} follows.
+
+\begin{mdframed}
+    \begin{corollary}
+    If the expected value of x is $E(x)$, and x must be an integer, then there exists a value of x that is greater than or equal to $\left \lceil{E(x)}\right \rceil$ and a value of x that is less than or equal to $\left \lfloor{E(x)}\right \rfloor $.
+    \end{corollary}
+\end{mdframed}
+
+Let's see this in action.
 
 
 
