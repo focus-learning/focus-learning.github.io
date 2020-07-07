@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1594151159 "intro-to-quadratics.tex" "build/intro-to-quadratics.pdf" "intro-to-quadratics" 1594151160
+["pdflatex"] 1594152560 "intro-to-quadratics.tex" "build/intro-to-quadratics.pdf" "intro-to-quadratics" 1594152562
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -84,9 +84,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "build/intro-to-quadratics.aux" 1594151160 990 e71bac72ddbc974d800d8f0e6866a3bd "pdflatex"
-  "intro-to-quadratics.tex" 1594151156 7767 113f921797d25e5dbd4269d046aa0e5d ""
+  "build/intro-to-quadratics.aux" 1594152562 1085 ba41c38be240138495f2b7413b4483b3 "pdflatex"
+  "intro-to-quadratics.tex" 1594152560 9173 0651e5e9706a24274c42073cefd6a1b8 ""
   (generated)
-  "build/intro-to-quadratics.pdf"
-  "build/intro-to-quadratics.log"
   "build/intro-to-quadratics.aux"
+  "build/intro-to-quadratics.log"
+  "build/intro-to-quadratics.pdf"
