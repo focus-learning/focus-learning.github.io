@@ -4,7 +4,7 @@ Welcome to the Focus Learning organization! We are a group of enthusiatic high s
 **Website:** https://focus-learning.github.io/website/
 
 ## Handouts List
-You'll notice that a portion of our handouts are marked as **WIP** (Work In Progress), but they are certainly readable. We'll always be working to bring new handouts to you!
+You'll notice that a portion of our handouts are marked as **WIP** (Work In Progress), but they are certainly readable. We are always be working to bring new handouts to you!
 
 ### Algebra
 
