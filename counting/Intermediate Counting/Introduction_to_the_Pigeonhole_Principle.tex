@@ -67,7 +67,21 @@ Going with the spirit of the name of the principle, consider $8$ pigeons and $7$
     \end{prop}
 \end{mdframed}
 
-Now, what if I had 16 pigeons and 7 pigeonholes. In this case, at least one pigeonhole would contain at least 2 pigeons. Using this idea, we can we can update Proposition \ref{prop:beginintro}.
+Now, what if I had 16 pigeons and 7 pigeonholes. In this case, at least one pigeonhole would contain at least 2 pigeons. We can create a better Pigeonhole Principle. That is\dots 
+
+
+\begin{mdframed}
+\begin{thm}
+If there are $n$ boxes and more than $k\cdot n$ objects are being distributed among the boxes, at least one box will contain more than $k$ objects.
+\end{thm}
+\end{mdframed}
+
+\begin{proof}
+We proceed by contradiction. Assume that all of the $n$ boxes contain $k$ or less objects. Then, there are a maximum of $k\cdot n$ objects, which contradicts the assumption that there are more than $k\cdot n$ objects, so we are done.
+\end{proof}
+
+
+Using this idea, we can we can update Proposition \ref{prop:beginintro}.
 
 \begin{mdframed}
     \begin{prop}
@@ -132,14 +146,6 @@ Although in the last section the boxes weren't given to us, it was usually quite
 
 As usual, let's start with an example.
 
-\begin{example}
-(Cornell) Prove that any collection of 31 distinct integers between 1 and 60 has the property that one divides another.
-\end{example}
-
-\begin{solution}
-
-\end{solution}
-
 \subsection{Connection with the Mean and Expected Value}
 We begin this subsection with two theorems.
 
@@ -173,6 +179,35 @@ An immediate corollary very similar to Theorem \ref{thm:expected value} follows.
 
 Let's see this in action.
 
+\begin{example}
+
+\end{example} 
+
+\subsection{Pigeons and Points (Geometry)}
+
+The Pigeonhole Principle is also occasionally seen with geometry. In most cases, it deals with points within a plane or space. Some clever thinking is usually the only thing required to solve these type of problems.
+
+\begin{example}[USAMTS]
+Every point in a plane is either red, green, or blue. Prove that there exists a rectangle in the plane such that all of its vertices are the same color.
+\end{example}
+
+\begin{solution}
+Choose a rectangle in the plane with 4 points as the columns and 19 points as the rows. Consider the first row. Since there are four points and 3 colors, at least 2 points will be the same color. 
+
+Now consider the 19 rows. Since for each row there are 3 ways to choose the color that is repeated and $\binom{4}{2}=6$ ways to choose which points are repeated, there are 18 possible arrangements of the 3 colors. Since there are 19 rows and 18 possible arrangements of the 3 colors, by the Pigeonhole Principle, 2 rows will be exactly the same and contain at least 2 points of the same color. The points that are the same color in those two rows will form the rectangle, and we are done.
+\end{solution}
+
+Our next one uses a bit of number theory, but again deals with points within a plane.
+
+\begin{example}
+Prove that if I choose any 5 distinct lattice points on the coordinate plane and compute the midpoints of all the segments formed by those 5 lattice points, there exists a midpoint that lies on a lattice point.
+\end{example}
+
+\begin{solution}
+
+\end{solution}
+
+
 
 
 
@@ -180,12 +215,16 @@ Let's see this in action.
 
 \section{Problems}
 
-\begin{exercise}
-(2006 AMC) Six distinct positive integers are randomly chosen between 1 and 2006, inclusive. What is the probability that some pair of these integers has a difference that is a multiple of 5?
+\begin{exercise}[Classic]
+If I have an infinite number of red socks, yellow socks, pink socks, green socks, and blue socks, how many socks do I have to draw I order to guarantee I have a pair of socks that are the same color.
 \end{exercise}
 
-\begin{exercise}
-(1972 IMO) Prove that from a set of ten distinct two-digit numbers (in the decimal system), it is possible to select two disjoint subsets whose members have the same sum.
+\begin{exercise}[2006 AMC]
+ Six distinct positive integers are randomly chosen between 1 and 2006, inclusive. What is the probability that some pair of these integers has a difference that is a multiple of 5?
+\end{exercise}
+
+\begin{exercise}[1972 IMO]
+Prove that from a set of ten distinct two-digit numbers (in the decimal system), it is possible to select two disjoint subsets whose members have the same sum.
 \end{exercise}
 
 
