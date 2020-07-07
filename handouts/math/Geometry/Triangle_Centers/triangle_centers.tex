@@ -1,0 +1,129 @@
+\documentclass[letterpaper]{article}
+
+\usepackage{sectsty}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{asymptote}
+\theoremstyle{plain}
+
+\newtheorem{thm}{Theorem}[section]
+
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{corollary}{Corollary}[thm]
+\newtheorem{lemma}[thm]{Lemma}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{exercise}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+
+
+\begin{document}
+
+\title{Basic Triangle Centers}
+\maketitle
+
+\begin{abstract}
+    Triangle centers are an important facet of euclidean geometry.
+    Often problems require an intricate understanding of the relationships between triangle centers.
+\end{abstract}
+\section{Concurrency}
+    The fact that many of the following triangles exist can be surprising. We will establish a condition which will help us prove that these centers do in fact exist.
+    \begin{mdframed}
+        \begin{thm}[Ceva's] 
+            In $\triangle ABC$, points D, E, and F are on sides BC, AC, and AB respectively. $\frac{BD}{DC}\cdot \frac{CE}{EA}\cdot\frac{AF}{FB} = 1$, if and only if the segments AD, BE, and CF are concurrent.
+            
+        \end{thm}
+        
+    \end{mdframed} 
+    \begin{proof}
+        We will first show that the direct implication holds. Let the point of concurrency be X. We have the following area ratio 
+        $$\frac{[ABD]}{[ADC]} = \frac{[XBD]}{[XDC]}=\frac{BD}{DC}.$$
+        As you may know, this implies $$\frac{[ABD-XBD]}{[ADC-XDC]}=\frac{[ABX]}{[AXC]}=\frac{BD}{DC}.$$
+        Similarly, for the other sides we have 
+        $$\frac{[BCE-XCE]}{[BEA-XEA]}=\frac{[BCX]}{[BXA]}=\frac{CE}{EA}$$
+        $$\frac{[CAF-XAF]}{[CFB-XFB]}=\frac{[CAX]}{[CXB]}=\frac{AF}{FB}.$$
+        Multiplying these 3 equalities gives us 
+        $$\frac{BD}{DC}\cdot \frac{CE}{EA}\cdot\frac{AF}{FB} = 1.$$
+        We now prove the converse. For the sake of contradiction, assume that the three segments are not concurrent.
+        Name the intersection of segments BE and CF X. Now intersect AX with BC at D'. From the given we have $\frac{BD}{DC}\cdot \frac{CE}{EA}\cdot\frac{AF}{FB} = 1.$
+        And since AD', BE and CF are concurrent we also have $\frac{BD'}{D'C}\cdot \frac{CE}{EA}\cdot\frac{AF}{FB} = 1.$
+        This implies $\frac{BD'}{DC}=\frac{BD}{DC}$. Since D' and D are both on segment BC, they must be the same point which is a contradiction. Thus, our original assumption 
+        that the three segments were not concurrent was wrong.
+    \end{proof} 
+ 
+    \begin{exercise}
+        Find a trigonometric form of Ceva's Theorem.
+    \end{exercise}
+\section{The Centroid}
+    \begin{mdframed}
+        \begin{definition}
+            The centroid is the intersection of the medians of a \\triangle.
+       \end{definition} 
+    \end{mdframed}
+       
+    \begin{exercise}
+        Verify that the centroid always exists.
+    \end{exercise}
+    Often the most important fact about the centroid used in computational
+    contests is that the medians divide each other into a 2:1 ratio at the centroid.
+    \begin{mdframed}
+        \begin{thm}
+            If AD,BE, and CF are medians in $\triangle ABC$ and G is the centroid then $$\frac{AG}{GD}=\frac{BG}{GE}=\frac{CG}{GF}=2$$
+        \end{thm}
+    \end{mdframed}
+    \begin{proof}
+        Begin by drawing segment EF. We notice that $\triangle EFG \sim \triangle BFG$.
+        So $\frac{BG}{GE} =2$. Repeating for the other medians finishes the proof.
+    \end{proof}
+    \begin{mdframed}
+        \begin{corollary}
+        \label{median ratios}
+            The 6 triangles formed by the medians and the sides of the triangle have equal area.
+        \end{corollary}
+    \end{mdframed}
+    \subsection*{Exercises}
+    \begin{exercise}
+        Prove corollary \ref{median ratios}.
+    \end{exercise}
+    \begin{exercise}[2018 AMC]
+        Square $ABCD$ has side length $30$. Point $P$ lies inside the square so that $AP = 12$ and $BP = 26$. The centroids of $\triangle{ABP}$, $\triangle{BCP}$, $\triangle{CDP}$, and $\triangle{DAP}$ are the vertices of a convex quadrilateral. What is the area of that quadrilateral?
+    \end{exercise}
+    \begin{exercise} If D,E, and F are the midpoints of $\triangle ABC$ and G is the centroid, show that G is the centroid of $\triangle DEF$
+    \end{exercise}
+    \begin{exercise} AB is the diameter of a circle and C is a point on the circle. What shape does the centroid of $\triangle ABC$ trace as C moves around the circle.
+    \end{exercise}
+
+\section{Circumcenter}
+\section{Incenter}
+\section{Orthocenter}
+\section{Other centers}
+\section{Important Relationships}
+\section{Techniques}
+    \subsection{Coordinate Bashing}
+    Often times, if you don't know a quick or easy way to do a geometry problem you can place the figure in the cartesian plane and work out the problem with coordinates.
+    \begin{mdframed}
+        \begin{thm}
+            If the coordinates of a triangle are $(x_1,y_1)$,$(x_2,y_2)$, and $(x_3,y_3)$ then the centroid has coordinates $$\left(\frac{x_1+x_2+x_3}{3},\frac{y_1+y_2+y_3}{3}\right)$$
+        \end{thm}
+        
+    \end{mdframed}
+    \begin{proof}
+        Let $(x_G,y_G)$ be the coordinates of the centroid and label $(x_1,y_1)$,$(x_2,y_2)$, and $(x_3,y_3)$ as A, B and C respectively.
+        \\We have that the midpoint of BC is $\left(\frac{x_2+x_3}{2},\frac{y_2+y_3}{2}\right)$. So $x_G-x_1=\frac{2}{3}\cdot\frac{x_2+x_3-2x_1}{2}$.
+        Therefore, $x_G = \frac{x_1+x_2+x_3}{3}$. The proof for the y component is exactly the same and we are done.
+         
+    \end{proof}
+    \begin{exercise}[AIME 2018]
+        Octagon $ABCDEFGH$ with side lengths $AB = CD = EF = GH = 10$ and $BC = DE = FG = HA = 11$ is formed by removing 6-8-10 triangles from the corners of a $23$ $\times$ $27$ rectangle with side $\overline{AH}$ on a short side of the rectangle. Let $J$ be the midpoint of $\overline{AH}$, and partition the octagon into 7 triangles by drawing segments $\overline{JB}$, $\overline{JC}$, $\overline{JD}$, $\overline{JE}$, $\overline{JF}$, and $\overline{JG}$. Find the area of the convex polygon whose vertices are the centroids of these 7 triangles.
+    \end{exercise}
+\end{document}
