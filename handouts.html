@@ -27,6 +27,9 @@
 				$('#chemistryContent').slideToggle('slow');
 			});
 		}
+		$(document).ready(function(){
+    $('.hidden').slideDown(500);
+});
 
 	</script>
 	<style>
@@ -40,6 +43,9 @@
 		.topicSection{
 			cursor: pointer;
 		}
+		.hidden{
+ display:none;   
+}
 	</style>
 </head>
 
@@ -76,7 +82,7 @@
 		</section>
 
 		<!-- Main -->
-		<section id="main" class="container">
+		<section id="main" class="container hidden">
 			<div class="row">
 				<div class="col-6 col-12-narrower">
 
