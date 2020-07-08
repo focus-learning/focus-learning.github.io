@@ -1,6 +1,5 @@
 \documentclass[letterpaper]{article}
 
-\usepackage{float}
 \usepackage{sectsty}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -9,13 +8,6 @@
 \usepackage{xcolor}
 \usepackage{array}
 \usepackage{asymptote}
-\usepackage{tkz-euclide}
-\usepackage{pgf,tikz,pgfplots}
-\usepackage[section]{placeins}
-\pgfplotsset{compat=1.15}
-\usepackage{mathrsfs}
-\usetikzlibrary{arrows}
-\usetikzlibrary{calc}
 \theoremstyle{plain}
 
 \newtheorem{thm}{Theorem}[section]
@@ -33,8 +25,6 @@
 \theoremstyle{remark}
 \newtheorem*{solution}{Solution}
 \newtheorem*{remark}{Remark}
-
-\newcommand{\squeezeup}{\vspace{-2.5mm}}
 
 
 
@@ -126,27 +116,14 @@
     Show that the orthocenter exists in all triangles. This is a simple application of trig Ceva.
 \end{exercise}
 
-
-\begin{figure}[!htb]
-    \centering
-    \scalebox{.75}{\input{images/orthocenter_circle.tikz}}
-    \caption{Cyclic Quadrilateral}
-    \label{fig:cyclic_orthocenter}
-
-\end{figure}
-
-
-
 One important thing to note about the orthocenter and the feet of the altitudes, is that there are many resulting cyclic quadrilaterals.
-For example, referring to Figure \ref{fig:cyclic_orthocenter}, we have $BFEC$ cyclic. This is because $\angle BFC = \angle BEC = 90$.
-See if you can find the other cyclic quads.
-
+For example, labeling the feet of the altitudes from A, B, and C, as D, E, and F respectively, we have FEBC cyclic. See if you can find all the other cyclic quadrilaterals. 
 
 \section{Other centers}
 \section{Important Relationships}
 \section{Techniques}
-    \subsection{Coordinate Bashing}
-    Often times, if you don't know a quick or easy way to do a geometry problem you can place the figure in the cartesian plane and work out the problem with coordinates.
+\subsection{Coordinate Bashing}
+Often times, if you don't know a quick or easy way to do a geometry problem you can place the figure in the cartesian plane and work out the problem with coordinates.
     \begin{mdframed}
         \begin{thm}
             If the coordinates of a triangle are $(x_1,y_1)$,$(x_2,y_2)$, and $(x_3,y_3)$ then the centroid has coordinates $$\left(\frac{x_1+x_2+x_3}{3},\frac{y_1+y_2+y_3}{3}\right)$$

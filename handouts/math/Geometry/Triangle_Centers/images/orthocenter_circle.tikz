@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+        \draw [line width=1pt,color=black] (-6.704024039828016,6.001415467595274)-- (-9.04,0);
+        \draw [line width=1pt,color=black] (-9.04,0)-- (-1,0);
+        \draw [line width=1pt,color=black] (-1,0)-- (-6.704024039828016,6.001415467595274);
+        \draw [line width=1pt,color=black] (-6.704024039828016,6.001415467595274)-- (-6.704024039828016,0);
+        \draw [line width=1pt,color=black] (-9.04,0)-- (-4.815865442051531,4.014813704551082);
+        \draw [line width=1pt,color=black] (-1,0)-- (-7.982161769643331,2.7177192000763215);
+        \draw [line width=1pt,color=black] (-5.02,0) circle (4.02cm);
+        \begin{scriptsize}
+        \draw [fill=gray] (-6.704024039828016,6.001415467595274) circle (2.5pt);
+        \draw[color=black] (-6.7412428749956845,6.475955615983044) node {\large $A$};
+        \draw [fill=gray] (-9.04,0) circle (2.5pt);
+        \draw[color=black] (-9.402389589483962,-0.20482529661340232) node {\large $B$};
+        \draw [fill=gray] (-1,0) circle (2.5pt);
+        \draw[color=black] (-0.6931821602495991,-0.03734053835889528) node {\large $C$};
+        \draw [fill=gray] (-6.704024039828016,0) circle (2pt);
+        \draw[color=black] (-6.759852292579519,-0.26065354936490465) node {\large $D$};
+        \draw [fill=gray] (-4.815865442051531,4.014813704551082) circle (2pt);
+        \draw[color=black] (-4.601159852854762,4.391700846593624) node {\large $E$};
+        \draw [fill=gray] (-7.982161769643331,2.7177192000763215) circle (2pt);
+        \draw[color=black] (-8.26721511687008,2.995994527806065) node {\large $F$};
+        \draw [fill=gray] (-6.704024039828017,2.2202200639544034) circle (2pt);
+        \draw[color=black] (-6.3551486991573436,1.809695395862857) node {\large $H$};
+        \end{scriptsize}
+    \end{tikzpicture}

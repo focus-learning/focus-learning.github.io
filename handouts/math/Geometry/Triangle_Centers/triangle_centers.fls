@@ -1,11 +1,13 @@
-PWD d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers
+PWD d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers
 INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.tex
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.log
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.tex
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.log
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/size10.clo
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/sectsty/sectsty.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/sectsty/sectsty.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
@@ -52,10 +54,10 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3kernel/expl3-code.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/nul:.tex
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/nul:.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
@@ -106,8 +108,8 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/asymptote/asymptote.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/asymptote/asymptote.sty
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pre
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pre
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.pre
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.pre
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
@@ -117,10 +119,281 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/catchfile.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/catchfile.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/catchfile.sty
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pre
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.pre
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-euclide.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-euclide.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfutil-common.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfutil-common-lists.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfutil-latex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ms/everyshi.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ms/everyshi.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/pgf.revision.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/pgf.revision.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgf.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathcalc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathutil.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathparser.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.random.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfint.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/utilities/pgffor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/utilities/pgffor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/math/pgfmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgf/math/pgfmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.shapes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.shapes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.shapes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.shapes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.text.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.text.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.text.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.text.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.pdf
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarythrough.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarythrough.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/numprint/numprint.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/numprint/numprint.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3packages/xfp/xfp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/l3packages/xfp/xfp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/defpattern.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/defpattern.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-basic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-basic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-addons.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-addons.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-snap.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-snap.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-exp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-exp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-trigo.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-trigo.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-pas.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-pas.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-random.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-random.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-eqn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-eqn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-upn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-upn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-eval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fp/fp-eval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-base.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-base.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-modules.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-modules.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-lib-marks.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-lib-marks.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-base.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-utilities.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-tools-math.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-text.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-BB.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-arith.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-print.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-tools-misc.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-obj-axes.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-obj-grids.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-obj-marks.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-obj-points.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-base/tkz-obj-rep.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-tools-intersections.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-tools-intersections.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-tools-angles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-tools-angles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-angles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-arcs.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-compass.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-circles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-draw-circles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-draw-lines.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-draw-polygons.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-draw-triangles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-lines.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-points.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-points-by.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-points-rnd.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-points-with.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-polygons.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-protractor.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-sectors.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-show.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tkz-euclide/tkz-obj-eu-triangles.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgfplots/pgfplots.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/pgfplots/pgfplots.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.revision.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.revision.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotscore.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotsstackedplots.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.scaling.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.markers.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplotsticks.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/pgfplots/pgfplots.paths.code.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/placeins/placeins.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/placeins/placeins.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/jknappen/mathrsfs.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/jknappen/mathrsfs.sty
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.aux
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.aux
+OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.aux
 INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii
 INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -140,6 +413,11 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmsy6.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/jknappen/ursfs.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/jknappen/ursfs.fd
+INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr9.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx9.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
@@ -148,10 +426,14 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmti10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-OUTPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.pdf
+INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm
-INPUT d:/jonat/GitHub/RadiantCheddar/handouts/Geometry/Triangle_Centers/triangle_centers.aux
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/images/orthocenter_circle.tikz
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/images/orthocenter_circle.tikz
+INPUT d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.aux
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -162,6 +444,8 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
