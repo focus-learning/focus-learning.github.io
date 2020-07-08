@@ -14,16 +14,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
 		function runOnLoad() {
-			$('#mathExpand').click(function () {
+			$('#mathSection').click(function () {
 				$('#mathContent').slideToggle('slow');
 			});
-			$('#compSciExpand').click(function () {
+			$('#compSciSection').click(function () {
 				$('#compSciContent').slideToggle('slow');
 			});
-			$('#biologyExpand').click(function () {
+			$('#biologySection').click(function () {
 				$('#biologyContent').slideToggle('slow');
 			});
-			$('#chemistryExpand').click(function () {
+			$('#chemistrySection').click(function () {
 				$('#chemistryContent').slideToggle('slow');
 			});
 		}
@@ -34,7 +34,11 @@
 			display: none;
 		}
 		.topicHeading{
-			border-bottom: 1px solid;
+			/*border-bottom: 1px solid;
+		*/
+		}
+		.topicSection{
+			cursor: pointer;
 		}
 	</style>
 </head>
@@ -76,7 +80,7 @@
 			<div class="row">
 				<div class="col-6 col-12-narrower">
 
-					<section class="box special">
+					<section id="mathSection" class="topicSection box special">
 						<div class="sitesection">
 							<h1 id="mathExpand" style="font-size:xx-large;" id="expand-one"><a href="#here">
 									<h1 class="topicHeading">Math</h1>
@@ -107,7 +111,7 @@
 				</div>
 				<div class="col-6 col-12-narrower">
 
-					<section class="box special">
+					<section id="compSciSection" class="topicSection box special">
 						<div class="sitesection">
 							<h1 id="compSciExpand" style="font-size:xx-large;" id="expand-one"><a href="#here">
 									<h1 class="topicHeading">Computer Science</h1>
@@ -119,7 +123,7 @@
 				</div>
 				<div class="col-6 col-12-narrower">
 
-					<section class="box special">
+					<section id="biologySection" class="topicSection box special">
 						<div class="sitesection">
 							<h1 id="biologyExpand" style="font-size:xx-large;" id="expand-one"><a href="#here">
 									<h1 class="topicHeading">Biology</h1>
@@ -131,7 +135,7 @@
 				</div>
 				<div class="col-6 col-12-narrower">
 
-					<section class="box special">
+					<section id="chemistrySection" class="topicSection box special">
 						<div class="sitesection">
 							<h1 id="chemistryExpand" style="font-size:xx-large;" id="expand-one"><a href="#here">
 									<h1 class="topicHeading">Chemistry</h1>
