@@ -91,6 +91,8 @@ Using this idea, we can we can update Proposition \ref{prop:beginintro}.
 
 Although we have this formula, there is no need to memorize it. Usually, common sense will suffice when the problem requires you to use this formula. The proof is left as an exercise for the reader. For simplicity, the \say{pigeons} will be known as balls for now on and the \say{pigeonholes} will be known as boxes.
 
+\bigskip
+
 \section{Basic Examples}
 Let's start with a simple example.
 
@@ -119,6 +121,7 @@ If we had an infinite number of balls for each color, then it's easy to see that
 We are not only limited to objects as the balls and boxes; they could be anything. A classic example involves modular arithmetic.
 
 \begin{example}
+\label{example:easymod}
 Prove that if we are given any 11 integers, there exists a pair of integers such that their difference is divisible by 10.
 \end{example}
 
@@ -140,11 +143,45 @@ Prove that for any 8 points chosen in a unit circle, there exists 2 points that 
 We want to somehow create the boxes so that each box will have more than 1 ball. The balls seem to be the 8 points. We are able to do this by dividing the circle into 7 congruent sectors. By the Pigeonhole Principle, at least one sector will have more than 1 point. In a sector, two points can be at most 1 unit apart, so we are done \footnote{Note that this does not mean 8 is the minimum number of points such that the condition is satisfied.}.
 \end{solution}
 
+\bigskip
+
 \section{More Difficult Examples}
 
 Although in the last section the boxes weren't given to us, it was usually quite easy to identify them. Also, the number of balls was always directly to us. In more advanced problems, however, we often have to create the balls and boxes on our own. 
 
 As usual, let's start with an example.
+
+\begin{example}[1972 IMO]
+Prove that from a set of ten distinct two-digit numbers (in the decimal system), it is possible to select two disjoint subsets whose members have the same sum.
+\end{example}
+
+\begin{solution}
+We first try to create the balls. Since we want to find two subsets that both satisfy a condition, the subsets seem to have the highest chance at being the balls (In other words, the subsets go into the same box). Consider any set of ten distinct two-digit numbers. There are $2^{10}=1024$ subsets. However, note that the empty subset and the subset with all the elements will never be able to satisfy the condition we want to prove, so we have to only consider 1022 subsets.
+
+Now, we find the possible sum of the subsets, which will act of the boxes. The smallest sum is simply the subset $\{10\}$ and the largest subset that is not the entire set is $\{91, 92, \dots 99\}$, which has sum \[91+92+93+\dots+99=770.\] Each of the 1022 subsets takes on exactly one value between 10 and 770. By the Pigeonhole Principle, two subsets will have the same sum. Further, if those two sets have overlapping elements, we can subtract those elements from both sets\footnote{Note that this action cannot create an empty subset because one of the subsets we have chosen cannot be a subset of the other}. Since we have created the two disjoint subsets, we are done. 
+\end{solution}
+
+The crux of this problem was identifying what the balls and boxes were. After that, the Pigeonhole Principle was sufficient. Since the problem statement wanted us to find two subsets that both satisfied a condition, we conjectured that the subsets were the balls. Then, since the problem wanted subsets that had the same sum, we guessed that the value of the sum were the boxes.
+
+\begin{example}
+Prove that there exists a multiple of 2020 that consists solely of the digits 1 and 0.
+\end{example}
+
+\begin{solution}
+Though we could bash it, that doesn't seem fun. Since we are dealing with digits, we can try to use modular arithmetic. Consider the set of positive integers that consists only of the digit 1; that is, \[1, 11, 111, 1111, 111111\dots .\] Call this set $S$. We can take each of the numbers in $S$ $\pmod {2020}$. Although we don't know exactly what each number $\pmod {2020}$ is, we know that it will be an integer between 0 and 2019, inclusive. Consider the first 2021 integers in $S$. Since each of them $\pmod{2020}$ is an integer between 0 and 2019, at least two numbers will be the same $\pmod{2020}$. Call these two numbers $a$ and $b$. Since $a\equiv b \pmod{2020}$, by definition, taking the positive difference of $a$ and $b$ will result in a number that is a multiple of by 2020. 
+\end{solution}
+
+This problem was similar to Example \ref{example:easymod} in that we considered modular arithmetic. We were able to solve the problem without finding the two numbers. The key idea in this problem was recognizing that there are limited residues, which gives us the idea to let them be the \say{boxes} in the Pigeonhole Principle.
+
+\begin{example}[1978 Putnam]
+Let $A$ be a set formed by choosing 20 numbers arbitrarily from the arithmetic sequence $1, 4, 7, \dots, 100$. Prove that there must be two numbers in $A$ such that their sum is $104$.
+\end{example}
+
+\begin{solution}
+It is easy to identify that the 20 numbers are the balls, since we want two of them to satisfy some property. However, the trickiness lies in identifying the boxes. Since we are given an arithmetic sequence, let's write everything in terms of a variable $n$. We get that the numbers are in the form $3n+1$ for $0\leq n \leq 33$. Now, we realize that we want to choose two numbers $3p+1$ and $3q+1$ such that they sum to $3(34)+2$. This can be rewritten as $p+q=34$, where $p$ and $q$ are non-negative integers less than 34. The values of $p$ and $q$ that work are \[(33, 1), (32, 2), (31, 3), \dots , (18, 16),\] so there are 16 pairs in total. These pairs seem like they are our boxes! However, we first have to remove the numbers 0 and 34, since they do not form pairs and would not work if we applied the Pigeonhole Principle. Now, since there are 16 pairs and 18 numbers to choose, 2 numbers will be from the same pair, and those two numbers will be our $p$ and $q$. Since we have found the two numbers, we are done \footnote{19 numbers works as well.}.
+\end{solution}
+
+
 
 \subsection{Connection with the Mean and Expected Value}
 We begin this subsection with two theorems.
@@ -185,7 +222,7 @@ Let's see this in action.
 
 \subsection{Pigeons and Points (Geometry)}
 
-The Pigeonhole Principle is also occasionally seen with geometry. In most cases, it deals with points within a plane or space. Some clever thinking is usually the only thing required to solve these type of problems.
+The Pigeonhole Principle is also occasionally seen with geometry. In most cases, it deals with points or lines that satisfy a condition. Some clever thinking on what the boxes will be is usually the main difficulty when solving these types of problems.
 
 \begin{example}[USAMTS]
 Every point in a plane is either red, green, or blue. Prove that there exists a rectangle in the plane such that all of its vertices are the same color.
@@ -197,20 +234,20 @@ Choose a rectangle in the plane with 4 points as the columns and 19 points as th
 Now consider the 19 rows. Since for each row there are 3 ways to choose the color that is repeated and $\binom{4}{2}=6$ ways to choose which points are repeated, there are 18 possible arrangements of the 3 colors. Since there are 19 rows and 18 possible arrangements of the 3 colors, by the Pigeonhole Principle, 2 rows will be exactly the same and contain at least 2 points of the same color. The points that are the same color in those two rows will form the rectangle, and we are done.
 \end{solution}
 
-Our next one uses a bit of number theory, but again deals with points within a plane.
+Our next one uses a bit of number theory, but deals with points within a plane.
 
 \begin{example}
 Prove that if I choose any 5 distinct lattice points on the coordinate plane and compute the midpoints of all the segments formed by those 5 lattice points, there exists a midpoint that lies on a lattice point.
 \end{example}
 
 \begin{solution}
-
+It seems quite obvious that the initial 5 points are the balls, so now we just have to determine the boxes. With a little motivation from parity and the fact that there are 5 points, it wouldn't be hard to guess that the parity of the points is the boxes. Since there are 2 choices of parity for the x-coordinate and 2 choices of parity for the y-coordinate of the points, there are $2^2=4$ coordinate points with different parities. By the Pigeonhole Principle, two points will have the same parity for both the x and y coordinates. Since the sum of 2 odd numbers and the sum of 2 even numbers is both even, and the midpoint of two points is $\left (\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2} \right )$, the two points with the same parity for both the x and y coordinates will have a midpoint that is an integer, and is therefore a lattice point.
 \end{solution}
 
 
 
 
-
+\bigskip
 
 
 \section{Problems}
@@ -219,13 +256,42 @@ Prove that if I choose any 5 distinct lattice points on the coordinate plane and
 If I have an infinite number of red socks, yellow socks, pink socks, green socks, and blue socks, how many socks do I have to draw I order to guarantee I have a pair of socks that are the same color.
 \end{exercise}
 
+\begin{exercise}[Classic]
+Prove that in a group of $n$ people where $n>1$, there exists two people that have the same number of friends. (Assume that if person $a$ is friends with person $b$, then person $b$ is friends with person $a$ as well. 
+\end{exercise}
+
 \begin{exercise}[2006 AMC]
  Six distinct positive integers are randomly chosen between 1 and 2006, inclusive. What is the probability that some pair of these integers has a difference that is a multiple of 5?
 \end{exercise}
 
-\begin{exercise}[1972 IMO]
-Prove that from a set of ten distinct two-digit numbers (in the decimal system), it is possible to select two disjoint subsets whose members have the same sum.
+\begin{exercise}
+ Prove Theorem \ref{thm:expected value}.
 \end{exercise}
+
+\begin{example}
+In a standard 8 $\times$ 8 chessboard, two opposite corner squares are removed. Prove that it impossible to tile the remaining chessboard with 2 $\times$ 1 tiles.
+\end{example}
+
+\begin{exercise}[Brilliant]
+Ten points are placed within a unit equilateral triangle. Show that there exists two points with distance at most $\frac{1}{3}$ apart.
+\end{exercise}
+
+\begin{exercise}[University of Victoria]
+ Prove that if $n + 1$ integers are selected from among $\{1, 2,..., 2n\}$, then the selection includes integers $a$ and $b$ such that $gcd(a,b)=1$
+\end{exercise}
+
+\begin{exercise}[2003 Manhattan Math Olympiad]
+ Prove that from any set of one hundred whole numbers, one can choose either one number which is divisible by 100, or several numbers whose sum is divisible by 100.
+\end{exercise}
+
+\begin{exercise}[1999 AIME]
+ Forty teams play a tournament in which every team plays every other team exactly once. No ties occur, and each team has a $50 \%$ chance of winning any game it plays. The probability that no two teams win the same number of games is $\frac mn,$ where $m_{}$ and $n_{}$ are relatively prime positive integers. Find $\log_2 n.$
+\end{exercise}
+
+\begin{exercise}[1997 Japan MO]
+ Take $10$ points inside the circle with diameter $5$. Prove that for any these 10 points there exist two points whose distance is less than 2.
+\end{exercise}
+
 
 
 
