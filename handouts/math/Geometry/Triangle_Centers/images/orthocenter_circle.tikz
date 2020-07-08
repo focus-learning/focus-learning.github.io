@@ -1,26 +1,26 @@
 \definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-\draw [line width=1pt,color=wrwrwr] (-6.704024039828016,6.001415467595274)-- (-9.04,0);
-\draw [line width=1pt,color=wrwrwr] (-9.04,0)-- (-1,0);
-\draw [line width=1pt,color=wrwrwr] (-1,0)-- (-6.704024039828016,6.001415467595274);
-\draw [line width=1pt,color=wrwrwr] (-6.704024039828016,6.001415467595274)-- (-6.704024039828016,0);
-\draw [line width=1pt,color=wrwrwr] (-9.04,0)-- (-4.815865442051531,4.014813704551082);
-\draw [line width=1pt,color=wrwrwr] (-1,0)-- (-7.982161769643331,2.7177192000763215);
-\draw [line width=1pt,color=wrwrwr] (-5.02,0) circle (4.02cm);
+\draw [line width=1.2pt,color=wrwrwr] (-6.704024039828016,6.001415467595274)-- (-9.04,0);
+\draw [line width=1.2pt,color=wrwrwr] (-9.04,0)-- (-1,0);
+\draw [line width=1.2pt,color=wrwrwr] (-1,0)-- (-6.704024039828016,6.001415467595274);
+\draw [line width=1.2pt,color=wrwrwr] (-6.704024039828016,6.001415467595274)-- (-6.704024039828016,0);
+\draw [line width=1.2pt,color=wrwrwr] (-9.04,0)-- (-4.815865442051531,4.014813704551082);
+\draw [line width=1.2pt,color=wrwrwr] (-1,0)-- (-7.982161769643331,2.7177192000763215);
+\draw [line width=1.2pt,color=wrwrwr] (-5.02,0) circle (4.02cm);
 \begin{scriptsize}
-\draw [fill=wrwrwr] (-6.704024039828016,6.001415467595274) circle (2.5pt);
-\draw[color=wrwrwr] (-6.741242874995684,6.475955615983047) node {\large $A$};
-\draw [fill=wrwrwr] (-9.04,0) circle (2.5pt);
-\draw[color=wrwrwr] (-9.402389589483962,-0.20482529661340015) node {\large $B$};
-\draw [fill=wrwrwr] (-1,0) circle (2.5pt);
-\draw[color=wrwrwr] (-0.5328552701807864,-0.03734053835889317) node {\large $C$};
+\draw [fill=wrwrwr] (-6.704024039828016,6.001415467595274) circle (2pt);
+\draw[color=wrwrwr] (-6.741242874995683,6.438736780815378) node {\large $A$};
+\draw [fill=wrwrwr] (-9.04,0) circle (2pt);
+\draw[color=wrwrwr] (-9.40238958948396,-0.24204413178106843) node {\large $B$};
+\draw [fill=wrwrwr] (-1,0) circle (2pt);
+\draw[color=wrwrwr] (-0.693182160249597,-0.07455937352656139) node {\large $C$};
 \draw [fill=wrwrwr] (-6.704024039828016,0) circle (2pt);
-\draw[color=wrwrwr] (-6.759852292579518,-0.26065354936490254) node {\large $D$};
+\draw[color=wrwrwr] (-6.759852292579517,-0.26065354936490254) node {\large $D$};
 \draw [fill=wrwrwr] (-4.815865442051531,4.014813704551082) circle (2pt);
-\draw[color=wrwrwr] (-4.601159852854761,4.391700846593626) node {\large $E$};
+\draw[color=wrwrwr] (-4.60115985285476,4.391700846593626) node {\large $E$};
 \draw [fill=wrwrwr] (-7.982161769643331,2.7177192000763215) circle (2pt);
-\draw[color=wrwrwr] (-8.26721511687008,2.995994527806067) node {\large $F$};
+\draw[color=wrwrwr] (-8.267215116870078,2.995994527806067) node {\large $F$};
 \draw [fill=wrwrwr] (-6.704024039828017,2.2202200639544034) circle (2pt);
-\draw[color=wrwrwr] (-6.443492193654338,1.8980388903598544) node {\large $H$};
+\draw[color=wrwrwr] (-6.443492193654337,1.8980388903598544) node {\large $H$};
 \end{scriptsize}
 \end{tikzpicture}
