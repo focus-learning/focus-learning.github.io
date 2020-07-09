@@ -14,7 +14,7 @@ You'll notice that a portion of our handouts are marked as **WIP** (Work In Prog
 
 [Techniques for Elementary Counting](https://github.com/focus-learning/website/blob/master/handouts/math/counting/elementary-counting/Techniques_for_Elementary_Counting.pdf) (Perryn Chang, July 2020)
 
-**WIP** [Introduction to the Pigeonhole Principle](https://github.com/focus-learning/website/blob/master/handouts/math/counting/Intermediate%20Counting/Introduction_to_the_Pigeonhole_Principle%20(1).pdf) (Perryn Chang, July 2020)
+[Introduction to the Pigeonhole Principle](https://github.com/focus-learning/website/blob/master/handouts/math/counting/Intermediate%20Counting/The_Pigeonhole_Principle.pdf) (Perryn Chang, July 2020)
 
 **WIP** [Expected Value](https://github.com/focus-learning/website/blob/master/handouts/math/counting/expected-value/expected-value.pdf) (Nathan Zhao, July 2020)
 

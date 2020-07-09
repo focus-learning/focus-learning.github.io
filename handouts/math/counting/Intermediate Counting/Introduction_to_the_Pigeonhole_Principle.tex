@@ -19,12 +19,12 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Introduction to the Pigeonhole Principle}
+\lhead{The Pigeonhole Principle}
 \rhead{\thepage}
 \usepackage{graphicx}
 \usepackage{dirtytalk}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=MidnightBlue, pdftitle=Introduction to the Pigeonhole Principle, pdfpagemode=FullScreen}
+\hypersetup{colorlinks=true, linkcolor=MidnightBlue, urlcolor=BrickRed, pdftitle=The Pigeonhole Principle, pdfpagemode=FullScreen}
 
 
 \theoremstyle{plain}
@@ -42,7 +42,7 @@
 \newtheorem*{solution}{Solution}
 
 
-\title{\textbf{Introduction to the Pigeonhole Principle}}
+\title{\textbf{The Pigeonhole Principle}}
 \author{\textbf{Perryn Chang}}
 \date{\today}
 
@@ -164,6 +164,7 @@ Now, we find the possible sum of the subsets, which will act of the boxes. The s
 The crux of this problem was identifying what the balls and boxes were. After that, the Pigeonhole Principle was sufficient. Since the problem statement wanted us to find two subsets that both satisfied a condition, we conjectured that the subsets were the balls. Then, since the problem wanted subsets that had the same sum, we guessed that the value of the sum were the boxes.
 
 \begin{example}
+\label{example:2020 mod thing}
 Prove that there exists a multiple of 2020 that consists solely of the digits 1 and 0.
 \end{example}
 
@@ -178,7 +179,7 @@ Let $A$ be a set formed by choosing 20 numbers arbitrarily from the arithmetic s
 \end{example}
 
 \begin{solution}
-It is easy to identify that the 20 numbers are the balls, since we want two of them to satisfy some property. However, the trickiness lies in identifying the boxes. Since we are given an arithmetic sequence, let's write everything in terms of a variable $n$. We get that the numbers are in the form $3n+1$ for $0\leq n \leq 33$. Now, we realize that we want to choose two numbers $3p+1$ and $3q+1$ such that they sum to $3(34)+2$. This can be rewritten as $p+q=34$, where $p$ and $q$ are non-negative integers less than 34. The values of $p$ and $q$ that work are \[(33, 1), (32, 2), (31, 3), \dots , (18, 16),\] so there are 16 pairs in total. These pairs seem like they are our boxes! However, we first have to remove the numbers 0 and 34, since they do not form pairs and would not work if we applied the Pigeonhole Principle. Now, since there are 16 pairs and 18 numbers to choose, 2 numbers will be from the same pair, and those two numbers will be our $p$ and $q$. Since we have found the two numbers, we are done \footnote{19 numbers works as well.}.
+It is easy to identify that the 20 numbers are the balls, since we want two of them to satisfy some property. However, the trickiness lies in identifying the boxes. Since we are given an arithmetic sequence, let's write everything in terms of a variable $n$. We get that the numbers are in the form $3n+1$ for $0\leq n \leq 33$. Now, we realize that we want to choose two numbers $3p+1$ and $3q+1$ such that they sum to $3(34)+2$. This can be rewritten as $p+q=34$, where $p$ and $q$ are non-negative integers less than 34. The values of $p$ and $q$ that work are \[(33, 1), (32, 2), (31, 3), \dots , (18, 16),\] so there are 16 pairs in total. These pairs seem like they are our boxes! However, we first have to remove the numbers 0 and 34, since they do not form pairs and would not work if we applied the Pigeonhole Principle. Now, since there are 16 pairs and 18 numbers to choose, 2 numbers will be from the same pair, and those two numbers will be our $p$ and $q$. Since we have found the two numbers, we are done \footnote{In this problem, 19 numbers works as well.}.
 \end{solution}
 
 
@@ -210,15 +211,28 @@ An immediate corollary very similar to Theorem \ref{thm:expected value} follows.
 
 \begin{mdframed}
     \begin{corollary}
+    \label{Corollary:Expected Value}
     If the expected value of x is $E(x)$, and x must be an integer, then there exists a value of x that is greater than or equal to $\left \lceil{E(x)}\right \rceil$ and a value of x that is less than or equal to $\left \lfloor{E(x)}\right \rfloor $.
     \end{corollary}
 \end{mdframed}
 
-Let's see this in action.
+Let's see an instructive example of this.
 
-\begin{example}
-
+\begin{example}[2012 USAMO]
+A circle is divided into 432 congruent arcs by 432 points. The points are colored in four colors such that some 108 points are colored Red, some 108 points are colored Green, some 108 points are colored Blue, and the remaining 108 points are colored Yellow. Prove that one can choose three points of each color in such a way that the four triangles formed by the chosen points of the same color are congruent.
 \end{example} 
+
+\begin{solution}
+WLOG, let's consider the red points. Notice that there are 431 rotations that allow the points to overlap. For each of the red points, a randomly chosen rotation will have a $\frac{108}{431}$ chance of coinciding with a point that was previously green. Since there are 108 red points, by Linearity of Expectation, in a single rotation, the amount of red points that land in a spot that was previously green is expected to be \[\frac{108}{432}\cdot 108, \] which is slightly greater than 27. By Corollary \ref{Corollary:Expected Value}, there exists a rotation such that 28 red points are rotated to a position previously held by a green point. This means that on the original circle there exists 28 green points that are rotations from 28 red points.
+
+We now do something similar. For each of the 28 red points already selected, a random rotation has a $\frac{108}{431}$ chance of overlapping with a yellow point. By Linearity of Expectation, \[\frac{108}{431}\cdot 28\] red points will overlap with a yellow point. Since this number is slightly greater than 7, there exists a rotation such that 8 of the 28 already selected red points all land on a yellow point. We have now created 8 red, green, and yellow points that are all rotations of each other.
+
+We can finally consider the last color, blue. For each of the 8 points that we already selected, a random rotation has a $\frac{108}{431}$ chance of overlapping with a blue point. By Linearity of Expectation, the amount of red points that will overlap with a blue point is \[\frac{108}{431}\cdot 8.\] This number is slightly greater than 2, so there exists a rotation such that 3 of the red points will overlap with 3 of the blue points. 
+
+From the 3 points of each color that we selected, we can construct a triangle of each color. Since they are rotations of each other, they must be congruent, and we are done.
+\end{solution}
+
+In this problem, we used Corollary \ref{Corollary:Expected Value} to figure out the \emph{existence} of a rotation we wanted. Then, we applied the same idea 3 times in order to get the result we wanted. The Theorems in this section are especially useful when the problem looks like a Pigeonhole Problem but cannot be directly solved with it.
 
 \subsection{Pigeons and Points (Geometry)}
 
@@ -256,6 +270,18 @@ It seems quite obvious that the initial 5 points are the balls, so now we just h
 If I have an infinite number of red socks, yellow socks, pink socks, green socks, and blue socks, how many socks do I have to draw I order to guarantee I have a pair of socks that are the same color.
 \end{exercise}
 
+\begin{exercise}
+In Foclandia, there exists 6 types of cars, labeled $A$ through $F$. I want to create a group of people such that at least 4 people have the same type of car. How many people should I gather?
+\end{exercise}
+
+\begin{exercise}
+ Solve Example \ref{example:2020 mod thing}, but 2020 is replaced by $n$.
+\end{exercise}
+
+\begin{exercise}[Chattanooga Math Circle]
+ There is an $n \times n$ grid divided into unit squares. Each unit square is filled with either -1, 0, or 1. Is it possible to fill in the grid such that the sum of each row, column, and main diagonal is different?
+\end{exercise}
+
 \begin{exercise}[Classic]
 Prove that in a group of $n$ people where $n>1$, there exists two people that have the same number of friends. (Assume that if person $a$ is friends with person $b$, then person $b$ is friends with person $a$ as well. 
 \end{exercise}
@@ -268,12 +294,16 @@ Prove that in a group of $n$ people where $n>1$, there exists two people that ha
  Prove Theorem \ref{thm:expected value}.
 \end{exercise}
 
-\begin{example}
+\begin{exercise}
 In a standard 8 $\times$ 8 chessboard, two opposite corner squares are removed. Prove that it impossible to tile the remaining chessboard with 2 $\times$ 1 tiles.
-\end{example}
+\end{exercise}
 
 \begin{exercise}[Brilliant]
 Ten points are placed within a unit equilateral triangle. Show that there exists two points with distance at most $\frac{1}{3}$ apart.
+\end{exercise}
+
+\begin{exercise}[1996 India RMO]
+ If $A$ is a fifty element subset of the set $1,2,\ldots 100$ such that no two numbers from $A$ add up to $100$, show that $A$ contains a square
 \end{exercise}
 
 \begin{exercise}[University of Victoria]
@@ -288,10 +318,34 @@ Ten points are placed within a unit equilateral triangle. Show that there exists
  Forty teams play a tournament in which every team plays every other team exactly once. No ties occur, and each team has a $50 \%$ chance of winning any game it plays. The probability that no two teams win the same number of games is $\frac mn,$ where $m_{}$ and $n_{}$ are relatively prime positive integers. Find $\log_2 n.$
 \end{exercise}
 
+\subsection{Challenges from the Olympiads}
+
+This section contains examples of the Pigeonhole Principle found in various Olympiads. Solutions for most of the problems can be found online.
+
 \begin{exercise}[1997 Japan MO]
  Take $10$ points inside the circle with diameter $5$. Prove that for any these 10 points there exist two points whose distance is less than 2.
 \end{exercise}
 
+\begin{exercise}[2017 India RMO Maharashtra and Goa\footnote{Strangely, I wasn't able to easily find this problem online. \href{https://apfstatic.s3.ap-south-1.amazonaws.com/s3fs-public/15_Prithwijit_PigeonholePrinciple.pdf?FIhlG8dGoKVAa36UwezGHRRxuVBzLIZ0}{This} source explains the solution pretty well. Credit goes to \textbf{Prithwijit De} for the linked document.}]
+ Let $P(X)$ and $Q(X)$ be polynomials of degree 6 and degree 3, respectively such that \[P(X)>Q(x)^2+Q(X)+x^2-6\] for all real values of $X$. If all the roots of $P(X)$ are real numbers, then prove that there exists two roots of $P(X)$, say $\alpha$ and $\beta$, such that $|\alpha-\beta|<1$.
+\end{exercise}
+
+\begin{exercise}[1985 IMO]
+ Given a set $M$ of $1985$ distinct positive integers, none of which has a prime divisor greater than $23$, prove that $M$ contains a subset of $4$ elements whose product is the $4$th power of an integer.
+\end{exercise}
+
+\begin{exercise} [2011 ISL]
+ Consider a polynomial $P(x) =  \prod^9_{j=1}(x+d_j),$ where $d_1, d_2, \ldots d_9$ are nine distinct integers. Prove that there exists an integer $N,$ such that for all integers $x \geq N$ the number $P(x)$ is divisible by a prime number greater than 20.
+\end{exercise}
+
+\begin{exercise}[2004 China Math Olympiad]
+ Let $M$ be a set consisting of $n$ points in the plane that satisfy the following conditions:
+ \begin{enumerate}
+     \item There exist $7$ points in $M$ which constitute the vertices of a convex heptagon
+     \item If for any $5$ points in $M$ which constitute the vertices of a convex pentagon, then there is a point in $M$ which lies in the interior of the pentagon.
+ \end{enumerate}
+Find the minimum value of $n$.
+\end{exercise}
 
 
 
