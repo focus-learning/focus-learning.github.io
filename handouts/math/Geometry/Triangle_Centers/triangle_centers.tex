@@ -139,9 +139,49 @@
 
 One important thing to note about the orthocenter and the feet of the altitudes, is that there are many resulting cyclic quadrilaterals.
 For example, referring to Figure \ref{fig:cyclic_orthocenter}, we have $BFEC$ cyclic. This is because $\angle BFC = \angle BEC = 90$.
-See if you can find the other cyclic quads.
+See if you can find the other cyclic quads.\\\\\\\\
+\begin{mdframed}
+    \begin{thm}\label{reflecting_the_orthocenter}
+        The reflections of the orthocenter of $\triangle ABC$ over $AB$, $AC$, $BC$ and the midpoints of those sides, lies on the circumcircle of $\triangle ABC$.
+    \end{thm} 
+\end{mdframed}
 
 
+\begin{figure}[!htb]
+    \centering
+    \scalebox{.75}{\input{images/reflecting_orthocenter.tikz}}
+    \caption{Reflection of the orthocenter}
+    \label{fig:reflection_orthocenter}
+
+\end{figure}
+\begin{proof}
+    tbd
+\end{proof}
+
+\begin{example}[Pumac 2019]
+    Let $\triangle ABC$ be a triangle with orthocenter $H$. Let $D$ be a point on the circumcircle
+    of $ABC$ such that $AD \perp BC$. Suppose that $AB=6$, $DB=2$, and the ratio $\frac{[ABC]}{[HBC]}=5$. Then, if $R$
+    is the length of the circumradius, then find $R^2$
+\end{example}
+
+\begin{figure}[!htb]
+    \centering
+    \scalebox{.5}{\input{images/pumacProb.tikz}}
+    \caption{Problem diagram}
+    \label{fig:pumac_problem}
+\end{figure}
+\begin{solution}
+    We first label the intersection of $HD$ with $BC$ as E as shown in the diagram.
+    Secondly, we note that the area condition, simply tells us that $\frac{HE}{AE}=5$. So we can set $HE=x$ and $AH=4x$.
+    Now, since $AD$ is perpendicular to $BC$, it is collinear with $AH$. Additionally, by 
+    Theorem \ref{reflecting_the_orthocenter}, we know that $HE=ED=x$.
+
+    Now we can use the law of cosines to find $x$. $$6^2+(6x)^2-2\cdot 6\cdot 6x \cos(90-B)=2^2.$$ However, $\cos(90-B)=\sin(B)=\frac{5x}{6}$
+    So this reduces to $$32=24x^2 \implies x=\frac{2\sqrt{3}}{3}.$$
+    Now we have $AH=\frac{10\sqrt{3}}{3}$. By the Pythagorean Theorem, we get that $EB=\frac{2\sqrt{6}}{3}$. Since $BD=2$, we have $\sin{D}=\frac{\sqrt{6}}{3}$.
+    But $\angle D = \angle C$ by cyclic quadrilateral properties so $\sin{C}=\sin{D}=\frac{\sqrt{6}}{3}$. Then by the extended law of sines, we find that 
+    $2R = \frac{18}{\sqrt{6}} \implies R^2=\boxed{\frac{27}{2}}$.
+\end{solution}
 \section{Other centers}
 \section{Important Relationships}
 \section{Techniques}

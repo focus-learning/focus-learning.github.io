@@ -1,0 +1,23 @@
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\draw [line width=1.2pt,color=wrwrwr] (-0.04,-0.8)-- (5.959997755737068,-0.8051895231137924);
+\draw [line width=1.2pt,color=wrwrwr] (-0.04,-0.8)-- (4.3399957517184,4.893104124914693);
+\draw [line width=1.2pt,color=wrwrwr] (4.3399957517184,4.893104124914693)-- (5.959997755737068,-0.8051895231137924);
+\draw [line width=1.2pt,color=wrwrwr] (2.9619228868856573,1.4218966862370686) circle (3.7347511166233263cm);
+\draw [line width=1.2pt,color=wrwrwr] (6.683756129741981,1.1115368700739812)-- (5.959997755737068,-0.8051895231137924);
+\draw [line width=1.2pt,color=wrwrwr] (-0.04,-0.8)-- (6.683756129741981,1.1115368700739812);
+\begin{scriptsize}
+\draw [fill=wrwrwr] (-0.04,-0.8) circle (2pt);
+\draw[color=wrwrwr] (-0.25347052662808867,-0.9538334598958449) node {\large $A$};
+\draw [fill=wrwrwr] (5.959997755737068,-0.8051895231137924) circle (2pt);
+\draw[color=wrwrwr] (6.14624011879702,-0.9382623877658567) node {\large $B$};
+\draw [fill=wrwrwr] (4.3399957517184,4.893104124914693) circle (2pt);
+\draw[color=wrwrwr] (4.464564328758305,5.259024319969413) node {\large $C$};
+\draw [fill=wrwrwr] (4.33614773368415,0.4441212293267627) circle (2pt);
+\draw[color=wrwrwr] (4.199856102548507,0.8212687629228002) node {\large $H$};
+\draw [fill=wrwrwr] (6.683756129741981,1.1115368700739812) circle (2pt);
+\draw[color=wrwrwr] (6.971506941686389,1.3351141432124078) node {\large $D$};
+\draw [fill=wrwrwr] (5.509951931713065,0.7778290497003716) circle (2pt);
+\draw[color=wrwrwr] (5.663536882767389,1.1949744940425149) node {\large $E$};
+\end{scriptsize}
+\end{tikzpicture}
