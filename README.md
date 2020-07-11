@@ -1,7 +1,7 @@
 # website
 Welcome to the Focus Learning organization! We are a group of enthusiatic high schoolers who want to make competitive math training easier for everyone.
 
-**Website:** https://focus-learning.github.io/website/
+**Website:** https://focus-learning.github.io/
 
 ## Handouts List
 You'll notice that a portion of our handouts are marked as **WIP** (Work In Progress), but they are certainly readable. We are always be working to bring new handouts to you!
