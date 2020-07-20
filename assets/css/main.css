@@ -29,6 +29,9 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+	body {
+		background-image:url("/assets/images/modular_arithmetic.png");
+	}
 
 	article, aside, details, figcaption, figure,
 	footer, header, hgroup, menu, nav, section {
