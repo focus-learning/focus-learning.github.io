@@ -5,6 +5,10 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{mdframed}
 \usepackage{enumerate}
+\usepackage{varwidth}
+
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.3em}
 
 %\usepackage[]{microtype}
 
@@ -41,7 +45,6 @@
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
 
-
 \title{\textbf{The Pigeonhole Principle}}
 \author{\textbf{Perryn Chang}}
 \date{\today}
@@ -67,7 +70,7 @@ Going with the spirit of the name of the principle, consider $8$ pigeons and $7$
     \end{prop}
 \end{mdframed}
 
-Now, what if I had 16 pigeons and 7 pigeonholes. In this case, at least one pigeonhole would contain at least 2 pigeons. We can create a better Pigeonhole Principle. That is\dots 
+Now, what if I had 16 pigeons and 7 pigeonholes. Rather than only saying 1 pigeonhole would have more than 1 pigeon, we can make a stronger claim. In this case, at least one pigeonhole would contain at least 2 pigeons. We can create a better Pigeonhole Principle. That is\dots 
 
 
 \begin{mdframed}
@@ -81,7 +84,7 @@ We proceed by contradiction. Assume that all of the $n$ boxes contain $k$ or les
 \end{proof}
 
 
-Using this idea, we can we can update Proposition \ref{prop:beginintro}.
+We present one last idea for this section.
 
 \begin{mdframed}
     \begin{prop}
@@ -89,7 +92,11 @@ Using this idea, we can we can update Proposition \ref{prop:beginintro}.
     \end{prop}
 \end{mdframed}
 
-Although we have this formula, there is no need to memorize it. Usually, common sense will suffice when the problem requires you to use this formula. The proof is left as an exercise for the reader. For simplicity, the \say{pigeons} will be known as balls for now on and the \say{pigeonholes} will be known as boxes.
+Although we have this formula, it is usually not necessary to memorize it. Typically, common sense will suffice when the problem requires you to use this formula. The proof is left as an exercise for the reader.
+
+\bigskip
+
+For simplicity, from now on, the \say{pigeons} will be known as balls and the \say{pigeonholes} will be known as boxes.
 
 \bigskip
 
@@ -97,23 +104,23 @@ Although we have this formula, there is no need to memorize it. Usually, common 
 Let's start with a simple example.
 
 \begin{example}
-There exists a group of 4 friends. How many apples should I give them such that at least one person will receive more than 1 apple.
+There exists a group of 4 friends. What is the minimum amount of apples I should give them such that at least one person will receive more than 1 apple.
 \end{example}
 
 \begin{solution}
-By the Pigeonhole Principle, when there are 5 apples, at least person will receive more than one apple, so our answer is \boxed{5}.
+By the Pigeonhole Principle, when there are 5 apples, at least person will receive more than one apple, so our answer is at most 5. However, notice that if there were 4 apples, each child could get 1 apple, so no child would get more than 1 apple. Hence, our answer is \boxed{5}.
 \end{solution}
 
 \bigskip
 
-In some scenarios, the Pigeonhole Principle cannot be directly used, but the idea behind it is similar. Here is an example.
+In some scenarios, the Pigeonhole Principle cannot be directly used, but the idea behind it is the same. Here is an example.
 
 \begin{example}
 (2019 AMC) A box contains $28$ red balls, $20$ green balls, $19$ yellow balls, $13$ blue balls, $11$ white balls, and $9$ black balls. What is the minimum number of balls that must be drawn from the box without replacement to guarantee that at least $15$ balls of a single color will be drawn$?$
 \end{example}
 
 \begin{solution}
-If we had an infinite number of balls for each color, then it's easy to see that the answer would be $14\cdot 6+1=85$, since in the worst case scenario we have to draw 14 balls of each color. This means that for the colors that have less than 15 balls, we can simply draw all of them. We can draw all the black, white, and blue balls, while drawing 14 of the yellow, green, and red balls. The next ball we draw forces some color to have 15 balls, so our answer is $\boxed{76}$.
+If we had an infinite number of balls for each color, then it's easy to see that by the Pigeonhole Principle, the answer would be $14\cdot 6+1=85$, since in the worst case scenario we have to draw 14 balls of each color. For the original problem, we can change it so that for the colors that have less than 15 balls, we draw all of them (rather than 14). We can draw all the black, white, and blue balls, while also drawing 14 of the yellow, green, and red balls. The next ball we draw forces some color to have 15 balls, so our answer is $\boxed{76}$.
 \end{solution}
 
 \bigskip
@@ -126,9 +133,9 @@ Prove that if we are given any 11 integers, there exists a pair of integers such
 \end{example}
 
 \begin{solution}
-Here, the balls and boxes aren't that clear. We are working with solely the integers. However, the words \say{difference} and \say{divisible} hint at modular arithmetic. We can express two integers being congruent modulo 10 as \[a \equiv b \pmod {10}\]
+Here, the balls and boxes aren't that clear. We are only working with integers. However, the words \say{difference} and \say{divisible} hint at modular arithmetic. We can express two integers being congruent modulo 10 as \[a \equiv b \pmod {10}\]
 
-Note that there are 10 choices for the residue of $a$ and $b$. But, we are given 11 total numbers. We can let our balls be the 11 numbers and the boxes be the residues. By the Pigeonhole Principle, at least 2 numbers will be congruent $\mod 10$, which implies that their difference is divisible by 10.
+and we are finding the numbers $a$ and $b$. Note that there are 10 choices for the residue of $a$ and $b$. But, we are given 11 total numbers. We can let our balls be the 11 numbers and the boxes be the residues. By the Pigeonhole Principle, at least 2 numbers will be congruent $\mod 10$, which implies that their difference is divisible by 10. Those are the two numbers $a$ and $b$, and we are done.
 \end{solution}
 
 \bigskip
@@ -140,7 +147,7 @@ Prove that for any 8 points chosen in a unit circle, there exists 2 points that 
 \end{example}
 
 \begin{solution}
-We want to somehow create the boxes so that each box will have more than 1 ball. The balls seem to be the 8 points. We are able to do this by dividing the circle into 7 congruent sectors. By the Pigeonhole Principle, at least one sector will have more than 1 point. In a sector, two points can be at most 1 unit apart, so we are done \footnote{Note that this does not mean 8 is the minimum number of points such that the condition is satisfied.}.
+We want to somehow create the boxes so that each box will have more than 1 ball. The balls seem to be the 8 points. We are able to make the boxes by dividing the circle into 7 congruent sectors. By the Pigeonhole Principle, at least one sector will have more than 1 point. In a sector, two points can be at most 1 unit apart, so the two points in the same sector are the two points that are at most 1 unit away from each other \footnote{Note that this does not mean 8 is the minimum number of points such that the condition is satisfied.}. 
 \end{solution}
 
 \bigskip
@@ -148,6 +155,8 @@ We want to somehow create the boxes so that each box will have more than 1 ball.
 \section{More Difficult Examples}
 
 Although in the last section the boxes weren't given to us, it was usually quite easy to identify them. Also, the number of balls was always directly to us. In more advanced problems, however, we often have to create the balls and boxes on our own. 
+
+\bigskip
 
 As usual, let's start with an example.
 
@@ -158,10 +167,10 @@ Prove that from a set of ten distinct two-digit numbers (in the decimal system),
 \begin{solution}
 We first try to create the balls. Since we want to find two subsets that both satisfy a condition, the subsets seem to have the highest chance at being the balls (In other words, the subsets go into the same box). Consider any set of ten distinct two-digit numbers. There are $2^{10}=1024$ subsets. However, note that the empty subset and the subset with all the elements will never be able to satisfy the condition we want to prove, so we have to only consider 1022 subsets.
 
-Now, we find the possible sum of the subsets, which will act of the boxes. The smallest sum is simply the subset $\{10\}$ and the largest subset that is not the entire set is $\{91, 92, \dots 99\}$, which has sum \[91+92+93+\dots+99=770.\] Each of the 1022 subsets takes on exactly one value between 10 and 770. By the Pigeonhole Principle, two subsets will have the same sum. Further, if those two sets have overlapping elements, we can subtract those elements from both sets\footnote{Note that this action cannot create an empty subset because one of the subsets we have chosen cannot be a subset of the other}. Since we have created the two disjoint subsets, we are done. 
+Now, we find the possible sum of the subsets, which will act of the boxes. The smallest sum is simply the subset $\{10\}$ and the largest subset that is not the entire set is $\{91, 92, \dots 99\}$, which has sum \[91+92+93+\dots+99=770.\] Each of the 1022 subsets takes on exactly one value between 10 and 770. By the Pigeonhole Principle, two subsets will have the same sum. Further, if those two sets have overlapping elements, we can subtract those elements from both sets\footnote{Note that this action cannot create an empty subset because one of the subsets we have chosen cannot be a subset of the other}. Since we have created the two disjoint subsets, we are done. $\square$
 \end{solution}
 
-The crux of this problem was identifying what the balls and boxes were. After that, the Pigeonhole Principle was sufficient. Since the problem statement wanted us to find two subsets that both satisfied a condition, we conjectured that the subsets were the balls. Then, since the problem wanted subsets that had the same sum, we guessed that the value of the sum were the boxes.
+The crux of this problem was identifying what the balls and boxes were. After that, the Pigeonhole Principle was sufficient. Since the problem statement wanted us to find two subsets that both satisfied a condition, we conjectured that the subsets were the balls. Then, since the problem wanted subsets that had the same sum, we made an educated guess that the value of the sum were the boxes.
 
 \begin{example}
 \label{example:2020 mod thing}
@@ -169,7 +178,7 @@ Prove that there exists a multiple of 2020 that consists solely of the digits 1 
 \end{example}
 
 \begin{solution}
-Though we could bash it, that doesn't seem fun. Since we are dealing with digits, we can try to use modular arithmetic. Consider the set of positive integers that consists only of the digit 1; that is, \[1, 11, 111, 1111, 111111\dots .\] Call this set $S$. We can take each of the numbers in $S$ $\pmod {2020}$. Although we don't know exactly what each number $\pmod {2020}$ is, we know that it will be an integer between 0 and 2019, inclusive. Consider the first 2021 integers in $S$. Since each of them $\pmod{2020}$ is an integer between 0 and 2019, at least two numbers will be the same $\pmod{2020}$. Call these two numbers $a$ and $b$. Since $a\equiv b \pmod{2020}$, by definition, taking the positive difference of $a$ and $b$ will result in a number that is a multiple of by 2020. 
+Though we could bash it, that doesn't seem fun. Since we are dealing with digits, we can try to use modular arithmetic. Consider the set of positive integers that consists only of the digit 1; that is, \[1, 11, 111, 1111, 111111\dots .\] Call this set $S$. We can take each of the numbers in $S$ $\pmod {2020}$. Although we don't know exactly what each number $\pmod {2020}$ is, we know that it will be an integer between 0 and 2019, inclusive. Consider the first 2021 integers in $S$. Since each of them $\pmod{2020}$ is an integer between 0 and 2019, at least two numbers will be the same $\pmod{2020}$. Call these two numbers $a$ and $b$. Since $a\equiv b \pmod{2020}$, by definition, taking the positive difference of $a$ and $b$ will result in a number that is a multiple of by 2020. Since $a$ and $b$ both consist only of the digit 1, their difference will consist only of the digits 1 and 0, so we are done.
 \end{solution}
 
 This problem was similar to Example \ref{example:easymod} in that we considered modular arithmetic. We were able to solve the problem without finding the two numbers. The key idea in this problem was recognizing that there are limited residues, which gives us the idea to let them be the \say{boxes} in the Pigeonhole Principle.
@@ -179,7 +188,7 @@ Let $A$ be a set formed by choosing 20 numbers arbitrarily from the arithmetic s
 \end{example}
 
 \begin{solution}
-It is easy to identify that the 20 numbers are the balls, since we want two of them to satisfy some property. However, the trickiness lies in identifying the boxes. Since we are given an arithmetic sequence, let's write everything in terms of a variable $n$. We get that the numbers are in the form $3n+1$ for $0\leq n \leq 33$. Now, we realize that we want to choose two numbers $3p+1$ and $3q+1$ such that they sum to $3(34)+2$. This can be rewritten as $p+q=34$, where $p$ and $q$ are non-negative integers less than 34. The values of $p$ and $q$ that work are \[(33, 1), (32, 2), (31, 3), \dots , (18, 16),\] so there are 16 pairs in total. These pairs seem like they are our boxes! However, we first have to remove the numbers 0 and 34, since they do not form pairs and would not work if we applied the Pigeonhole Principle. Now, since there are 16 pairs and 18 numbers to choose, 2 numbers will be from the same pair, and those two numbers will be our $p$ and $q$. Since we have found the two numbers, we are done \footnote{In this problem, 19 numbers works as well.}.
+It is easy to identify that the 20 numbers are the balls, since we want two of them to satisfy some property. However, the trickiness lies in identifying the boxes. Since we are given an arithmetic sequence, let's write everything in terms of a variable $n$. We get that the numbers are in the form $3n+1$ for $0\leq n \leq 33$. Now, we realize that we want to choose two numbers $3p+1$ and $3q+1$ such that they sum to $3(34)+2$. This can be rewritten as $p+q=34$, where $p$ and $q$ are non-negative integers less than 34. The values of $p$ and $q$ that work are \[(33, 1), (32, 2), (31, 3), \dots , (18, 16),\] so there are 16 pairs in total. These pairs seem like they are our boxes! However, we first have to remove the numbers 0 and 34, since they do not form pairs and would not work if we applied the Pigeonhole Principle. Now, since there are 16 pairs and 18 numbers to choose, 2 numbers will be from the same pair, and those two numbers will be our $p$ and $q$. Since we have found the two numbers, we are done \footnote{In this problem, 19 numbers works as well.}. $\square$
 \end{solution}
 
 
@@ -227,7 +236,7 @@ WLOG, let's consider the red points. Notice that there are 431 rotations that al
 
 We now do something similar. For each of the 28 red points already selected, a random rotation has a $\frac{108}{431}$ chance of overlapping with a yellow point. By Linearity of Expectation, \[\frac{108}{431}\cdot 28\] red points will overlap with a yellow point. Since this number is slightly greater than 7, there exists a rotation such that 8 of the 28 already selected red points all land on a yellow point. We have now created 8 red, green, and yellow points that are all rotations of each other.
 
-We can finally consider the last color, blue. For each of the 8 points that we already selected, a random rotation has a $\frac{108}{431}$ chance of overlapping with a blue point. By Linearity of Expectation, the amount of red points that will overlap with a blue point is \[\frac{108}{431}\cdot 8.\] This number is slightly greater than 2, so there exists a rotation such that 3 of the red points will overlap with 3 of the blue points. 
+We can finally consider the last color, blue. For each of the 8 red points that we already selected, a random rotation has a $\frac{108}{431}$ chance of overlapping with a blue point. By Linearity of Expectation, the amount of red points that will overlap with a blue point is \[\frac{108}{431}\cdot 8.\] This number is slightly greater than 2, so there exists a rotation such that 3 of the red points will overlap with 3 of the blue points. 
 
 From the 3 points of each color that we selected, we can construct a triangle of each color. Since they are rotations of each other, they must be congruent, and we are done.
 \end{solution}
@@ -243,7 +252,7 @@ Every point in a plane is either red, green, or blue. Prove that there exists a 
 \end{example}
 
 \begin{solution}
-Choose a rectangle in the plane with 4 points as the columns and 19 points as the rows. Consider the first row. Since there are four points and 3 colors, at least 2 points will be the same color. 
+Choose a rectangle in the plane consisting of 4 columns and 19 rows. Consider the first row. Since there are four points and 3 colors, at least 2 points will be the same color. 
 
 Now consider the 19 rows. Since for each row there are 3 ways to choose the color that is repeated and $\binom{4}{2}=6$ ways to choose which points are repeated, there are 18 possible arrangements of the 3 colors. Since there are 19 rows and 18 possible arrangements of the 3 colors, by the Pigeonhole Principle, 2 rows will be exactly the same and contain at least 2 points of the same color. The points that are the same color in those two rows will form the rectangle, and we are done.
 \end{solution}
