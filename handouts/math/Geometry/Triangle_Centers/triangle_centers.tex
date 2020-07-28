@@ -1,61 +1,35 @@
-\documentclass[letterpaper]{article}
-
+\documentclass[11pt]{scrartcl}
+\usepackage[sexy]{evan}
 \usepackage{float}
-\usepackage{sectsty}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{mdframed}
-\usepackage{xcolor}
-\usepackage{array}
-\usepackage{asymptote}
-\usepackage{tkz-euclide}
-\usepackage{pgf,tikz,pgfplots}
-\usepackage[section]{placeins}
-\pgfplotsset{compat=1.15}
-\usepackage{mathrsfs}
 \usetikzlibrary{arrows}
 \usetikzlibrary{calc}
 \theoremstyle{plain}
 
-\newtheorem{thm}{Theorem}[section]
-
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{corollary}{Corollary}[thm]
-\newtheorem{lemma}[thm]{Lemma}
-
-\theoremstyle{definition}
-
-\newtheorem{definition}[thm]{Definition}
-\newtheorem{example}[thm]{Example}
-\newtheorem{exercise}[thm]{Exercise}
-
-\theoremstyle{remark}
-\newtheorem*{solution}{Solution}
-\newtheorem*{remark}{Remark}
+% Copyright (c) 2020 Evan Chen [evan at evanchen.cc]
+% https://web.evanchen.cc/ || github.com/vEnhance
 
 \newcommand{\squeezeup}{\vspace{-2.5mm}}
 
-
-
 \begin{document}
-
 \title{Basic Triangle Centers}
+\author{Jonathan Pei}
+\subtitle{}
 \maketitle
 
 \begin{abstract}
     Triangle centers are an important facet of euclidean geometry.
     Often problems require an intricate understanding of the relationships between triangle centers.
 \end{abstract}
+
 \section{Concurrency}
     The fact that many of the following triangles exist can be surprising. We will establish a condition which will help us prove that these centers do in fact exist.
-    \begin{mdframed}
-        \begin{thm}[Ceva's] 
+    %
+        \begin{theorem}[Ceva's] 
             In $\triangle ABC$, points D, E, and F are on sides BC, AC, and AB respectively. $\frac{BD}{DC}\cdot \frac{CE}{EA}\cdot\frac{AF}{FB} = 1$, if and only if the segments AD, BE, and CF are concurrent.
             
-        \end{thm}
+        \end{theorem}
         
-    \end{mdframed} 
+    % 
     \begin{proof}
         We will first show that the direct implication holds. Let the point of concurrency be X. We have the following area ratio 
         $$\frac{[ABD]}{[ADC]} = \frac{[XBD]}{[XDC]}=\frac{BD}{DC}.$$
@@ -75,33 +49,34 @@
     \begin{exercise}
         Find a trigonometric form of Ceva's Theorem.
     \end{exercise}
+    
 \section{The Centroid}
-    \begin{mdframed}
+    
         \begin{definition}
             The centroid is the intersection of the medians of a \\triangle.
        \end{definition} 
-    \end{mdframed}
+    
        
     \begin{exercise}
         Verify that the centroid always exists.
     \end{exercise}
     Often the most important fact about the centroid used in computational
     contests is that the medians divide each other into a 2:1 ratio at the centroid.
-    \begin{mdframed}
-        \begin{thm}
+    
+        \begin{theorem}
             If AD,BE, and CF are medians in $\triangle ABC$ and G is the centroid then $$\frac{AG}{GD}=\frac{BG}{GE}=\frac{CG}{GF}=2$$
-        \end{thm}
-    \end{mdframed}
+        \end{theorem}
+    
     \begin{proof}
         Begin by drawing segment EF. We notice that $\triangle EFG \sim \triangle BFG$.
         So $\frac{BG}{GE} =2$. Repeating for the other medians finishes the proof.
     \end{proof}
-    \begin{mdframed}
+    
         \begin{corollary}
         \label{median ratios}
             The 6 triangles formed by the medians and the sides of the triangle have equal area.
         \end{corollary}
-    \end{mdframed}
+    
     \subsection*{Exercises}
     \begin{exercise}
         Prove corollary \ref{median ratios}.
@@ -117,42 +92,34 @@
 \section{Circumcenter}
 \section{Incenter}
 \section{Orthocenter}
-\begin{mdframed}
+
     \begin{definition}
         The orthocenter is the intersection of the altitudes of a \\triangle.
    \end{definition} 
-\end{mdframed}
+
 \begin{exercise}
     Show that the orthocenter exists in all triangles. This is a simple application of trig Ceva.
 \end{exercise}
 
 
-\begin{figure}[!htb]
+\begin{figure}[H]
     \centering
     \scalebox{.75}{\input{images/orthocenter_circle.tikz}}
     \caption{Cyclic quadrilateral with feet from altitudes.}
     \label{fig:cyclic_orthocenter}
-
 \end{figure}
-
-
 
 One important thing to note about the orthocenter and the feet of the altitudes, is that there are many resulting cyclic quadrilaterals.
 For example, referring to Figure \ref{fig:cyclic_orthocenter}, we have $BFEC$ cyclic. This is because $\angle BFC = \angle BEC = 90$.
-See if you can find the other cyclic quads.\\\\\\\\
-\begin{mdframed}
-    \begin{thm}\label{reflecting_the_orthocenter}
-        The reflections of the orthocenter of $\triangle ABC$ over $AB$, $AC$, $BC$ and the midpoints of those sides, lies on the circumcircle of $\triangle ABC$.
-    \end{thm} 
-\end{mdframed}
-
-
-\begin{figure}[!htb]
+See if you can find the other cyclic quads.\\
+\begin{theorem}\label{reflecting_the_orthocenter}
+    The reflections of the orthocenter of $\triangle ABC$ over $AB$, $AC$, $BC$ and the midpoints of those sides, lies on the circumcircle of $\triangle ABC$.
+\end{theorem} 
+\begin{figure}[H]
     \centering
     \scalebox{.75}{\input{images/reflecting_orthocenter.tikz}}
     \caption{Reflection of the orthocenter}
     \label{fig:reflection_orthocenter}
-
 \end{figure}
 \begin{proof}
     tbd
@@ -164,13 +131,13 @@ See if you can find the other cyclic quads.\\\\\\\\
     is the length of the circumradius, find $R^2$
 \end{example}
 
-\begin{figure}[!htb]
+\begin{figure}[H]
     \centering
     \scalebox{.5}{\input{images/pumacProb.tikz}}
     \caption{Problem diagram}
     \label{fig:pumac_problem}
 \end{figure}
-\begin{solution}
+\begin{soln}
     We first label the intersection of $HD$ with $BC$ as E as shown in the diagram.
     Secondly, we note that the area condition, simply tells us that $\frac{HE}{AE}=5$. So we can set $HE=x$ and $AH=4x$.
     Now, since $AD$ is perpendicular to $BC$, it is collinear with $AH$. Additionally, by 
@@ -181,18 +148,18 @@ See if you can find the other cyclic quads.\\\\\\\\
     Now we have $AH=\frac{10\sqrt{3}}{3}$. By the Pythagorean Theorem, we get that $EB=\frac{2\sqrt{6}}{3}$. Since $BD=2$, we have $\sin{D}=\frac{\sqrt{6}}{3}$.
     But $\angle D = \angle C$ by cyclic quadrilateral properties so $\sin{C}=\sin{D}=\frac{\sqrt{6}}{3}$. Then by the extended law of sines, we find that 
     $2R = \frac{18}{\sqrt{6}} \implies R^2=\boxed{\frac{27}{2}}$.
-\end{solution}
+\end{soln}
 \section{Other centers}
 \section{Important Relationships}
 \section{Techniques}
     \subsection{Coordinate Bashing}
     Often times, if you don't know a quick or easy way to do a geometry problem you can place the figure in the cartesian plane and work out the problem with coordinates.
-    \begin{mdframed}
-        \begin{thm}
+    
+        \begin{theorem}
             If the coordinates of a triangle are $(x_1,y_1)$,$(x_2,y_2)$, and $(x_3,y_3)$ then the centroid has coordinates $$\left(\frac{x_1+x_2+x_3}{3},\frac{y_1+y_2+y_3}{3}\right)$$
-        \end{thm}
+        \end{theorem}
         
-    \end{mdframed}
+    
     \begin{proof}
         Let $(x_G,y_G)$ be the coordinates of the centroid and label $(x_1,y_1)$,$(x_2,y_2)$, and $(x_3,y_3)$ as A, B and C respectively.
         \\We have that the midpoint of BC is $\left(\frac{x_2+x_3}{2},\frac{y_2+y_3}{2}\right)$. So $x_G-x_1=\frac{2}{3}\cdot\frac{x_2+x_3-2x_1}{2}$.
