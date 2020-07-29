@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2020.6.24)  27 JUL 2020 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2020.6.24)  28 JUL 2020 22:26
 entering extended mode
 **d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.tex
 (d:/jonat/GitHub/RadiantCheddar/handouts/handouts/math/Geometry/Triangle_Centers/triangle_centers.tex
@@ -1222,29 +1222,29 @@ File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.aux)
 \openout1 = `triangle_centers.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 50.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
-Package scrbase Info: activating english \contentsname on input line 13.
-Package scrbase Info: activating english \listfigurename on input line 13.
-Package scrbase Info: activating english \listtablename on input line 13.
+LaTeX Font Info:    ... okay on input line 50.
+Package scrbase Info: activating english \contentsname on input line 50.
+Package scrbase Info: activating english \listfigurename on input line 50.
+Package scrbase Info: activating english \listtablename on input line 50.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count327
@@ -1269,7 +1269,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box75
-Package hyperref Info: Link coloring ON on input line 13.
+Package hyperref Info: Link coloring ON on input line 50.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty"
@@ -1279,9 +1279,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count333
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
  (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.out) (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.out)
 \@outlinefile=\write6
 \openout6 = `triangle_centers.out'.
@@ -1293,7 +1293,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 13.
+(scrartcl)           before \begin{document} on input line 50.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
  ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
@@ -1313,26 +1313,26 @@ Package tocstyle Warning: Usage of `tocstyle' with new `tocbasic' detected.
 (tocstyle)                You may also get additional warnings because of
 (tocstyle)                redefined `\numberline'. Ignore them.
 
-Package tocstyle Info: prepare \l@part for redefinition on input line 13.
-Package tocstyle Info: prepare \l@section for redefinition on input line 13.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 13.
-LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+Package tocstyle Info: prepare \l@part for redefinition on input line 50.
+Package tocstyle Info: prepare \l@section for redefinition on input line 50.
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 50.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 13.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 50.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 13.
-Package tocstyle Info: prepare \l@table for redefinition on input line 13.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 13.
+Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 50.
+Package tocstyle Info: prepare \l@table for redefinition on input line 50.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 50.
 \c@lstlisting=\count335
-LaTeX Info: Redefining \microtypecontext on input line 13.
+LaTeX Info: Redefining \microtypecontext on input line 50.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1353,8 +1353,68 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+
+{C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Package tocbasic Info: character protrusion at toc deactivated on input line 61.
+ (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.toc
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
 )
-LaTeX Font Info:    Try loading font information for TS1+cmss on input line 24.
+\tf@toc=\write7
+\openout7 = `triangle_centers.toc'.
+
+ [2]
+LaTeX Font Info:    Try loading font information for TS1+cmss on input line 63.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmss.fd"
 File: ts1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1364,75 +1424,72 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 27.
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 27.
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 50.
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 56.
- [1
-
-
-{C:/Users/jonat/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(mdframed)              on input line 66.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 66.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 89.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 95.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 67.
+(mdframed)              on input line 106.
+ [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 76.
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 76.
- (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\images/orthocenter_circle.tikz) [2]
-Underfull \hbox (badness 10000) in paragraph at lines 112--115
+(mdframed)              on input line 115.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 115.
+ (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\images/orthocenter_circle.tikz) [4]
+Underfull \hbox (badness 10000) in paragraph at lines 151--154
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 115.
-(d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\images/reflecting_orthocenter.tikz) [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+(mdframed)              on input line 154.
+(d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\images/reflecting_orthocenter.tikz) [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.128 \begin{example}[Pumac 2019]
+l.167 \begin{example}[Pumac 2019]
                                  pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.128 \begin{example}[Pumac 2019]
+l.167 \begin{example}[Pumac 2019]
                                  ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 128.
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 128.
+(mdframed)              on input line 167.
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 167.
  (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\images/pumacProb.tikz)
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 159.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+(mdframed)              on input line 198.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.160         \end{theorem}
-                           ] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
+l.199         \end{theorem}
+                           ] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
  (d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `triangle_centers.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 42278 strings out of 492970
- 847620 string characters out of 3135855
- 1056774 words of memory out of 3000000
- 45434 multiletter control sequences out of 15000+200000
- 547581 words of font info for 106 fonts, out of 3000000 for 9000
+ 42304 strings out of 492970
+ 848300 string characters out of 3135855
+ 1056773 words of memory out of 3000000
+ 45456 multiletter control sequences out of 15000+200000
+ 547530 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,20n,107p,10214b,1125s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,20n,107p,10214b,1123s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jonat\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcsx1200.pk> <C:\Users\jonat\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcsx1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.pdf (5 pages, 228557 bytes).
+Output written on d:/jonat\GitHub\RadiantCheddar\handouts\handouts\math\Geometry\Triangle_Centers\triangle_centers.pdf (7 pages, 232936 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 19125 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 19133 words of extra memory for PDF output out of 20736 (max. 10000000)
 
