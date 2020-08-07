@@ -55,7 +55,7 @@
 
 \begin{abstract}
     Triangle centers are an important facet of euclidean geometry.
-    Often problems require an intricate understanding of the relationships between triangle centers.
+    Often problems require an intricate understanding of the relationships between them.
 \end{abstract}
 \newpage
 \tableofcontents
@@ -88,7 +88,24 @@
     \begin{exercise}
         Find a trigonometric form of Ceva's Theorem.
     \end{exercise}
-    
+
+\section{Circumcenter}
+\begin{definition}
+    The circumcenter is the center of the circle that passes through the vertices of a triangle. 
+\end{definition}
+\begin{remark}
+    We don't need to verify that this exists because any three non-collinear points describe a circle, which by definition has a center.
+\end{remark}
+
+The circumcenter comes up a lot in problems, mainly because circles are very popular in geometry!
+\begin{example}
+    In $\triangle ABC$, the circumcircle $\omega$ is drawn and the tangent $\ell$ at $B$ is drawn. If $O$ is the center of $\omega$,
+    show that the angle formed by $\ell$ and $\seg{BC}$ is half of $\angle BOC$.
+\end{example}
+\begin{soln}
+    Let $\angle BOC = x$. Since $\triangle BOC$ is isosceles, $\angle OBC = 90-\frac{x}{2}$. $\ell$ is perpendicular to $\seg{OB}$ because it is tangent so 
+    the angle formed by $\seg{BC}$ and $\ell$ is $90-(90-\frac{x}{2})=\frac{x}{2}$.
+\end{soln}
 \section{Centroid}
     
         \begin{definition}
@@ -107,8 +124,8 @@
         \end{theorem}
     
     \begin{proof}
-        Begin by drawing segment EF. We notice that $\triangle EFG \sim \triangle BFG$.
-        So $\frac{BG}{GE} =2$. Repeating for the other medians finishes the proof.
+        Begin by drawing segment EF. We notice that $\triangle EFG \sim \triangle BGC$.
+        So $\frac{BG}{GE} =2$. Likewise for the other medians finishes the proof.
     \end{proof}
     
         \begin{corollary}
@@ -128,12 +145,21 @@
     \begin{exercise} AB is the diameter of a circle and C is a point on the circle. What shape does the centroid of $\triangle ABC$ trace as C moves around the circle.
     \end{exercise}
 
-\section{Circumcenter}
 \section{Incenter}
+\begin{definition}
+    The incenter is the center of the circle which is tangent to all three sides of the triangle.
+\end{definition}
+If we show that the internal angle bisectors of a triangle always coincide, we prove that the incenter always exists along with the incircle.
+
+\begin{exercise}
+    Verify using Ceva's theorem that the incenter always exists.
+\end{exercise}
+
+
 \section{Orthocenter}
 
     \begin{definition}
-        The orthocenter is the intersection of the altitudes of a \\triangle.
+        The orthocenter is the intersection of the altitudes of a triangle.
    \end{definition} 
 
 \begin{exercise}
