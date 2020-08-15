@@ -1,5 +1,5 @@
-# website
-Welcome to the Focus Learning organization! We are a group of enthusiatic high schoolers who want to make competitive math training easier for everyone.
+# Focus Learning Website
+Welcome to the Focus Learning organization! We are a group of enthusiatic high schoolers who want to make competitive math training easier for everyone. We offer our Beyond Common Core and Competitive Math livestreams on [Twitch](https://www.twitch.tv/focus_learning), LaTeX math handouts, a [Discord server](https://discord.gg/WnBgCdH), and much more!
 
 **Website:** https://focus-learning.github.io/
 
