@@ -1,0 +1,5 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Vieta's in Quadratics}{2}{section.2}%
+\contentsline {section}{\numberline {3}Vieta's in Higher Degrees}{4}{section.3}%
+\contentsline {section}{\numberline {4}Problems}{7}{section.4}%
