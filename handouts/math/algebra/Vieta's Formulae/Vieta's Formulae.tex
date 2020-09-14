@@ -61,11 +61,11 @@ In this handout, we go over \textbf{Vieta's Formulae}, which provide relationshi
 
 \section{Introduction}
 
-Suppose that we have the polynomial 
-\[P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_0,\] and we had to relate the roots of the polynomial to the coefficients. Looking immediately, it seems impossible, since we are not given any information on the roots of $P$. However, once we write the polynomial in factored form, the roots come out: 
+Suppose that we have the polynomial
+\[P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_0,\] and we had to relate the roots of the polynomial to the coefficients. Looking immediately, it seems impossible, since we are not given any information on the roots of $P$. However, once we write the polynomial in factored form, the roots come out:
 \[P(x)=a_n(x-r_1)(x-r_2)\dots(x-r_n).\] With these 2 equations of $P$, we can now relate the roots of $P$ to coefficients of $P$. (Try it yourself?!)
 
-In the next 2 sections, we will dive deeper into how the roots are related to the coefficients. The equations this handout will go over are called \textbf{Vieta's Formulae}, named after French Mathematician Fran\c{c}ois Vi\`{e}te. 
+In the next 2 sections, we will dive deeper into how the roots are related to the coefficients. The equations this handout will go over are called \textbf{Vieta's Formulae}, named after French Mathematician Fran\c{c}ois Vi\`{e}te.
 
 
 \section{Vieta's in Quadratics}
@@ -80,26 +80,26 @@ Consider a quadratic polynomial \[P(x)=ax^2+bx+c.\] Then, the sum of the two roo
 \end{thm}
 
 \begin{proof}
-Let the two roots of $P$ be $r_1$ and $r_2$. By the Fundamental Theorems of Algebra, $P$ can be written as \[a(x-r_1)(x-r_2).\] Expanding this, we get \[a(x^2-(r_1+r_2)x+r_1 r_2) \implies ax^2-a(r_1+r_2)x+ar_1 r_2.\] Since two polynomials are equal if and only if their coefficients are equal, we can equate the coefficients or $ax^2+bx+c$ and $ax^2-a(r_1+r_2)x+ar_1 r_2$. We have 
+Let the two roots of $P$ be $r_1$ and $r_2$. By the Fundamental Theorems of Algebra, $P$ can be written as \[a(x-r_1)(x-r_2).\] Expanding this, we get \[a(x^2-(r_1+r_2)x+r_1 r_2) \implies ax^2-a(r_1+r_2)x+ar_1 r_2.\] Since two polynomials are equal if and only if their coefficients are equal, we can equate the coefficients or $ax^2+bx+c$ and $ax^2-a(r_1+r_2)x+ar_1 r_2$. We have
 
-\begin{equation}  \label{eq:quadratic1} b=-a(r_2+r_2) \end{equation} and 
+\begin{equation}  \label{eq:quadratic1} b=-a(r_2+r_2) \end{equation} and
 \begin{equation}  \label{eq:quadratic2}  c=ar_1 r_2.  \end{equation}
 Dividing Equation \ref{eq:quadratic1} by $-a$ and Equation \ref{eq:quadratic2} by $a$, we get $r_1+r_2=-\frac{b}{a}$ and $r_1 r_2=\frac{c}{a}$, as desired.
 
 \end{proof}
 
-An important thing to realize here is that our proof did not rely on the fact that any of the variables were real numbers. This means that Vieta's Formulae works for all complex numbers. When you are solving problems and it asks you to find the sum of the real roots, you may \textbf{not} directly use Vieta's Formulae. Of course, you may use Vieta's if you know all the roots are real. 
+An important thing to realize here is that our proof did not rely on the fact that any of the variables were real numbers. This means that Vieta's Formulae works for all complex numbers. When you are solving problems and it asks you to find the sum of the real roots, you may \textbf{not} directly use Vieta's Formulae. Of course, you may use Vieta's if you know all the roots are real.
 
 \bigskip
 
-In most problems, the solution typically involves manipulating the equations that we derive from Vieta's Formulae. If the problem asks for a relationship between the roots of a polynomial, it is typically a hint that Vieta's Formulae should come into use. We will see this in the first example. 
+In most problems, the solution typically involves manipulating the equations that we derive from Vieta's Formulae. If the problem asks for a relationship between the roots of a polynomial, it is typically a hint that Vieta's Formulae should come into use. We will see this in the first example.
 
 \begin{example}
 Given that $x_1$ and $x_2$ are the two roots of the equation $4x^2+8x+27$, find the value of $x_1 ^{2}+x_2 ^{2}.$
 \end{example}
 
 \begin{solution}
-Although we could find the value of the 2 roots and substitute them into the expression, it might take a while. Also, since the problem specifically asked us to find $x_1 ^{2}+x_2 ^{2}$ rather than simply $x_1$ and $x_2$, it probably does not want us to find the two roots directly. 
+Although we could find the value of the 2 roots and substitute them into the expression, it might take a while. Also, since the problem specifically asked us to find $x_1 ^{2}+x_2 ^{2}$ rather than simply $x_1$ and $x_2$, it probably does not want us to find the two roots directly.
 
 Using Vieta's, we get that $x_1+x_2=-\frac{8}{4}=-2$ and $x_1 x_2=\frac{27}{4}$. Now, we just have to manipulate these equations until we find the result we desire. Squaring the first equation, we get that \[x_1 ^{2}+2x_1x_2+x_2^{2}=4.\] Multiplying the second equation by 2, we get $2x_1x_2=\frac{27}{2}$. Subtracting this equation from $x_1 ^{2}+2x_1x_2+x_2^{2}=4$, we get $x_1^{2}+x_2^{2}=-\frac{19}{2}$, which is the equation we want. Our answer is $-\frac{19}{2}$.
 \end{solution}
@@ -111,7 +111,7 @@ Let $P(x) = x^2 - 3x - 7$, and let $Q(x)$ and $R(x)$ be two quadratic polynomial
 \end{example}
 
 \begin{solution}
-Since we are given that $Q$ and $R$ are quadratic polynomials with the coefficient of $x$ equal to 1, we can let \[Q(x)=x^2+ax+b\] and \[R(x)=x^2+cx+d.\] Since $R(0)=d$, our goal is to find the value of $D$. However, since we know that $Q(2)=0$, $b=2$. Hence, we can write \[Q(x)=x^2+ax+2.\] Since the problem asks us to relate the sum of each pair of polynomials, we compute that  \[(P+Q)(x)=2x^2+(a-3)x-5,\] \[(P+R)(x)=2x^2+(c-3)x+d-7,\] and \[(Q+R)(x)=2x^2+(c+a)x+d+2.\] Now, we are also given that each pair of these sums has a common root, so we can let the roots of $(P+Q)$ be $r$ and $s$, the roots of $(P+R)$ be $s$ and $t$, and the roots of $(Q+R)$ be $r$ and $t$. We can now proceed using Vieta's Formulae. We have the equations \[r+s=\frac{3-a}{2}, s+t=\frac{3-c}{2}, r+t=\frac{-a-c}{2}, rs=-\frac{5}{2}, st=\frac{d-7}{2}, rt=\frac{d+2}{2}.\] Adding the first two equations, we get that \[r+2s+t=\frac{6-a-c}{2}.\]Subtracting the third equation, we get \[2s=3 \implies s=\frac{3}{2}.\] Using the fourth equation, we get that \[\frac{3}{2}r=-\frac{5}{2} \implies r=-\frac{5}{3}.\] Since we want to find the value of $d$, we can create a system of equations using the fifth and sixth equations. We have that \[\frac{3}{2}t=\frac{d-7}{2}\] and \[-\frac{5}{3}t=\frac{d+2}{2}.\]Solving the system of equations, we find that  $d=\frac{52}{19}$, so our final answer is $71.$
+Since we are given that $Q$ and $R$ are quadratic polynomials with the coefficient of $x$ equal to 1, we can let \[Q(x)=x^2+ax+b\] and \[R(x)=x^2+cx+d.\] Since $R(0)=d$, our goal is to find the value of $D$. However, since we know that $Q(0)=2$, $b=2$. Hence, we can write \[Q(x)=x^2+ax+2.\] Since the problem asks us to relate the sum of each pair of polynomials, we compute that  \[(P+Q)(x)=2x^2+(a-3)x-5,\] \[(P+R)(x)=2x^2+(c-3)x+d-7,\] and \[(Q+R)(x)=2x^2+(c+a)x+d+2.\] Now, we are also given that each pair of these sums has a common root, so we can let the roots of $(P+Q)$ be $r$ and $s$, the roots of $(P+R)$ be $s$ and $t$, and the roots of $(Q+R)$ be $r$ and $t$. We can now proceed using Vieta's Formulae. We have the equations \[r+s=\frac{3-a}{2}, s+t=\frac{3-c}{2}, r+t=\frac{-a-c}{2}, rs=-\frac{5}{2}, st=\frac{d-7}{2}, rt=\frac{d+2}{2}.\] Adding the first two equations, we get that \[r+2s+t=\frac{6-a-c}{2}.\]Subtracting the third equation, we get \[2s=3 \implies s=\frac{3}{2}.\] Using the fourth equation, we get that \[\frac{3}{2}r=-\frac{5}{2} \implies r=-\frac{5}{3}.\] Since we want to find the value of $d$, we can create a system of equations using the fifth and sixth equations. We have that \[\frac{3}{2}t=\frac{d-7}{2}\] and \[-\frac{5}{3}t=\frac{d+2}{2}.\]Solving the system of equations, we find that  $d=\frac{52}{19}$, so our final answer is $71.$
 
 
 \end{solution}
@@ -130,16 +130,16 @@ We are not solely limited to using Vieta's Formulae with quadratics. Using the s
 
 \begin{thm}
 \begin{mdframed}
-Consider the polynomial \[P(x)=a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\dots+a_1x+a_0.\] Let the $n$ roots of this polynomial be \[r_1, r_2, r_3, \dots, r_n.\] Then, we have the equations 
-\[r_1+r_2+\dots+r_n=-\frac{a_{n-1}}{a_n}\] 
-\[(r_1r_2+r_1r_3+r_1r_4+\dots+r_1r_n)+(r_2r_3+r_2r_4+\dots+r_2r_n)+\dots(r_{n-1}r_n)=\frac{a_{n-2}}{a_n}\] \[\vdots\] \[r_1r_2\ \dots r_n=(-1)^n\frac{a_0}{a_n}\] 
+Consider the polynomial \[P(x)=a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\dots+a_1x+a_0.\] Let the $n$ roots of this polynomial be \[r_1, r_2, r_3, \dots, r_n.\] Then, we have the equations
+\[r_1+r_2+\dots+r_n=-\frac{a_{n-1}}{a_n}\]
+\[(r_1r_2+r_1r_3+r_1r_4+\dots+r_1r_n)+(r_2r_3+r_2r_4+\dots+r_2r_n)+\dots(r_{n-1}r_n)=\frac{a_{n-2}}{a_n}\] \[\vdots\] \[r_1r_2\ \dots r_n=(-1)^n\frac{a_0}{a_n}\]
 
 \end{mdframed}
 \end{thm}
 
 \begin{proof}
-We can write $P(x)$ as \[P(x)=a_n(x-r_1)(x-r_2)\dots(x-r_n).\] Expanding the right side, we get that it is 
-\[a_nx^n-a_n(r_1+r_2+\dots+r_n)x^{n-1}+a_n(r_1r_2+r_1r_3+\dots+r_{n-1}r_n)x^{n-2}+\dots+(-1)^na_nr_1r_2\dots r_n.\] Comparing coefficients, we have 
+We can write $P(x)$ as \[P(x)=a_n(x-r_1)(x-r_2)\dots(x-r_n).\] Expanding the right side, we get that it is
+\[a_nx^n-a_n(r_1+r_2+\dots+r_n)x^{n-1}+a_n(r_1r_2+r_1r_3+\dots+r_{n-1}r_n)x^{n-2}+\dots+(-1)^na_nr_1r_2\dots r_n.\] Comparing coefficients, we have
 \[-a_n(r_1+r_2+\dots+r_n)=a_{n-1} \implies r_1+r_2+\dots+r_n=-\frac{a_{n-1}}{a_n}\]
 \[a_n(r_1r2+r_1+r_3+\dots+r_{n-1}r_n)=a_{n-2} \implies r_1r_2+r_1r_3+\dots+r_{n-1}r_n=\frac{a_{n-2}}{a_n}\]
 \[\vdots\]
@@ -149,25 +149,25 @@ We can write $P(x)$ as \[P(x)=a_n(x-r_1)(x-r_2)\dots(x-r_n).\] Expanding the rig
 Again, I would like to note that Vieta's by itself is usually not enough to completely solve a problem. Other (algebraic) techniques should still be used in order to find an answer.
 
 \begin{example}[Brilliant]
-Let $r_1, r_2, r_3$ be the roots of the polynomial $5x^3-11x^2+7x+3.$ Evaluate 
+Let $r_1, r_2, r_3$ be the roots of the polynomial $5x^3-11x^2+7x+3.$ Evaluate
 \[r_1(1+r_2+r_3)+r_2(1+r_3+r_1)+r_3(1+r_1+r_2).\]
 \end{example}
 
 \begin{solution}
 Looking at the equation, there seems to be no way to use Vieta's immediately. We can start by expanding the expression. We get \[r_1+r_1r_2+r_1r_3+r_2+r_2r_3+r_2r_1+r_3+r_3r_1+r_3r_2.\] This can be written as \[r_1+r_2+r_3+2(r_1r_2+r_2r_3+r_1r_3).\] Now, we have an expression that we can simplify using Vieta's. By Vieta's, we have $r_1+r_2+r_3=\frac{11}{5}$ and $r_1r_2+r_2r_3+r_3r_1=\frac{7}{3}$, so our answer is $\frac{11}{5}+2(\frac{7}{5})=5$.
  \end{solution}
- 
+
  We solved this problem by manipulating an expression until we were able to substitute things in using Vieta's. This is a common strategy that occurs in problems involving Vieta's Formulae.
- 
+
  \begin{example}[Brilliant]
- Find all triples of complex numbers which satisfy the following system of equations: 
+ Find all triples of complex numbers which satisfy the following system of equations:
  \[a+b+c=0\] \[ab+bc+ca=0\] \[abc=0.\]
  \end{example}
- 
+
  \begin{solution}
  Without seeing a polynomial, it would appear quite difficult to relate this problem to Vieta's Formulae. However, the equations we are given are in the form of Vieta's Formulae. This means that we can create a polynomial, with $a, b, c$ being the roots of our polynomial. Since there are 3 roots, the polynomial must be cubic. Therefore, for simplicity, we can choose the monic\footnote{Note that choosing a monic polynomial does not affect the roots, since the coefficient of the leading term can just be factored out. If you do not see this, try writing the polynomial in factored form.} polynomial \[P(x)=x^3+mx^2+nx+p.\] We know that $a+b+c=-m=0$, $ab+bc+ca=n=0$, and $abc=-p=0$, so our polynomial becomes \[P(x)=x^3.\] It is easy to see that the only root of $P$ is 0 (with a multiplicity of 3). Since we let $a, b, c,$ be the roots of this polynomial, the values of $a, b, c$ must be all 0.
  \end{solution}
- 
+
  In this problem, rather than getting a polynomial and using Vieta's on it, we used it \say{in reverse}. Although these problems are not common, keep an eye out for when you see equations that satisfy Vieta's Formulae.
 
 \begin{example}[2019 AIME]
@@ -179,15 +179,15 @@ For distinct complex numbers $z_1,z_2,\dots,z_{673}$, the polynomial
 \begin{solution}
 First, please make sure you know what the problem is asking before moving on to reading the solution. The notation used in this problem is rather confusing.
 
-Notice that we are given only the first few terms of the polynomial. This seems like it would be a hint to use Vieta's. 
+Notice that we are given only the first few terms of the polynomial. This seems like it would be a hint to use Vieta's.
 
-First, note that from the factored form of the polynomial, we can immediately observe that the roots are \[z_1, z_1, z_1, z_2, z_2, z_2, \dots, z_{673}, z_{673}, z_{673}, \]where each $z_i$ has a multiplicity of 3. From Vieta's, we have \[3(z_1+z_2+\dots+z_{673})=-20\] and 
+First, note that from the factored form of the polynomial, we can immediately observe that the roots are \[z_1, z_1, z_1, z_2, z_2, z_2, \dots, z_{673}, z_{673}, z_{673}, \]where each $z_i$ has a multiplicity of 3. From Vieta's, we have \[3(z_1+z_2+\dots+z_{673})=-20\] and
 
 \begin{equation} \label{eq:3}
 3(z_{1}^2+z_{2}^2+\dots+z_{673}^2)+9((z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+z_2z_4+\dots+z_2z_{673})+(z_3z_4+\dots+z_3z_{673})+\dots+z_{672}z_{673})=19.
 \end{equation}
 
-Notice the $9(\text{something})$ term of the second equation is what we need to find, so if we can find the value of $3(z_1^2+z_2^2+\dots+z_{673}^2),$ then we would basically be done. Dividing the first equation by 3, we get \[z_1+z_2+\dots +z_{673}=-\frac{20}{3}.\] Squaring this, we get \[(z_1^2+z_2^2+\dots+z_{673}^2)+2((z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+\dots+z_{672}z_{673})=\frac{400}{9}.\] Now, observe that in this equation, we have $(z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+\dots+z_{672}z_{673}$ as well, which is the value the question is asking for. We can write the equation as \[3(z_1^2+z_2^2+\dots+z_{673}^3)=\frac{400}{3}-6((z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+\dots+z_{672}z_{673}).\] Substituting into \ref{eq:3}, 
+Notice the $9(\text{something})$ term of the second equation is what we need to find, so if we can find the value of $3(z_1^2+z_2^2+\dots+z_{673}^2),$ then we would basically be done. Dividing the first equation by 3, we get \[z_1+z_2+\dots +z_{673}=-\frac{20}{3}.\] Squaring this, we get \[(z_1^2+z_2^2+\dots+z_{673}^2)+2((z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+\dots+z_{672}z_{673})=\frac{400}{9}.\] Now, observe that in this equation, we have $(z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+\dots+z_{672}z_{673}$ as well, which is the value the question is asking for. We can write the equation as \[3(z_1^2+z_2^2+\dots+z_{673}^3)=\frac{400}{3}-6((z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+\dots+z_{672}z_{673}).\] Substituting into \ref{eq:3},
 \[3((z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+z_{672}z_{673})=19-\frac{400}{3}.\] Simplifying the right hand side and dividing by 3, we get that \[(z_1z_2+z_1z_3+\dots+z_1z_{673})+(z_2z_3+\dots+z_2z_{673})+z_{672}z_{673}=-\frac{343}{9},\] so the answer is $343+9=352.$
 
 
@@ -198,7 +198,7 @@ Notice the $9(\text{something})$ term of the second equation is what we need to 
 \section{Problems}
 
 \begin{exercise}
-Determine the sum and product of the roots of 
+Determine the sum and product of the roots of
 \[(a) \qquad 3x^2-8x+13\]
 \[(b) \qquad 4x^4-5x^2+1\]
 \[(c) \qquad x^5-5x^4+9x^3-2x+1\]
